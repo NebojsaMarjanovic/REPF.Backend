@@ -25,7 +25,7 @@ namespace REPF.Backend.Controllers
         {
             ForecastRequest request = new ForecastRequest()
             {
-                Location = forecastRequestParameters.Location.ToString(),
+                PlaceTitle = forecastRequestParameters.Location.ToString(),
                 RoomCount = forecastRequestParameters.RoomCount
             };
 

@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+
 option csharp_namespace = "REPF.Grpc";
 
 package forecast;
@@ -12,8 +13,12 @@ service Forecaster {
 
 // The request message containing the user's name.
 message ForecastRequest {
-  string location = 1;
-  double roomCount = 2;
+  int32 m2 = 1;
+  string heatingType = 2;
+  int32 elevator = 3;
+  double price = 4;
+  double roomCount = 5;
+  string placeTitle = 6;
 }
 
 // The response message containing the greetings.

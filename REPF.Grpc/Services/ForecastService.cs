@@ -1,5 +1,7 @@
 ﻿using Grpc.Core;
 using Microsoft.ML;
+using Microsoft.ML.Data;
+using REPF.Grpc.Models;
 
 namespace REPF.Grpc.Services
 {
@@ -9,11 +11,16 @@ namespace REPF.Grpc.Services
 
         public ForecastService()
         {
+
             var context = new MLContext();
 
-            var model = context.Model.Load("./MLModel/nazivfajla.zip", out DataViewSchema inputSchema);
+            var dataView = context.Data.LoadFromTextFile<RealEstate>("C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\MLModel\\rakovica-fetch_from_24.04.2023.csv",
+                separatorChar: '|',hasHeader:true);
 
-            _predictionEngine = context.Model.CreatePredictionEngine<ForecastRequest, ForecastResponse>(model, inputSchema: inputSchema);
+            var preview = dataView.Preview();
+
+
+            //_predictionEngine = context.Model.CreatePredictionEngine<ForecastRequest, ForecastResponse>(model, inputSchema: inputSchema);
         }
 
         public override async Task<ForecastResponse> Forecast(ForecastRequest request, ServerCallContext context)
