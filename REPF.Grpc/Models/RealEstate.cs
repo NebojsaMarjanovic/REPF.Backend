@@ -6,20 +6,20 @@ namespace REPF.Grpc.Models
     public class RealEstate
     {
         [LoadColumn(0)]
-        public int m2 { get; set; }
+        public float Quadrature { get; set; }
         [LoadColumn(1)]
-        public string heatingType { get; set; } //district-centralno; central-etazno
+        public string HeatingType { get; set; } //district-centralno; central-etazno
         [LoadColumn(2)]
-        public int elevator { get; set; }
+        public float Elevator { get; set; }
         [LoadColumn(3)]
-        public double price { get; set; }
+        public float Price { get; set; }
         [LoadColumn(4)]
-        public DateTime createdAt { get; set; }
+        public DateTime CreatedAt { get; set; }
         [LoadColumn(5)]
-        public double roomCount { get; set; }
+        public float RoomCount { get; set; }
         [LoadColumn(6)]
-        public int redactedFloor { get; set; }
+        public float RedactedFloor { get; set; }
         [LoadColumn(7)]
-        public string placeTitle { get; set; }
+        public string Location { get; set; }
     }
 }
