@@ -47,9 +47,23 @@ namespace REPF.Grpc.Services
 
         public override Task<ForecastResponse> Forecast(ForecastRequest request, ServerCallContext context)
         {
+
+            var realEstateSample = new RealEstate()
+            {
+                Quadrature = request.M2,
+                CreatedAt = DateTime.Now,
+                Elevator = request.Elevator,
+                HeatingType = request.HeatingType,
+                Location = request.PlaceTitle,
+                Price = 0,
+                RedactedFloor = 0,
+                RoomCount = (float) request.RoomCount
+            };
+
+
             var model = Train(mlContext);
             Evaluate(mlContext, model);
-            var singlePrediction = TestSinglePrediction(mlContext, model);
+            var singlePrediction = TestSinglePrediction(mlContext, model, realEstateSample);
 
 
             return Task.FromResult(singlePrediction);
@@ -97,7 +111,7 @@ namespace REPF.Grpc.Services
         }
 
 
-        private ForecastResponse TestSinglePrediction(MLContext mlContext, ITransformer model)
+        private ForecastResponse TestSinglePrediction(MLContext mlContext, ITransformer model, RealEstate realEstate)
         {
             var predictionFunction = mlContext.Model.CreatePredictionEngine<RealEstate, RealEstatePrediction>(model);
 
@@ -108,19 +122,7 @@ namespace REPF.Grpc.Services
 
 
 
-            var realEstateSample = new RealEstate()
-            {
-                Quadrature = 54,
-                CreatedAt = DateTime.Now,
-                Elevator = 1,
-                HeatingType = "district",
-                Location = "Vidikovac",
-                Price = 0,
-                RedactedFloor = 1,
-                RoomCount = 1.5f
-            };
-
-            var prediction = predictionFunction.Predict(realEstateSample);
+            var prediction = predictionFunction.Predict(realEstate);
 
             Console.WriteLine($"**********************************************************************");
             Console.WriteLine($"Predicted price: {prediction.Price:0.####}, actual price: 180000");

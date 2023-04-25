@@ -26,7 +26,10 @@ namespace REPF.Backend.Controllers
             ForecastRequest request = new ForecastRequest()
             {
                 PlaceTitle = forecastRequestParameters.Location.ToString(),
-                RoomCount = forecastRequestParameters.RoomCount
+                RoomCount = forecastRequestParameters.RoomCount,
+                Elevator=forecastRequestParameters.Elevator,
+                HeatingType = forecastRequestParameters.HeatingType,
+                M2=forecastRequestParameters.Quadrature,
             };
 
 
