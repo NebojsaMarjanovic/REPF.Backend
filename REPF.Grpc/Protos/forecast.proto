@@ -19,6 +19,10 @@ message ForecastRequest {
   double price = 4;
   double roomCount = 5;
   string placeTitle = 6;
+  string furnishedStatus=7;
+  string registeredStatus=8;
+  bool isLastFloor=9;
+  int32 redactedFloor=10;
 }
 
 // The response message containing the greetings.

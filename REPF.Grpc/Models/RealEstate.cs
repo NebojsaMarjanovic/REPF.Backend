@@ -1,5 +1,6 @@
 ﻿using Microsoft.ML.Data;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace REPF.Grpc.Models
 {
@@ -20,6 +21,14 @@ namespace REPF.Grpc.Models
         [LoadColumn(6)]
         public float RedactedFloor { get; set; }
         [LoadColumn(7)]
+        public string IsLastFloor { get; set; }
+
+        [LoadColumn(8)]
+        public string? FurnishedStatus { get; set; }
+        [LoadColumn(9)]
+        public string? RegisteredStatus { get; set; }
+
+        [LoadColumn(10)]
         public string Location { get; set; }
     }
 }

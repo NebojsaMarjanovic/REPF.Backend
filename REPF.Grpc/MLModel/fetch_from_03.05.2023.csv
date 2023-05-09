@@ -1,0 +1,550 @@
+m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnished|registered|placeTitle
+95|district|1|180000|04/03/2023 13:20:57|2.5|5|True||yes|Skojevsko Naselje
+50|district|0|87000|03/17/2023 16:20:45|2|3|False||yes|Kanarevo Brdo
+96|district|2|180000|03/29/2023 13:22:32|3.5|3|False||yes|Vidikovac
+49|district|1|97000|11/22/2022 12:19:09|1.5|6|False||yes|Miljakovac
+42|electricity|0|88000|03/07/2023 15:15:24|1.5|4|False||yes|Kanarevo Brdo
+70|district|1|104900|03/13/2023 23:02:42|3|5|True|no|in_progress|Miljakovac II
+95|district|0|150000|03/30/2023 14:23:00|3.5|2|True||yes|Vidikovac
+72|district|1|140000|03/29/2023 20:21:45|2.5|0|False||yes|Vidikovac
+84|district|1|115000|10/17/2022 19:22:45|4|11|False|no|yes|Petlovo Brdo
+50|central|1|95000|11/14/2022 14:19:16|2|2|False||yes|Vidikovac
+71|district|0|154900|01/06/2023 14:15:32|3|3|False|no|yes|Miljakovac
+99|gas|0|120000|01/06/2023 14:15:36|2|2|True|no|yes|Petlovo Brdo
+32|central|0|67000|01/06/2023 14:15:43|1|-1|False|no|yes|Miljakovac
+45|district|0|99000|01/06/2023 14:15:50|2|1|False|no|yes|Labudovo Brdo
+66|central|0|119900|04/05/2023 16:22:17|2.5|-1|False||yes|Petlovo Brdo
+60|district|3|99000|10/10/2022 16:19:44|2|14|False||yes|Vidikovac
+103|district|1|159000|04/07/2023 20:06:52|4.5|4|False||yes|Vidikovac
+46|norwegianRadiators|0|117300|03/15/2023 16:21:46|2.5|0|False||yes|Kanarevo Brdo
+53|district|1|97000|03/25/2023 10:08:48|1.5|11|False||yes|Vidikovac
+37|district|0|74000|04/03/2023 19:06:33|1.5|0|False|no||Kanarevo Brdo
+64|district|1|138000|03/25/2023 10:08:56|2|2|False||yes|Vidikovac
+61|district|0|128100|04/21/2023 22:17:01|2.5|1|False|no|yes|Kanarevo Brdo
+22|district|0|56000|03/04/2023 14:10:46|1|-1|False|no|yes|Miljakovac
+75|central|0|135000|03/04/2023 14:05:33|2|3|True|||Rakovica
+45|district|0|99000|11/08/2022 15:18:15|2|1|False||yes|Labudovo Brdo
+85|district|0|99000|03/07/2023 13:21:26|3|3|True||no|Resnik
+46|central|0|73000|04/29/2023 15:25:04|1.5|-1|False||no|Vidikova��ka Pa
+92|district|0|113000|01/11/2023 15:24:56|3.5|3|True||yes|Resnik
+33|electricity|0|62000|04/20/2023 14:25:25|1.5|1|False||yes|Vidikova��ka Pa
+130|gas|0|142000|03/16/2023 17:21:43|3.5|-1|False||no|Petlovo Brdo
+36|central|0|54000|09/13/2022 16:20:34|2.5|4|True||no|Petlovo Brdo
+130|district|1|230000|04/07/2023 14:23:24|5|7|True||yes|Vidikovac
+74|district|1|163000|10/19/2022 13:18:37|3|3|False||yes|Skojevsko Naselje
+102|district|0|145000|08/04/2022 12:10:42|4.5|3|True|no||Labudovo Brdo
+46|central|0|88500|03/04/2023 10:28:35|2|4|True|yes|yes|Rakovica - Centar
+66|district|0|125000|02/06/2023 09:31:30|2|3|False|no||Vidikovac
+28|central|0|51000|05/02/2023 18:22:34|0.5|3|False||no|Labudovo Brdo
+92|district|1|180000|06/03/2022 18:04:57|3.5|1|False|no|yes|Stari Ko��ut
+105|district|1|168000|08/03/2022 17:30:49|4|5|False||yes|Vidikovac
+88|district|3|159000|03/03/2023 16:07:58|3.5|4|False||yes|Vidikovac
+96|district|1|175000|09/03/2022 14:17:07|4|0|False|no|yes|Vidikovac
+62|storageHeater|0|70000|12/03/2022 14:05:06|2.5|2|False||no|Rakovica
+49|electricity|0|46000|05/02/2023 13:35:42|2.5|3|True|no||Rakovica - Centar
+64|district|1|138000|11/14/2022 20:21:45|2|2|False|no|yes|Vidikovac
+128|district|1|230000|12/24/2022 11:26:57|4.5|7|True|no|yes|Vidikovac
+70|district|0|143000|02/01/2023 11:28:24|2.5|3|True|no|yes|Vidikovac
+61|central|0|140000|03/03/2023 00:18:26|3|3|True||yes|Kanarevo Brdo
+56|district|0|100800|03/02/2023 20:11:01|2|-1|False||yes|Miljakovac
+62|district|1|93000|11/02/2022 20:10:48|2.5|-1|False|no|yes|Miljakovac II
+72|gas|0|129900|08/02/2022 18:11:02|2.5|-1|False|no|yes|Petlovo Brdo
+104|central|0|100000|12/02/2022 14:10:16|4|-1|False|no||Kijevo
+60|district|1|110000|05/01/2023 14:11:37|2|4|False|no|yes|Miljakovac
+80|electricity|1|193000|12/02/2022 13:17:38|3|4|False||yes|Miljakovac
+92|district|1|210000|06/02/2022 12:49:34|3.5|1|False|yes|yes|Stari Ko��ut
+61|district|0|130000|02/09/2023 16:21:37|2|-1|False|no|yes|Miljakovac
+90|district|0|143900|08/31/2022 22:18:46|4|5|False|no|yes|Miljakovac
+25|central|0|43000|04/30/2023 19:38:01|0.5|4|True|yes||Vidikova��ka Pa
+48|central|0|84000|03/01/2023 19:19:30|1.5|-1|False||no|Petlovo Brdo
+70|district|1|140000|02/01/2023 19:16:08|2.5|0|False|yes|yes|Miljakovac
+50|district|0|112000|12/01/2022 18:10:19|2|2|False|yes|yes|Kanarevo Brdo
+90|gas|0|129900|10/01/2022 17:27:23|3|-1|False|yes|yes|Petlovo Brdo
+130|gas|0|142000|08/31/2022 17:20:21|3|-1|False|no|yes|Petlovo Brdo
+67|central|0|110000|03/31/2023 16:05:23|2.5|1|False|yes|yes|Miljakovac III
+111|central|0|89990|03/31/2022 15:10:17|3.5|0|False|no|yes|Petlovo Brdo
+46|district|0|86000|04/30/2023 15:01:31|2|0|False|no|yes|Kanarevo Brdo
+52|district|1|120000|10/31/2022 14:30:47|1.5|1|False||no|Vidikovac
+55|district|0|120000|02/01/2023 14:18:01|2|1|False|no|yes|Kanarevo Brdo
+95|district|0|150000|03/31/2023 14:17:10|4|2|True|no|yes|Vidikovac
+79|district|0|159000|03/20/2023 18:23:11|3|2|False|no|yes|Miljakovac
+121|central|0|120000|03/31/2023 07:07:23|3|0|False|no|yes|Resnik
+121|central|0|120000|03/31/2023 07:07:22|3|1|False|no|yes|Resnik
+61|storageHeater|0|82350|03/31/2023 07:07:20|2.5|-1|False|no|yes|Resnik
+33|central|0|55000|04/30/2023 01:22:01|1.5|1|False||no|Vidikova��ka Pa
+105|district|0|148000|06/30/2022 20:22:34|4.5|3|False|no|yes|Labudovo Brdo
+51|gas|0|80000|01/30/2023 20:15:15|1.5|1|False|no|yes|Petlovo Brdo
+43|district|1|104000|03/30/2023 20:07:13|1.5|4|False|no|yes|Miljakovac
+88|central|0|75000|10/30/2019 18:48:05|2.5|1|False||no|Vidikovac
+33|central|0|61900|11/30/2022 18:19:56|1.5|0|False|no||Vidikova��ka Pa
+69|district|1|140000|01/30/2023 18:15:23|2.5|-1|False|no|yes|Vidikovac
+41|central|0|63000|12/30/2022 17:28:02|1.5|2|False|no||Petlovo Brdo
+46|central|0|85000|02/28/2023 17:29:58|2|4|True|no|yes|Rakovica - Centar
+50|central|0|125000|04/29/2023 13:35:29|2|1|False|no|yes|Kanarevo Brdo
+61|district|1|109000|03/30/2023 13:30:24|3|0|False|no|yes|Petlovo Brdo
+84|district|0|215000|11/30/2022 13:30:26|4|2|True||yes|Skojevsko Naselje
+36|district|0|95000|02/27/2023 18:22:34|1|5|False|no||Vidikovac
+60|electricity|0|80000|03/10/2023 19:05:39|2|4|True||yes|Kne��
+61||1|110000|10/26/2022 18:05:25|2.5|14|False||yes|Vidikovac
+55||0|95000|04/24/2023 11:05:37|2|2|False|||Labudovo Brdo
+136||0|190000|03/10/2023 19:05:35|5|0|False|yes|in_progress|Rakovica
+43|central|0|95000|04/29/2023 01:20:50|2|3|False||yes|Miljakovac
+87|district|3|160000|04/12/2023 18:47:42|3.5|12|False||yes|Vidikovac
+89|district|1|185000|03/29/2023 20:24:58|4|4|False|no|yes|Skojevsko Naselje
+120|central|0|134000|03/29/2023 20:20:49|5|1|False|semi|yes|Petlovo Brdo
+35|central|0|65000|03/29/2023 20:17:22|1.5|2|False|yes|yes|Vidikova��ka Pa
+57|central|0|89000|03/29/2023 20:13:30|2.5|1|False|yes|yes|Vidikova��ka Pa
+67|district|1|109990|03/29/2023 20:11:22|3|5|True||no|Miljakovac
+305|central|1|325000|10/14/2022 15:24:41|3.5|6|True|no||Vidikovac
+59|district|1|139000|10/17/2022 13:22:51|2|8|False|no|yes|Skojevsko Naselje
+56||1|103900|04/28/2023 18:26:22|2|0|False||yes|Vidikovac
+54|district|0|120000|11/29/2022 18:18:28|2|2|False||yes|Kanarevo Brdo
+112|central|0|160000|11/07/2022 16:19:15|5|1|True|no|yes|Petlovo Brdo
+51|district|1|110000|03/29/2023 16:26:43|2|-1|False|no||Vidikovac
+64|district|0|79500|11/29/2022 16:10:53|2.5|-1|False|no|yes|Miljakovac II
+71|central|0|129000|01/29/2023 15:29:38|2.5|4|False|no||Vidikova��ka Pa
+54|district|1|120000|12/29/2022 15:27:50|1.5|1|False|no|yes|Vidikovac
+72|gas|0|129900|08/29/2022 15:30:41|3|-1|False||yes|Petlovo Brdo
+37|central|0|63500|03/29/2023 14:07:06|1.5|1|False|no||Kne��
+95|electricity|0|129000|12/29/2022 13:30:00|5|2|False|no|yes|Miljakovac
+46||0|117300|11/02/2022 20:22:56|2.5|0|False|yes|yes|Kanarevo Brdo
+84|district|0|159000|04/15/2023 16:22:07|2|0|False|no|yes|Labudovo Brdo
+35|electricity|0|58000|04/28/2023 01:21:40|1.5|3|False||no|Vidikovac
+130|central|0|180000|07/28/2022 19:05:12|3.5|4|True||no|Petlovo Brdo
+102|electricity|0|85000|11/28/2020 18:49:55|3|-1|False||no|Rakovica
+129|central|0|200000|12/28/2022 18:36:09|4|-1|False||yes|Rakovica
+54|district|0|119000|12/28/2022 18:36:04|2.5|1|False||no|Skojevsko Naselje
+39|electricity|0|78000|03/28/2023 18:06:13|1.5|2|False||yes|Kanarevo Brdo
+70|district|1|104900|03/28/2023 17:30:00|2.5|5|True|no||Miljakovac II
+37|gas|1|102000|03/28/2023 16:26:51|2|-1|False|no|yes|Vidikovac
+53|district|1|106900|12/28/2022 16:15:21|2|1|False|no|yes|Miljakovac II
+50|district|0|85000|04/27/2023 15:33:07|2|3|False|no|yes|Petlovo Brdo
+70|district|1|104900|04/27/2023 15:33:06|2.5|4|True|no||Miljakovac
+77|electricity|0|135000|12/28/2022 14:16:28|2|2|True|no||Rakovica - Centar
+23|central|0|50000|04/27/2023 14:24:50|0.5|-1|False||yes|Kne��
+37|district|1|99000|03/28/2023 13:31:24|1|3|False|no|yes|Skojevsko Naselje
+88|district|0|115000|03/28/2023 13:31:23|3|3|False|no|yes|Resnik
+300|gas|1|620000|04/27/2023 12:07:41|4|7|True|no||Vidikovac
+72|electricity|0|135000|03/03/2023 16:21:40|3|3|True|no||Rakovica - Centar
+96|district|1|174000|01/28/2023 11:29:58|3.5|0|False|no|yes|Vidikovac
+77|district|1|165000|11/21/2022 15:18:44|3|4|False||yes|Miljakovac II
+79|district|0|158000|12/08/2022 09:18:28|3|1|False||yes|Miljakovac
+91|district|1|200000|08/28/2022 11:00:15|3.5|5|False||yes|Stari Ko��ut
+59|district|1|115000|04/20/2023 10:36:10|2.5|4|False|no|yes|Labudovo Brdo
+57|central|0|89000|04/25/2023 14:14:51|2.5|1|False|no|yes|Vidikova��ka Pa
+120|gas|0|134000|04/25/2023 14:55:00|3|1|False|yes|yes|Petlovo Brdo
+89|district|1|170000|02/27/2023 20:15:53|3|7|False|no|yes|Vidikovac
+75|electricity|0|165000|03/27/2023 19:34:13|2.5|1|False|no|yes|Rakovica - Centar
+72|gas|0|129900|07/27/2022 18:27:04|3|-1|False|no|yes|Petlovo Brdo
+57|norwegianRadiators|0|117000|03/27/2023 18:05:24|2.5|1|False|yes|yes|Kanarevo Brdo
+42|district|1|94000|04/26/2023 17:37:37|1|0|False|no|yes|Skojevsko Naselje
+35|district|0|65990|03/27/2023 16:14:42|1|4|True|yes|in_progress|Miljakovac I
+54||0|119000|04/10/2023 20:05:36|2|1|False||in_progress|Rakovica
+63|central|1|140000|03/27/2023 15:31:15|2.5|8|False|no|yes|Vidikovac
+41|central|0|61000|12/06/2022 16:31:05|2|-1|False||yes|Petlovo Brdo
+48|storageHeater|0|91000|03/27/2023 15:23:46|2.5|1|False||yes|Vidikovac
+98|district|1|159000|02/20/2023 12:27:37|3.5|4|False|no||Vidikovac
+41|central|0|122500|08/27/2022 14:30:46|2.5|0|False||yes|Skojevsko Naselje
+32|district|0|61000|03/27/2023 14:29:47|1|0|False|no|yes|Petlovo Brdo
+73|district|0|130000|03/22/2021 13:55:33|3|-1|False||no|Petlovo Brdo
+62||1|93000|10/27/2022 12:05:11|2.5|0|False|no|yes|Miljakovac II
+37|gas|1|102000|03/24/2023 14:21:57|2|-1|False|no||Vidikovac
+34|district|1|78000|12/27/2022 11:41:52|1|8|False|no|yes|Miljakovac
+89|district|1|155000|11/01/2022 20:22:53|3|5|True|no|yes|Miljakovac
+30|district|1|56000|01/06/2023 11:28:46|1|-1|False|no|yes|Miljakovac
+81|central|0|140000|04/26/2023 09:35:38|3|-1|False|no|yes|Vidikovac
+95|district|1|180000|10/27/2018 00:56:08|5|5|True||yes|Rakovica
+230|gas|0|114000|10/27/2018 00:48:47|5|2|True||no|Petlovo Brdo
+72|district|0|160000|01/27/2023 00:17:39|3|1|False|no|yes|Miljakovac
+70|central|0|135000|04/25/2023 23:16:14|3|8|False|no|yes|Vidikovac
+34|district|0|67000|12/23/2022 18:24:40|0.5|0|False|no|yes|Rakovica - Centar
+35||1|56000|04/25/2023 11:34:19|1.5|1|False|no||Kne��
+30|district|0|56000|09/26/2022 17:28:03|1.5|-1|False|no|yes|Miljakovac
+46|central|0|85000|04/25/2023 15:36:43|2|4|True|no|yes|Rakovica - Centar
+89|district|1|168000|01/26/2023 15:30:02|3|8|False|no|yes|Vidikovac
+56|central|0|110000|12/26/2022 15:26:15|2.5|2|False|no|yes|Rakovica - Centar
+30|district|0|56000|09/26/2022 14:36:33|1.5|-1|False||yes|Miljakovac
+62||0|90000|10/26/2022 14:10:13|2.5|-1|False|no||Stari Ko��ut
+59|district|1|115000|12/07/2022 22:25:02|2.5|4|False|no||Labudovo Brdo
+92|district|0|185000|04/25/2023 13:38:05|3.5|3|False|no|yes|Stari Ko��ut
+84||1|120000|03/26/2023 13:20:48|3|5|False||yes|Miljakovac
+54|district|1|97800|02/08/2023 00:19:05|2|5|False||yes|Rakovica
+74|district|0|162000|12/26/2022 12:16:23|3|3|False|no|yes|Skojevsko Naselje
+97|district|1|170000|07/18/2022 10:20:33|3|5|False|no|yes|Vidikovac
+61|gas|0|82900|09/26/2022 10:20:26|2.5|4|True|no|yes|Petlovo Brdo
+70|district|1|104900|03/26/2023 01:21:37|3|5|True||no|Miljakovac
+90|gas|0|129900|08/26/2022 00:16:18|2|-1|False||yes|Petlovo Brdo
+54|district|0|130000|04/25/2023 00:08:00|2|-1|False|no||Vidikovac
+28||0|68000|03/25/2023 23:21:23|1.5|0|False|yes|yes|Skojevsko Naselje
+75|central|0|79000|10/27/2022 13:24:30|4|4|False|no|yes|Labudovo Brdo
+54|gas|0|93000|02/10/2023 01:05:25|2|3|False|no|yes|Petlovo Brdo
+60|district|1|93000|10/25/2022 21:18:16|2.5|0|False||yes|Miljakovac
+78|district|0|180000|01/25/2023 20:15:17|3|4|False|no|yes|Kanarevo Brdo
+200|electricity|0|150000|08/25/2022 19:16:19|3|1|False||no|Petlovo Brdo
+58|electricity|0|76800|04/24/2023 19:21:20|2.5|4|False||no|Vidikovac
+22|district|0|43000|02/25/2023 18:19:32|0.5|1|False||no|Petlovo Brdo
+34|electricity|0|66000|04/24/2023 17:26:23|0.5|-1|False|no||Miljakovac
+41|district|1|105000|03/25/2023 16:25:45|1|3|False|no||Skojevsko Naselje
+43|district|1|104000|03/25/2023 15:06:02|3|4|False|yes|yes|Miljakovac
+84|district|1|160000|04/24/2023 14:10:14|3.5|6|False|no|yes|Vidikovac
+69|norwegianRadiators|1|128000|02/25/2023 13:30:43|2.5|9|True|no|yes|Labudovo Brdo
+140|central|0|160000|08/02/2022 18:23:39|5|2|True|no||Vidikovac
+37|gas|1|102000|03/25/2023 11:20:20|2|-1|False||no|Vidikovac
+79|district|0|160000|03/25/2023 10:09:30|3|1|False||yes|Miljakovac I
+64|district|1|92000|03/25/2023 10:09:11|2.5|8|False||yes|Labudovo Brdo
+77|district|1|162000|03/25/2023 10:09:08|3|4|False||yes|Miljakovac
+113|district|1|175000|03/25/2023 10:08:53|4.5|6|False||yes|Kanarevo Brdo
+56|electricity|0|92400|03/25/2023 10:08:11|2|-1|False||yes|Vidikovac
+39|central|1|80000|03/25/2023 10:07:44|1.5|5|True||yes|Labudovo Brdo
+200|underfloor|1|199000|03/25/2023 10:07:14|2|1|False||yes|Petlovo Brdo
+95|district|1|130000|03/25/2023 10:07:12|3.5|6|True||yes|Miljakovac
+110|central|0|130000|03/25/2023 10:06:25|4|4|True||no|Kanarevo Brdo
+88|district|1|115000|03/25/2023 10:06:23|3|5|False||yes|Miljakovac II
+90|district|1|180000|03/24/2023 21:27:09|5|5|False|no|yes|Rakovica - Centar
+61|district|0|130000|02/24/2023 20:28:58|2|-1|False|no|yes|Miljakovac
+49||1|102000|03/24/2023 20:13:09|2|-1|False||no|Vidikovac
+89|district|1|185000|04/23/2023 20:11:43|4|4|False|no|yes|Skojevsko Naselje
+130|district|1|230000|01/24/2023 19:37:51|5|7|True|yes|yes|Vidikovac
+35|district|1|78000|02/24/2023 19:06:36|1|8|False||yes|Miljakovac
+37|central|0|65000|04/23/2023 18:34:32|1.5|1|False|no||Vidikova��ka Pa
+30|central|0|50000|02/24/2023 18:05:55|1|2|False|no||Kne��
+39|district|1|104000|03/24/2023 17:32:47|1.5|4|False|no|yes|Miljakovac II
+41|district|1|100000|03/24/2023 17:30:24|1|3|False|no|yes|Skojevsko Naselje
+75|district|1|230000|01/24/2023 17:30:26|5|7|True|no|yes|Vidikovac
+65|district|0|78|03/25/2023 11:29:33|2|0|False|no|in_progress|Petlovo Brdo
+87|district|1|180000|08/24/2022 16:17:00|4|8|False|no|yes|Vidikovac
+88|district|1|115000|12/24/2022 16:17:36|3|5|True|no|yes|Miljakovac
+41|central|0|82200|11/24/2022 16:10:42|2|0|False|no||Kne��
+37|central|0|73800|11/24/2022 16:10:42|1.5|0|False|no||Rakovica - Centar
+37|central|0|73800|11/24/2022 16:10:42|1.5|0|False|no||Kne��
+37|central|0|73800|11/24/2022 16:10:42|1.5|2|True|no||Kne��
+41|central|0|82200|11/24/2022 16:10:42|2|2|True|no||Kne��
+37|central|0|73800|11/24/2022 16:10:42|1.5|2|True|no||Kne��
+92||1|298000|03/24/2023 15:15:36|3.5|0|False|||Stari Ko��ut
+37|gas|0|102000|03/24/2023 15:03:04|1.5|-1|False|no|yes|Vidikovac
+72|gas|0|129900|01/24/2023 13:29:28|3|-1|False|no|yes|Petlovo Brdo
+88|district|1|115000|12/24/2022 13:30:33|3|5|True|no|yes|Miljakovac II
+47|central|0|101000|09/24/2022 13:25:48|1|2|False|no|yes|Skojevsko Naselje
+82|central|0|99900|03/24/2023 13:15:01|3|2|False||yes|Rakovica - Centar
+134|district|0|235000|11/24/2022 12:20:54|4|3|False|no|yes|Stari Ko��ut
+33|electricity|0|66000|03/24/2023 12:06:12|1|1|False|no|yes|Vidikova��ka Pa
+30|central|0|50000|04/22/2023 21:00:08|1.5|3|False|no|in_progress|Rakovica - Centar
+72|electricity|0|135000|01/23/2023 19:40:10|2|2|True||no|Rakovica - Centar
+77|district|1|162500|11/23/2022 16:19:08|3|4|False|no|yes|Miljakovac
+77|district|1|162000|11/23/2022 16:18:39|3|4|False|no|yes|Miljakovac II
+36|district|0|63000|01/23/2023 15:59:34|1.5|-1|False|no|yes|Miljakovac I
+65|central|0|128000|04/22/2023 14:07:42|3|-1|False|no||Miljakovac III
+65|central|0|128000|04/22/2023 14:07:42|3|2|False|no||Miljakovac III
+76|gas|0|153000|02/23/2022 13:09:32|3|-1|False||yes|Petlovo Brdo
+61|electricity|0|103000|01/23/2023 12:20:22|2.5|1|False|no|yes|Petlovo Brdo
+34|district|1|79000|12/15/2022 18:20:07|1.5|8|False|no|yes|Miljakovac
+36||0|69000|02/23/2023 08:29:26|1|5|True|yes||Miljakovac I
+54|district|0|97000|02/23/2023 01:07:21|2.5|4|True|no|yes|Miljakovac
+129|central|0|195000|08/22/2022 23:21:27|4|-1|False|no|yes|Kanarevo Brdo
+92|district|1|190000|03/22/2023 20:11:11|3.5|3|False||yes|Stari Ko��ut
+92|district|1|298000|02/22/2023 19:25:30|4|2|False|no|yes|Stari Ko��ut
+61||0|98000|12/22/2022 19:25:38|3|1|True|no||Petlovo Brdo
+115|district|2|180000|07/22/2022 18:30:58|5|8|False||yes|Vidikovac
+78|district|0|154900|07/22/2022 18:11:17|3|3|False|no|yes|Miljakovac
+75|district|1|119000|09/22/2022 17:05:40|3.5|9|False||yes|Skojevsko Naselje
+39|district|1|79000|12/05/2022 20:14:08|1|5|False|no|yes|Miljakovac II
+92|district|1|185000|08/22/2022 15:30:34|3.5|3|False||yes|Stari Ko��ut
+64|central|0|70000|01/22/2023 13:30:54|3|4|True|no|yes|Kanarevo Brdo
+101|central|0|140000|04/21/2023 13:33:06|3|3|False||yes|Vidikova��ka Pa
+90|district|0|165000|07/22/2022 13:17:07|4|3|True||yes|Labudovo Brdo
+48|central|3|100000|02/01/2022 11:25:28|2|14|False|no|yes|Vidikovac
+75|district|1|119000|04/21/2023 10:22:55|3.5|10|False|no|yes|Skojevsko Naselje
+72|electricity|0|135000|12/22/2022 09:27:09|2|2|True|||Rakovica
+71|district|1|118000|04/20/2023 22:08:28|3|-1|False|no|yes|Miljakovac
+105||0|145990|02/21/2022 20:08:00|4.5|3|False||yes|Labudovo Brdo
+120||0|119990|02/21/2022 20:08:00|4.5|3|False||yes|Labudovo Brdo
+51|district|1|102000|04/20/2023 19:47:22|1.5|0|False|no|yes|Vidikovac
+46|central|0|88500|03/20/2023 12:21:41|2|4|True||yes|Rakovica
+62|electricity|0|90200|03/21/2023 18:19:36|2.5|4|True||yes|Rakovica
+35|district|0|70000|03/21/2023 18:15:18|1.5|-1|False|no||Skojevsko Naselje
+96||1|280000|04/20/2023 18:07:00|4|3|True|no|yes|Stari Ko��ut
+28|district|0|50000|03/21/2023 17:21:21|1.5|-3|False|no|yes|Miljakovac I
+36|district|0|50000|01/21/2023 16:15:49|2|1|True|no|yes|Kanarevo Brdo
+95|district|1|180000|03/21/2023 16:06:20|3|5|True|no|yes|Skojevsko Naselje
+101|central|0|140000|04/20/2023 15:33:04|3|3|False|no|yes|Vidikova��ka Pa
+88|district|1|115000|12/21/2022 15:28:20|3|5|False|no|yes|Miljakovac II
+120|gas|0|134000|01/11/2023 16:16:24|5|1|False|no|yes|Petlovo Brdo
+51|district|1|105000|04/20/2023 13:36:33|1.5|0|False|no|yes|Vidikovac
+72|gas|0|129900|08/21/2022 13:20:56|2.5|-1|False|no|yes|Petlovo Brdo
+95|district|3|160000|03/21/2023 12:27:54|3.5|6|False||yes|Vidikovac
+67|central|1|95000|03/21/2023 12:26:53|2.5|9|True|no|yes|Vidikovac
+92|district|3|160000|03/21/2023 12:19:25|3|6|False|no|yes|Vidikovac
+25|none|0|27000|04/19/2023 22:07:09|0.5|-3|False|no|no|Petlovo Brdo
+51|district|1|106500|04/19/2023 21:33:31|1.5|0|False|no|yes|Vidikovac
+56|gas|0|129900|07/20/2022 21:21:26|3|-1|False|yes|yes|Petlovo Brdo
+77|district|2|139000|01/20/2023 19:42:41|3.5|13|False||yes|Vidikovac
+115|district|0|115000|01/20/2023 19:32:53|4|3|False|no|yes|Resnik
+36|central|0|55000|10/20/2022 18:16:51|1|3|True||no|Kne��
+41|district|1|98400|02/20/2023 18:12:57|1|-1|False|no|yes|Skojevsko Naselje
+82|central|0|100000|02/20/2023 17:08:31|3|2|True||yes|Vidikovac
+120|gas|0|134000|02/07/2023 19:01:06|5|1|False|yes|yes|Petlovo Brdo
+56|central|0|89600|06/29/2022 19:21:53|1.5|-3|False|no|yes|Vidikovac
+54|district|1|97000|08/16/2022 15:19:05|1.5|6|False|no|yes|Miljakovac
+64|district|1|140000|11/12/2022 17:20:09|2|2|False|no|yes|Vidikovac
+100|district|0|200000|04/03/2023 16:27:32|2.5|3|False|no|yes|Vidikovac
+48|central|1|97000|04/19/2023 15:33:45|1.5|3|False|no||Skojevsko Naselje
+65|district|0|119000|08/20/2022 15:17:50|3|10|True||yes|Skojevsko Naselje
+35|norwegianRadiators|1|50000|02/20/2023 15:06:19|1.5|1|False||yes|Kne��
+60|electricity|0|50000|07/20/2022 14:30:34|2|1|False||no|Vidikovac
+58|central|0|104400|10/20/2022 12:19:01|3|2|False|yes|yes|Rakovica - Centar
+305|central|1|324990|03/20/2023 12:19:00|4|7|True||no|Vidikovac
+30|district|1|55000|01/20/2023 11:37:20|1|-1|False||yes|Miljakovac I
+70|district|0|114900|04/19/2023 10:26:17|3|5|True|no||Miljakovac II
+37|district|1|99900|02/20/2023 10:19:08|1|4|False|no|yes|Vidikovac
+51|district|1|105000|04/18/2023 17:06:15|1.5|0|False||yes|Vidikovac
+92|district|1|155000|10/19/2022 16:25:27|3.5|10|False|no|yes|Kanarevo Brdo
+54|district|1|120000|01/19/2023 15:30:13|1.5|1|False|no|yes|Vidikovac
+78|district|0|180000|11/19/2021 15:27:25|3|4|False|no|yes|Kanarevo Brdo
+72|gas|0|129900|07/19/2022 14:12:35|3|-1|False|no|yes|Petlovo Brdo
+53|district|1|93000|04/18/2023 13:35:00|2|-1|False|no|yes|Miljakovac II
+45|district|0|85990|04/18/2023 13:22:54|1.5|1|False|no|yes|Miljakovac
+42|central|0|84000|12/19/2022 12:23:45|2|1|False|semi||Vidikova��ka Pa
+75|central|0|135000|12/19/2022 11:25:28|2|2|True|no|yes|Rakovica - Centar
+84|district|0|215000|01/19/2023 10:39:35|4|2|True|semi|yes|Skojevsko Naselje
+84|district|0|102000|04/18/2023 10:36:13|3.5|3|False|no|yes|Resnik
+70|central|0|85000|04/18/2023 10:36:10|3|2|True|||Vidikovac
+22||0|55000|04/18/2023 10:36:09|1|-1|False|no|yes|Miljakovac
+30|electricity|0|71500|04/18/2023 10:36:09|1.5|4|True|no||Petlovo Brdo
+67|district|0|119900|01/18/2023 22:18:18|3|7|False||yes|Labudovo Brdo
+72|gas|0|129900|07/18/2022 21:19:23|2.5|-1|False|yes|yes|Petlovo Brdo
+46|district|0|90000|03/18/2023 20:06:38|2|0|False|no|yes|Kanarevo Brdo
+110|central|0|139000|08/03/2022 09:25:30|4|2|True|no|yes|Rakovica
+68|electricity|0|90000|10/18/2021 19:19:33|2.5|2|True||yes|Rakovica
+88|district|0|109000|04/17/2023 19:19:31|5|3|False||yes|Resnik
+41|district|1|92400|02/18/2023 18:11:04|1|-1|False|no|yes|Skojevsko Naselje
+305|central|1|325000|11/18/2022 17:48:55|3.5|6|True||yes|Vidikovac
+60|airConditioning|0|72000|01/18/2023 16:10:48|3|0|False||yes|Vidikovac
+60|district|0|110000|01/18/2023 13:29:46|2|5|True|no||Miljakovac
+30|district|0|64000|01/18/2023 10:18:31|0.5|1|False|no|yes|Labudovo Brdo
+64|central|0|70000|11/18/2022 09:18:23|2|4|True||yes|Kanarevo Brdo
+52|district|1|97000|10/17/2022 18:10:35|1.5|11|True|no|yes|Vidikovac
+56|district|0|100800|03/17/2023 17:31:31|2|-1|False|no|yes|Miljakovac
+30|storageHeater|0|59700|03/17/2023 15:26:42|1|3|False|no||Kne��
+107|central|0|205000|03/17/2023 14:15:07|3|4|False|yes|partially|Miljakovac
+43|central|0|95000|03/17/2023 13:29:17|2|3|False|no|yes|Miljakovac
+64|storageHeater|0|70000|11/17/2022 13:29:02|3|4|True|no|yes|Kanarevo Brdo
+41|district|1|92400|03/17/2023 12:14:25|1|-1|False||yes|Skojevsko Naselje
+116|gas|0|148000|09/17/2022 12:10:52|5|1|True|no||Petlovo Brdo
+110|electricity|0|160000|03/17/2022 01:11:55|3.5|100|False||yes|Kanarevo Brdo
+70|gas|0|78000|02/17/2022 00:42:37|3|100|False||no|Petlovo Brdo
+92|district|0|185000|03/16/2023 19:31:53|3.5|3|False|no|yes|Stari Ko��ut
+37|central|0|52000|05/16/2022 19:18:39|1.5|3|True||no|Kne��
+46||1|117300|03/16/2023 19:11:12|2.5|0|False||yes|Kanarevo Brdo
+29|electricity|0|65000|01/16/2023 18:23:50|1|2|False||no|Rakovica
+88|district|1|150000|01/16/2023 18:18:03|3|7|False|no|yes|Vidikovac
+34|district|1|79000|12/16/2022 18:12:22|1|8|False|no|yes|Miljakovac
+77||1|193000|12/16/2022 16:12:33|3|4|False|no|yes|Miljakovac
+100|electricity|0|100000|05/16/2022 15:43:40|3|1|False|no|yes|Rakovica - Centar
+53|electricity|0|85000|02/16/2023 14:08:20|2.5|-1|False||yes|Petlovo Brdo
+50|district|0|87000|03/16/2023 14:06:52|2|3|False|no|yes|Kanarevo Brdo
+70|norwegianRadiators|0|60000|06/16/2022 12:52:16|3|-1|False||no|Kne��
+104|district|1|168000|01/16/2023 12:24:26|3|5|False||yes|Vidikovac
+36|district|0|50000|02/16/2023 12:18:24|1.5|1|False||yes|Kanarevo Brdo
+71|gas|0|82000|02/16/2023 12:17:17|3.5|3|True||no|Labudovo Brdo
+38|district|2|82000|04/14/2023 20:59:47|1.5|0|False|no|yes|Kanarevo Brdo
+43|electricity|0|49500|03/15/2023 20:07:26|1.5|-2|False|no|yes|Rakovica - Centar
+68|central|0|71900|02/15/2023 19:32:18|2.5|5|True|no||Petlovo Brdo
+50|district|1|105000|12/15/2022 19:31:11|2|1|False||yes|Kanarevo Brdo
+129|central|0|195000|09/15/2022 19:35:04|5|-1|False||yes|Kanarevo Brdo
+79|district|0|160000|12/15/2022 18:25:59|3|1|False|no|yes|Miljakovac
+35|district|0|76500|12/15/2022 18:17:57|2|3|True||yes|Skojevsko Naselje
+94||0|147000|12/15/2022 18:12:33|3.5|3|True|no|yes|Miljakovac III
+46||0|117000|03/15/2023 16:11:28|2.5|0|False|no|yes|Kanarevo Brdo
+56|district|0|100800|03/15/2023 16:11:27|2|-1|False|no|yes|Miljakovac
+55|electricity|0|102000|03/15/2023 16:08:37|2|1|True||yes|Petlovo Brdo
+66|district|1|135000|02/15/2023 15:28:07|2|3|False|no|yes|Vidikovac
+80|district|0|142000|03/15/2023 14:33:17|3|2|False|no|yes|Vidikovac
+115|district|0|99900|08/15/2022 14:30:10|4|3|False||yes|Resnik
+48|electricity|0|91000|03/15/2023 14:06:50|2.5|1|False||yes|Vidikovac
+44|central|0|74900|02/15/2023 14:05:21|2|4|True||yes|Kne��
+42|electricity|0|60900|02/15/2023 12:07:34|1.5|0|False|no|yes|Petlovo Brdo
+38|central|0|75000|03/15/2023 11:47:47|2|2|True|yes|yes|Miljakovac III
+69|electricity|0|115000|11/15/2022 00:16:52|2.5|3|True||no|Rakovica
+78|central|0|75000|11/15/2022 00:15:54|4|5|True||no|Vidikovac
+80|district|0|155000|04/14/2022 18:50:01|3|2|False||yes|Vidikovac
+145|district|0|135000|02/14/2022 18:43:40|5|-1|False||yes|Miljakovac
+48|central|0|69000|03/14/2023 17:32:23|1|1|False|no||Vidikova��ka Pa
+64|district|1|138000|11/14/2022 16:27:05|2|2|False|no|yes|Vidikovac
+43|district|1|86500|02/14/2023 15:23:30|1|1|False|no|yes|Kanarevo Brdo
+36|district|0|71900|01/14/2023 14:19:51|1|1|False|no|yes|Miljakovac
+300|gas|1|620000|04/13/2023 13:06:34|4|7|True|yes|in_progress|Vidikovac
+90|storageHeater|0|85000|04/13/2023 12:58:26|3|4|True|no|yes|Kanarevo Brdo
+60|district|0|80000|04/13/2023 12:23:35|1.5|-1|False|no||Kanarevo Brdo
+33|central|0|68000|04/13/2023 11:27:37|1.5|3|False|yes|yes|Kne��
+99|central|0|100000|02/14/2019 00:45:47|4|1|False||yes|Vidikovac
+42|district|1|104000|03/14/2023 00:19:44|2|4|False||yes|Miljakovac
+61|district|0|130000|02/13/2023 23:26:50|2|-1|False|no|yes|Miljakovac
+62|storageHeater|0|105000|02/13/2023 23:26:48|2|0|False|no|yes|Kanarevo Brdo
+40|district|1|72000|02/13/2023 19:28:12|1.5|5|False|no|yes|Miljakovac II
+44|central|0|85000|11/13/2022 19:26:29|1.5|4|True|semi||Vidikova��ka Pa
+46|norwegianRadiators|0|117000|03/13/2023 19:18:51|2.5|0|False||yes|Kanarevo Brdo
+43|central|0|49500|03/13/2023 17:24:00|1.5|-3|False|no|yes|Miljakovac
+109|gas|1|325000|02/04/2022 16:19:42|4|7|True|no|yes|Vidikovac
+67|district|0|122900|12/13/2022 16:22:19|2.5|2|False|no|yes|Kanarevo Brdo
+50|district|1|125000|12/13/2022 14:12:31|1.5|2|False|no|yes|Skojevsko Naselje
+74|district|2|142000|02/13/2023 14:12:38|2.5|2|False|no|yes|Kanarevo Brdo
+116|gas|0|138000|09/13/2022 11:27:06|5|1|False|no|yes|Petlovo Brdo
+61|central|0|105000|04/12/2023 11:30:41|2.5|1|False|no||Petlovo Brdo
+67|district|2|153000|12/23/2022 10:23:44|3|-1|False||no|Vidikovac
+84|district|0|159000|04/10/2023 17:22:45|2|0|False||yes|Labudovo Brdo
+71|district|1|195000|04/12/2023 07:12:33|3|3|False|yes|yes|Vidikovac
+32|central|0|55000|04/12/2023 00:25:34|1.5|-1|False|no|yes|Petlovo Brdo
+51|central|0|90000|04/12/2023 00:05:16|1.5|2|False||no|Kne��
+30|district|1|56000|01/12/2023 19:34:23|1|-1|False||yes|Miljakovac
+64|district|1|140000|11/12/2022 16:20:36|2.5|2|False|no|yes|Vidikovac
+97|district|1|168000|04/11/2023 15:34:34|3|5|False|no|yes|Vidikovac
+81|electricity|0|140000|04/06/2023 17:52:58|4|4|True|no|yes|Kanarevo Brdo
+134|district|0|235000|03/08/2023 17:57:24|4|3|False|yes|yes|Stari Ko��ut
+74|district|1|230000|04/11/2023 12:12:52|5|7|True|no|yes|Vidikovac
+65|district|1|119000|08/22/2022 11:22:52|3|10|True|no|yes|Skojevsko Naselje
+71|district|1|175000|04/11/2023 07:10:10|3|3|False|yes|yes|Vidikovac
+88|district|1|159000|04/10/2023 19:08:27|3.5|4|False||no|Skojevsko Naselje
+45|district|0|99000|04/10/2023 18:08:17|2|-1|False||yes|Vidikovac
+81|central|0|80000|04/10/2023 17:33:41|4|2|True|no|yes|Resnik
+76|central|0|130000|01/11/2023 17:29:57|3|1|False|no|yes|Petlovo Brdo
+58|gas|0|90000|01/11/2023 16:16:23|3|0|False|no|yes|Petlovo Brdo
+115|district|1|180000|01/11/2023 16:16:19|5|8|False|no|yes|Vidikovac
+67|central|1|95000|01/11/2023 16:16:18|2.5|9|True|no|yes|Vidikovac
+59|district|1|150000|04/10/2023 16:09:25|2.5|2|False||yes|Vidikovac
+33|central|0|68000|04/10/2023 15:57:22|1|3|False|yes|yes|Labudovo Brdo
+62||0|130000|04/10/2023 15:27:32|2.5|0|False||yes|Miljakovac
+74|district|1|162000|10/11/2022 14:19:25|3|3|False|no|yes|Skojevsko Naselje
+37|electricity|0|54999|02/11/2023 12:18:31|1.5|0|False||no|Labudovo Brdo
+72|electricity|0|139000|03/11/2023 11:48:30|2|2|True|no|yes|Rakovica
+110|gas|1|325000|04/11/2022 11:02:49|4|7|True|no|yes|Vidikovac
+74|district|1|145000|08/10/2022 20:30:52|4|7|True||yes|Miljakovac
+30|electricity|0|59700|02/10/2023 19:19:06|1|3|False||no|Vidikova��ka Pa
+95|central|0|120000|07/10/2021 12:52:29|5|2|True||yes|Miljakovac
+130|district|1|230000|01/10/2023 11:30:29|5|7|True|yes|yes|Vidikovac
+30|electricity|0|59000|04/08/2023 22:11:09|1.5|3|False|no||Rakovica - Centar
+29|central|0|56900|04/08/2023 22:11:09|1.5|4|True|no||Rakovica - Centar
+66|district|1|150000|04/08/2023 16:07:15|2.5|2|False|no|yes|Vidikovac
+43|central|0|95000|03/09/2023 14:25:38|1.5|3|False|no|yes|Miljakovac I
+100|district|1|200000|04/08/2023 14:11:52|3|3|False||yes|Vidikovac
+28|central|0|58000|03/09/2023 14:06:49|1.5|3|True|no|yes|Rakovica - Centar
+46|district|0|73000|12/09/2021 14:00:24|2.5|5|False||yes|Miljakovac
+88|district|1|115000|02/09/2023 01:17:28|3|5|True||yes|Miljakovac
+74|district|1|125800|04/07/2023 20:06:31|3.5|0|False||yes|Labudovo Brdo
+76|central|0|123900|09/08/2022 18:12:40|4|1|True|no|yes|Kne��
+65|electricity|0|80000|03/08/2023 17:30:34|3|3|False|no||Labudovo Brdo
+102|district|0|145000|03/08/2023 17:30:30|4.5|3|False|no|yes|Labudovo Brdo
+56|district|0|109000|04/07/2023 15:33:06|2|3|False|no|yes|Kanarevo Brdo
+90|district|1|180000|02/08/2023 15:26:24|3|7|False|no|yes|Vidikovac
+61||0|114900|03/08/2023 15:22:25|2|1|False|no|yes|Vidikovac
+129|central|0|195000|03/08/2023 14:24:36|5|-2|False|no|yes|Kanarevo Brdo
+40|central|0|65000|04/07/2023 14:07:49|1.5|-1|False|no|yes|Rakovica - Centar
+40|central|0|65000|04/07/2023 14:07:49|1.5|-1|False|no|yes|Rakovica - Centar
+33|central|0|68000|04/07/2023 13:54:39|1|3|False|yes|yes|Labudovo Brdo
+73|district|1|128000|02/01/2023 11:35:18|2.5|-1|False|no|no|Vidikovac
+92|district|1|190000|04/07/2023 10:57:28|3.5|3|True|no|yes|Stari Ko��ut
+44|gas|1|93900|04/07/2023 09:29:13|1.5|2|False|no|yes|Kne��
+67|district|0|119000|04/03/2023 16:12:41|2.5|4|True|no|yes|Kanarevo Brdo
+49|electricity|0|98500|01/08/2023 00:15:54|2|2|False|no|yes|Kanarevo Brdo
+48|central|0|81000|03/08/2023 00:07:58|2|100|False|no|yes|Kne��
+56|district|0|84000|12/08/2022 00:00:10|2.5|-1|False||no|Miljakovac
+51|norwegianRadiators|0|110000|12/07/2022 20:25:56|2.5|2|True|no|yes|Rakovica
+75|district|1|230000|04/06/2023 19:38:30|5|7|True|no|yes|Vidikovac
+88|district|0|159000|02/07/2023 19:30:12|3.5|4|False|no|yes|Vidikovac
+29|central|0|56900|04/06/2023 15:40:56|1.5|4|True|no||Kne��
+86|gas|0|140000|04/07/2022 15:33:23|3|-1|False|no|yes|Petlovo Brdo
+50|district|0|87000|04/06/2023 13:33:05|2|3|False|no|yes|Kanarevo Brdo
+49|district|1|97900|12/07/2022 12:12:18|1.5|4|False|no|yes|Rakovica - Centar
+48|electricity|0|79000|12/07/2022 00:17:21|1|4|True||yes|Kne��
+30|district|0|56000|11/07/2022 00:17:05|1|-1|False||yes|Miljakovac
+51|gas|0|80000|08/06/2022 18:17:08|2|1|False||yes|Petlovo Brdo
+104|gas|0|120000|08/06/2022 18:17:05|3|2|True||yes|Petlovo Brdo
+30|district|0|56000|10/06/2022 15:32:46|1|-1|False|no|yes|Miljakovac
+86|district|1|168000|04/05/2023 15:32:22|4|5|False|no|yes|Vidikovac
+120|district|0|149000|12/06/2022 14:23:15|4|3|False|no|yes|Labudovo Brdo
+72|district|1|158000|01/06/2023 14:15:49|2.5|11|False|no|yes|Vidikovac
+92|district|1|168000|01/06/2023 14:15:43|3.5|10|False|no|yes|Vidikovac
+35|central|0|70000|03/06/2023 13:05:37|2|3|False|no|yes|Kne��
+43|central|0|95000|02/06/2023 13:10:08|2|3|False||yes|Miljakovac
+22|district|0|56000|01/06/2023 11:32:47|1|-1|False|no|yes|Miljakovac
+36|district|1|96000|02/06/2023 10:38:53|1|5|False|no|in_progress|Vidikovac
+60|district|0|123000|04/05/2023 00:05:15|2|0|False||yes|Miljakovac
+68|central|1|94998|08/05/2022 15:30:39|2.5|9|True||yes|Vidikovac
+114|central|0|137000|04/04/2023 14:07:43|4|-1|False|no|yes|Petlovo Brdo
+73|district|0|200000|04/04/2023 13:24:40|3|3|False|no|yes|Vidikovac
+157|district|1|360000|10/05/2022 13:10:54|5|7|True|semi|yes|Vidikovac
+45|central|0|77000|11/05/2020 00:50:43|1|4|True||no|Labudovo Brdo
+36|electricity|0|57600|04/04/2023 00:18:50|1.5|3|False||no|Kne��
+129|central|0|200000|07/04/2022 19:19:13|4|-3|False|no|yes|Kanarevo Brdo
+127|central|0|129011|09/04/2020 19:06:26|4|1|True|no|yes|Petlovo Brdo
+94|district|1|89000|07/04/2021 15:38:11|3.5|4|False|no||Labudovo Brdo
+68|district|2|135000|03/04/2023 15:07:15|2|5|False||yes|Vidikovac
+47|central|0|65000|01/03/2023 00:22:37|1.5|0|False||no|Kne��
+44|central|0|75000|03/02/2023 17:31:25|2|4|True|no|yes|Rakovica - Centar
+88|district|1|115000|01/02/2023 12:27:19|3|5|True|no|yes|Miljakovac
+71||1|96011|03/31/2022 22:07:19|2.5|9|False||no|Petlovo Brdo
+46|norwegianRadiators|0|110000|10/31/2022 15:25:50|2.5|0|False|yes|yes|Kanarevo Brdo
+130|gas|0|142000|08/31/2022 10:22:20|3|-1|False|no||Petlovo Brdo
+33|central|0|88500|03/01/2023 10:24:08|2|4|True|no|yes|Rakovica
+37|district|1|83000|12/31/2022 00:22:45|1.5|2|False||yes|Miljakovac
+54|district|0|112000|11/30/2022 17:24:56|2.5|2|False|no|yes|Kanarevo Brdo
+42||0|69900|01/30/2023 14:23:17|2.5|0|False|no||Kne��
+149|gas|0|142000|09/29/2022 20:10:50|4|-1|False|no||Petlovo Brdo
+92|district|1|298000|07/29/2022 18:24:05|4|2|False|no|yes|Stari Ko��ut
+84|district|0|148500|07/29/2022 12:25:29|3.5|3|True||yes|Vidikovac
+90|gas|0|129900|01/26/2023 14:32:56|3|-1|False|no|yes|Petlovo Brdo
+56|district|0|95000|02/25/2023 13:32:42|2|-1|False|no|yes|Miljakovac
+45|norwegianRadiators|0|45000|03/24/2023 19:19:22|1.5|-1|False||no|Kne��
+88|district|1|115000|12/24/2022 14:35:18|3|5|False||yes|Miljakovac
+59||1|125000|02/24/2023 14:06:33|2|5|False|no|yes|Skojevsko Naselje
+129|central|0|200000|08/23/2022 17:25:09|4|-3|False|no|yes|Kanarevo Brdo
+54|district|0|119000|12/23/2022 15:30:00|2|1|False|no||Rakovica - Centar
+33|central|0|61000|01/16/2023 18:32:25|1.5|0|False|no||Vidikova��ka Pa
+30|electricity|0|57000|02/16/2023 15:08:33|1.5|2|False||no|Kne��
+52|gas|0|85000|12/15/2022 21:22:34|2.5|2|False|no|yes|Petlovo Brdo
+64|district|1|138000|12/15/2022 16:25:50|2|2|False|no|yes|Vidikovac
+92|district|1|195000|03/15/2023 13:39:16|3.5|3|False|semi|yes|Stari Ko��ut
+36|district|0|63000|11/14/2022 22:24:10|1.5|-3|False|no|yes|Miljakovac
+62|electricity|0|105000|02/14/2023 18:08:40|2|0|False|no|yes|Kanarevo Brdo
+72|gas|0|129900|12/14/2022 12:11:05|3|-1|False|no|yes|Petlovo Brdo
+92|district|1|190000|07/11/2022 17:22:42|3.5|3|False|no|yes|Stari Ko��ut
+130|district|1|230000|01/10/2023 11:31:24|5|7|True|no|yes|Vidikovac
+111||0|180000|08/08/2022 15:21:13|4|5|False|yes||Skojevsko Naselje
+42||0|85000|12/06/2022 13:31:25|1.5|1|False||yes|Kne��
+77|district|1|162000|12/05/2022 20:31:13|3|4|False||yes|Miljakovac
+110|gas|1|325000|04/04/2022 14:53:37|4|7|True|no||Vidikovac
+72|gas|0|134900|02/01/2023 17:32:17|3|-1|False|no|yes|Petlovo Brdo
+33|storageHeater|0|66000|03/01/2023 13:41:23|1|1|False|yes|yes|Rakovica
+72|storageHeater|0|135000|11/14/2022 11:08:19|2|2|True|yes|in_progress|Rakovica - Centar
+32|electricity|0|58000|02/23/2023 18:20:13|1.5|1|False||no|Kne��
+45|central|1|104000|02/23/2023 18:20:05|1.5|-1|False||no|Vidikovac
+21|district|0|48000|02/18/2023 20:24:32|0.5|3|False||in_progress|Kanarevo Brdo
+92|district|1|190000|07/11/2022 17:22:42|3.5|3|False|no|yes|Stari Ko��ut
+130|district|1|230000|01/10/2023 11:31:24|5|7|True|no|yes|Vidikovac
+111||0|180000|08/08/2022 15:21:13|4|5|False|yes||Skojevsko Naselje
+42||0|85000|12/06/2022 13:31:25|1.5|1|False||yes|Kne��
+77|district|1|162000|12/05/2022 20:31:13|3|4|False||yes|Miljakovac
+110|gas|1|325000|04/04/2022 14:53:37|4|7|True|no||Vidikovac
+72|gas|0|134900|02/01/2023 17:32:17|3|-1|False|no|yes|Petlovo Brdo
+33|storageHeater|0|66000|03/01/2023 13:41:23|1|1|False|yes|yes|Rakovica
+72|storageHeater|0|135000|11/14/2022 11:08:19|2|2|True|yes|in_progress|Rakovica - Centar
+32|electricity|0|58000|02/23/2023 18:20:13|1.5|1|False||no|Kne��
+45|central|1|104000|02/23/2023 18:20:05|1.5|-1|False||no|Vidikovac
+21|district|0|48000|02/18/2023 20:24:32|0.5|3|False||in_progress|Kanarevo Brdo
+37|central|0|55500|01/22/2023 22:09:54|1.5|-2|False|no|in_progress|Petlovo Brdo
+40|electricity|0|80000|03/11/2022 20:21:48|1.5|5|True|no|yes|Labudovo Brdo
+130|district|2|230000|12/10/2022 19:27:55|5|7|True|yes|yes|Vidikovac
+59|district|0|103000|12/09/2022 15:41:48|2|0|False|yes|yes|Labudovo Brdo
+30|electricity|0|37000|12/05/2022 15:08:13|0.5|-1|False|no|no|Kne��
+71|district|1|122000|11/23/2022 13:57:25|3|0|False|no|yes|Miljakovac I
+43|central|0|95000|11/04/2022 16:25:07|1.5|3|False|no|yes|Miljakovac I
+52|district|0|115500|10/28/2022 09:56:10|2|3|False|no|in_progress|Vidikovac
+36|district|0|63000|10/25/2022 18:20:42|1.5|-1|False|no|yes|Miljakovac I
+84|district|0|100000|10/10/2022 11:33:12|3.5|3|False||yes|Resnik
+74|district|1|170000|10/03/2022 20:34:46|3|3|False||yes|Skojevsko Naselje
+55|district|1|117000|09/09/2022 12:42:37|2.5|0|False|no|yes|Skojevsko Naselje
+130|gas|0|142000|08/24/2022 07:50:15|4|-1|False|no|in_progress|Petlovo Brdo
+46|central|0|65000|04/15/2022 15:08:01|2|-3|False|semi|yes|Labudovo Brdo
+41|electricity|0|25000|11/10/2021 11:57:51|2.5|0|False|yes|no|Kijevo
+85|underfloor|0|99999|11/05/2020 12:08:15|3|0|False|semi|in_progress|Rakovica
+32|electricity|0|34999|02/17/2019 21:14:06|1|-1|False|no|in_progress|Rakovica - Centar
+45|storageHeater|0|49500|10/17/2018 11:51:32|1.5|1|True|no|in_progress|Stari Ko��ut

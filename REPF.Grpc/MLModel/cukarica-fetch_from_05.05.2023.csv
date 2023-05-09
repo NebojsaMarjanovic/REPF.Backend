@@ -1,0 +1,823 @@
+m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnished|registered|placeTitle
+65|district|1|115000|10/27/2022 15:18:11|1.5|-1|False||yes|Cerak Vinogradi
+62|gas|0|119000|04/07/2023 17:33:24|2.5|1|True|no|yes|Filmski Grad
+0||1|0|03/02/2023 07:32:40|0|0|False||in_progress|Čukarica
+70|district|1|189000|04/18/2023 10:26:26|2.5|5|False|semi|yes|Banovo Brdo
+296|gas|1|620000|05/04/2023 17:06:55|4|7|True||no|Cerak Vinogradi
+60|gas|0|170000|05/30/2022 13:29:34|2.5|2|True|no|yes|Golf Naselje
+94|district|0|150000|04/20/2023 18:06:55|3.5|6|True||yes|Banovo Brdo
+53|central|0|130000|03/29/2023 16:06:43|2|4|False||yes|Banovo Brdo
+38|airConditioning|0|59990|04/28/2023 22:01:09|2|-1|False|yes|yes|Železnik
+43|storageHeater|0|74000|04/09/2023 09:46:38|2|100|False|no|yes|Julino Brdo
+43|storageHeater|0|84000|04/09/2023 09:21:03|2|1|False|no|yes|Julino Brdo
+92|district|1|209900|10/31/2022 13:18:53|3.5|0|False||yes|Banovo Brdo
+73|district|1|148000|04/26/2023 19:38:09|2.5|2|False|no|yes|Cerak Vinogradi
+78||1|155000|04/21/2023 16:40:14|3|0|False||yes|Banovo Brdo
+69|district|1|177000|10/31/2022 11:18:57|2.5|1|False||yes|Banovo Brdo
+79|gas|0|123000|05/27/2021 15:55:32|3|2|True||yes|Cerak
+58|gas|0|101500|04/20/2023 19:24:18|2|2|False||yes|Bele Vode
+81|district|1|230000|02/03/2023 15:31:41|3|5|True|no|yes|Banovo Brdo
+47|district|1|119000|03/24/2023 15:30:01|1.5|3|False|no|yes|Čukarička Padina
+62|district|1|170000|04/26/2023 17:34:48|2.5|1|False|no|yes|Čukarička Padina
+73|central|0|230000|09/10/2021 17:25:49|2.5|2|False|no|yes|Banovo Brdo
+42|central|0|77000|03/28/2023 13:31:24|2|5|True|no|yes|Žarkovo
+100|central|1|350000|04/10/2023 22:34:21|2.5|5|True|no||Banovo Brdo
+65|district|1|155000|03/06/2023 14:06:17|2.5|2|False|no|yes|Čukarička Padina
+53|storageHeater|0|130000|05/05/2023 14:06:52|2|4|True|no||Banovo Brdo
+58|district|0|130000|05/05/2023 14:06:48|2.5|1|True|no|yes|Bele Vode
+126|electricity|0|250000|10/22/2021 14:16:30|6|1|False|no||Banovo Brdo
+44|district|0|125000|03/25/2022 16:00:53|1.5|2|False|no||Banovo Brdo
+68||0|136000|05/03/2022 18:05:10|3|5|False|no||Banovo Brdo
+125|district|0|250000|05/27/2022 16:06:32|3.5|5|True|no|yes|Banovo Brdo
+83|gas|1|232512|07/04/2022 16:20:09|4|2|False|no||Banovo Brdo
+83|gas|1|232512|07/04/2022 16:20:10|4|1|False|no||Banovo Brdo
+79|district|0|116000|07/11/2022 16:20:22|2.5|-1|False|no|yes|Žarkovo
+117|gas|1|327600|07/29/2022 18:23:14|3.5|5|False|no|yes|Banovo Brdo
+99|gas|1|277200|07/29/2022 20:22:09|3|5|False|no|yes|Banovo Brdo
+92|gas|0|235000|08/04/2022 18:22:33|2|0|False|no|yes|Banovo Brdo
+78|district|1|175000|09/19/2022 16:26:04|3.5|4|True|no|yes|Banovo Brdo
+47|gas|1|115312|10/20/2022 20:22:38|1|-1|False|no||Banovo Brdo
+60|gas|1|150800|10/20/2022 22:21:58|3|1|False|no||Banovo Brdo
+68|gas|1|171150|10/21/2022 14:24:33|3|2|False|no||Banovo Brdo
+137|gas|1|349375|10/21/2022 16:24:07|4|4|True|no||Banovo Brdo
+154|central|0|360000|11/12/2022 14:21:04|3|1|False|no|yes|Banovo Brdo
+159|gas|0|336000|11/29/2022 20:21:47|6|1|False|no|yes|Banovo Brdo
+159|electricity|0|330000|12/06/2022 20:24:17|4.5|1|False|no|yes|Banovo Brdo
+142|gas|0|610000|12/19/2022 18:22:30|4.5|3|False|no|yes|Banovo Brdo
+130|gas|0|500000|12/20/2022 13:27:56|4|2|False|no|yes|Banovo Brdo
+53|district|0|108900|01/12/2023 19:28:29|2|5|True|no|yes|Banovo Brdo
+55|electricity|0|117000|01/17/2023 17:31:12|2|1|False|no|yes|Banovo Brdo
+77|district|1|205000|02/01/2023 13:28:16|4|4|False|no|yes|Banovo Brdo
+70|gas|1|250000|02/02/2023 13:31:04|3|1|False|no||Banovo Brdo
+85|district|0|215000|02/18/2023 15:26:28|3.5|3|True|no|yes|Banovo Brdo
+84||1|275000|05/05/2023 13:05:40|3|2|False||yes|Čukarička Padina
+154|norwegianRadiators|0|271000|11/16/2022 12:32:58|3|2|False||yes|Banovo Brdo
+54|district|0|125000|03/21/2023 15:27:10|3|0|False|no|yes|Banovo Brdo
+73|district|1|189000|04/20/2023 17:33:15|2.5|4|False|no|yes|Banovo Brdo
+50|electricity|0|108000|04/27/2023 17:32:30|3|1|False|no|yes|Žarkovo
+65|gas|1|184520|07/06/2022 12:20:46|3|4|False|no||Banovo Brdo
+65|gas|1|184520|07/06/2022 12:20:46|3|3|False|no||Banovo Brdo
+37|central|0|77000|04/05/2023 12:13:03|2|4|True|no|yes|Žarkovo
+30|electricity|1|79900|03/06/2023 12:06:13|1|-2|False|no|yes|Banovo Brdo
+69||0|96900|03/06/2023 11:33:14|2.5|2|False|no|yes|Železnik
+87|central|1|247950|02/06/2023 11:28:12|3.5|-1|False|no|yes|Čukarička Padina
+41|district|0|87000|03/27/2023 19:34:14|1|6|True|no|yes|Cerak Vinogradi
+52|airConditioning|0|129000|04/05/2023 10:22:05|2|4|False||yes|Banovo Brdo
+46|electricity|0|79000|05/05/2023 00:12:26|2|0|False|no||Julino Brdo
+72|district|1|200000|06/05/2017 21:45:30|2.5|5|True||yes|Čukarica
+55|district|0|123000|11/12/2022 20:13:51|2|0|False|no|yes|Banovo Brdo
+78|district|1|175000|08/05/2022 18:56:02|4|6|True|no|yes|Banovo Brdo
+93|district|0|140000|04/04/2023 18:16:25|3|6|True|no|yes|Banovo Brdo
+60|district|0|163700|04/04/2023 18:16:24|3|2|False|no||Banovo Brdo
+68|district|1|185000|04/04/2023 18:16:24|3|2|False|no|yes|Banovo Brdo
+68|district|1|184400|04/04/2023 18:16:24|3|1|False|no||Banovo Brdo
+132|district|1|355900|04/04/2023 18:16:24|4|100|False|no|yes|Banovo Brdo
+68|gas|0|125000|05/10/2022 09:41:58|3|4|False|no|yes|Cerak
+76|district|1|148000|04/04/2023 17:46:44|3|2|False|yes|yes|Cerak
+28|district|1|69500|04/26/2023 15:27:53|0.5|1|False|no||Čukarička Padina
+76|central|0|79000|05/04/2023 16:37:55|3|-1|False|no|yes|Julino Brdo
+54|central|0|86500|09/05/2022 16:26:49|1.5|-1|False|no||Žarkovo
+92|district|1|195000|05/04/2023 16:18:53|3.5|-1|False|no|yes|Cerak Vinogradi
+49||0|99000|05/04/2023 16:08:19|2.5|3|True|no|yes|Cerak Vinogradi
+68|central|0|136000|05/04/2023 15:38:07|3|5|False|no||Banovo Brdo
+32|district|0|94000|05/04/2023 15:37:30|1|2|False|yes|yes|Filmski Grad
+38|central|0|70000|05/04/2023 15:37:29|2|-1|False|no||Filmski Grad
+30|district|1|84900|05/04/2023 15:37:28|1.5|6|True|no|yes|Žarkovo
+54|district|0|125000|04/04/2023 15:31:10|3|0|False|no|yes|Banovo Brdo
+45|district|0|76000|05/04/2023 14:49:24|1.5|0|False|no|yes|Čukarička Padina
+65|district|1|204000|12/05/2022 14:19:22|2.5|3|False|yes|yes|Cerak
+61|district|1|214000|05/04/2023 14:06:47|2|4|False|no||Banovo Brdo
+20|electricity|0|45000|04/04/2023 13:30:09|0.5|1|False|no||Bele Vode
+80|district|0|120000|03/31/2021 13:02:47|3|6|True|no||Banovo Brdo
+54|gas|0|82000|08/03/2022 16:22:05|2|-1|False|no|yes|Žarkovo
+59|district|1|155000|04/11/2023 17:28:26|2|2|False|no|yes|Filmski Grad
+52|electricity|0|129000|04/04/2023 12:19:31|2|4|False||yes|Banovo Brdo
+51|district|0|180000|03/16/2023 11:20:05|2|3|False||yes|Banovo Brdo
+166|gas|1|630000|04/15/2022 19:29:10|5|4|True|no|yes|Banovo Brdo
+95|district|1|350000|04/06/2023 13:45:21|4|3|False|no|yes|Ada Ciganlija
+35|central|0|47250|04/11/2023 13:05:52|1.5|2|True|no|in_progress|Žarkovo
+40|electricity|0|60000|04/04/2023 10:47:40|1.5|1|False|no|yes|Rušanj
+75|storageHeater|0|130000|09/15/2019 15:53:59|3|1|False|semi|yes|Žarkovo
+125|district|0|230000|01/17/2020 12:57:19|3.5|5|True|yes|yes|Banovo Brdo
+74|gas|0|111000|01/12/2021 19:03:19|2|-1|False|no|yes|Čukarica
+122|district|1|195000|07/15/2022 13:18:50|4.5|6|False|no|yes|Cerak Vinogradi
+54|central|0|82000|07/21/2022 01:19:25|1.5|-1|False|no|yes|Žarkovo
+135|gas|0|225000|09/10/2022 15:21:21|5|1|False|no|yes|Bele Vode
+154|norwegianRadiators|0|360000|11/10/2022 19:22:57|3|2|False|no|yes|Banovo Brdo
+30|district|1|84900|11/12/2022 17:20:10|1.5|6|True|semi|yes|Žarkovo
+110|district|0|240000|12/15/2022 17:20:54|4|3|True|semi|yes|Bele Vode
+74|district|0|300000|02/03/2023 18:27:47|3|1|False|no|yes|Banovo Brdo
+47|norwegianRadiators|0|106000|03/16/2023 19:27:20|2|-1|False|no|yes|Banovo Brdo
+58|district|1|155000|04/11/2023 12:30:58|2|2|False|yes|yes|Filmski Grad
+42|district|0|120000|04/04/2023 10:06:54|1.5|1|False|no|yes|Banovo Brdo
+75|district|0|199000|05/04/2023 09:39:56|3|7|False||yes|Banovo Brdo
+31||0|67000|04/04/2023 09:29:09|1|3|True|||Bele Vode
+48|central|0|130000|04/03/2023 13:57:26|2|4|False|no|yes|Banovo Brdo
+60||1|79900|10/13/2022 13:05:14|2|0|False||yes|Železnik
+63|gas|0|129700|11/05/2022 02:10:41|2.5|1|True|semi|yes|Filmski Grad
+38|central|1|100000|05/03/2023 13:21:49|1.5|6|False|no|yes|Banovo Brdo
+83|central|0|115000|03/04/2023 21:27:45|2.5|-1|False|no||Žarkovo
+178|central|0|430000|11/04/2022 20:17:50|4|2|False|no|yes|Košutnjak
+94|central|0|169000|02/17/2023 15:29:08|4|3|False|no|yes|Žarkovo
+76||1|220000|02/27/2023 13:28:56|2.5|3|True|no|yes|Žarkovo
+100|district|0|260000|11/15/2022 17:18:42|4.5|-1|False||yes|Cerak
+60|district|0|115000|04/26/2023 21:34:18|2|4|True|no|yes|Banovo Brdo
+38|district|0|89000|05/03/2023 18:13:57|2|-3|False|no|yes|Banovo Brdo
+41|district|1|87000|05/03/2023 17:25:41|1|6|True||yes|Cerak Vinogradi
+68|district|0|102000|05/03/2023 15:36:48|3|2|False|no||Cerak
+95|district|1|350000|05/03/2023 15:34:32|4|3|False|no|yes|Ada Ciganlija
+72|district|2|180000|04/26/2023 19:24:52|3|2|False||yes|Banovo Brdo
+70|electricity|0|87500|12/14/2022 14:20:20|3|1|True||yes|Železnik
+84|gas|1|197000|05/13/2021 15:54:42|3|1|False||no|Filmski Grad
+107|district|1|165000|03/16/2022 11:46:02|4|7|False||yes|Čukarička Padina
+48|gas|0|105000|03/29/2023 18:22:42|1.5|3|True||yes|Žarkovo
+53|gas|1|109500|02/23/2023 16:21:24|2.5|4|True||no|Filmski Grad
+83|district|1|150000|11/30/2022 18:19:15|3|6|True|semi|yes|Cerak Vinogradi
+47|norwegianRadiators|0|105900|03/17/2023 15:20:06|2|-1|False||yes|Banovo Brdo
+74|district|0|165000|03/09/2023 12:21:21|3|1|False||no|Banovo Brdo
+122|district|1|195000|07/16/2022 14:18:13|4.5|6|False||yes|Cerak Vinogradi
+39|district|1|120000|01/26/2023 18:36:15|1.5|5|False|no|yes|Banovo Brdo
+86|district|0|275000|03/04/2023 10:28:34|3.5|3|True|no|yes|Banovo Brdo
+54|district|0|108000|04/07/2023 21:45:28|2.5|1|False|no|no|Julino Brdo
+74|district|0|300000|02/03/2023 20:15:16|3|1|False|no|yes|Banovo Brdo
+73|gas|0|165000|10/28/2022 20:05:22|3|0|False|||Filmski Grad
+59||1|180000|04/18/2023 16:05:40|3|4|False||yes|Banovo Brdo
+62|central|0|145000|04/12/2023 20:05:38|3|3|False||yes|Železnik
+40||0|130000|04/12/2023 20:05:35|3|4|True||yes|Žarkovo
+232|district|0|485000|04/02/2023 16:26:11|5|0|False|no|yes|Banovo Brdo
+75|central|0|79000|05/03/2022 16:04:43|2.5|-3|False|no||Julino Brdo
+87|district|0|235000|04/18/2023 16:37:01|3.5|2|False|no|yes|Banovo Brdo
+45|district|0|81000|03/03/2023 14:41:47|1.5|5|True|no|in_progress|Žarkovo
+63|electricity|0|179000|09/03/2022 14:16:45|3|1|True|no|yes|Košutnjak
+145|central|0|200000|05/13/2022 12:03:14|4|1|False|no|yes|Žarkovo
+30|district|1|84900|11/14/2022 20:21:46|1.5|6|True|no|yes|Žarkovo
+63|district|1|189000|04/01/2023 11:26:55|2.5|1|False|no|yes|Golf Naselje
+42|central|0|77000|04/05/2023 17:30:14|2|5|True|no|yes|Žarkovo
+63|district|1|189000|02/03/2023 12:18:01|2.5|1|False|no|yes|Banovo Brdo
+54|district|0|82000|07/20/2022 12:19:17|2|-1|False|no||Cerak
+39||1|117000|03/03/2023 11:05:28|1|3|False||no|Filmski Grad
+31|gas|0|66500|05/02/2023 02:07:44|0.5|1|False|no|yes|Žarkovo
+75|storageHeater|0|75000|11/03/2022 00:00:28|3|-1|False||yes|Umka
+44|central|0|112500|05/01/2023 21:21:37|1.5|2|False|no|yes|Žarkovo
+63|storageHeater|0|82000|02/02/2023 19:29:29|4|-1|False|no||Železnik
+125|district|2|438000|03/02/2023 16:01:22|4|7|True||yes|Banovo Brdo
+125|district|2|438620|03/02/2023 15:54:54|3|7|True||yes|Banovo Brdo
+143|district|2|504100|03/02/2023 15:51:32|4|7|True||yes|Banovo Brdo
+175|district|2|614599|03/02/2023 14:58:48|4|6|False||yes|Banovo Brdo
+63|district|0|100000|04/01/2023 14:15:13|2.5|2|False|no|yes|Železnik
+51|central|0|88000|03/02/2023 14:07:02|2|1|False|no|yes|Bele Vode
+55|gas|0|98000|02/02/2023 13:40:31|2|0|False||no|Cerak
+65|district|0|97000|05/01/2023 13:12:50|2.5|5|False|no|yes|Banovo Brdo
+85|district|0|137000|12/02/2022 12:10:32|2|5|True|no|yes|Banovo Brdo
+45|district|1|98000|12/02/2022 12:10:14|1.5|7|False|semi|yes|Čukarička Padina
+55|central|0|110000|02/09/2023 14:21:55|2.5|0|False|no||Žarkovo
+83|district|0|215000|02/20/2023 16:22:46|3|3|True|no|yes|Banovo Brdo
+158|district|0|457000|04/01/2023 11:47:15|4|2|False|no|yes|Banovo Brdo
+59|gas|0|100000|02/02/2023 11:29:14|2|2|False|no||Bele Vode
+122|district|1|195000|04/01/2023 11:12:29|4.5|6|False|no|yes|Cerak Vinogradi
+115|district|2|317210|03/02/2023 10:44:59|4|3|False||yes|Banovo Brdo
+50|district|2|159085|03/02/2023 10:41:13|2|3|False||yes|Banovo Brdo
+49|district|2|157270|03/02/2023 10:35:53|2|2|False||yes|Banovo Brdo
+85|district|0|165000|05/01/2023 10:35:06|2.5|0|False|no|yes|Filmski Grad
+93|district|2|255388|03/02/2023 10:13:15|3|4|False||yes|Banovo Brdo
+68|gas|0|115000|06/29/2022 11:49:30|3|3|False|no||Cerak
+70|district|0|118500|07/28/2022 18:25:48|3|0|False|no|yes|Julino Brdo
+45|district|0|75000|08/13/2022 14:19:04|2|3|False|no||Čukarička Padina
+74|district|0|300000|02/06/2023 15:25:47|3|1|False|no|yes|Banovo Brdo
+60|gas|0|90000|08/02/2022 00:16:38|4|5|True||no|Cerak
+49|district|1|98000|05/01/2023 00:07:47|1.5|3|False|no|yes|Julino Brdo
+61|gas|0|130000|05/01/2023 00:07:46|2.5|1|True|no|yes|Cerak
+178|central|0|450000|10/01/2020 21:38:30|4|2|False|no|yes|Golf Naselje
+65|district|0|135000|01/31/2023 20:15:15|2.5|2|False|no|yes|Cerak Vinogradi
+78|district|1|200000|04/30/2023 20:17:15|3|5|True|no|yes|Golf Naselje
+72|district|1|280000|03/31/2023 19:32:29|3|1|False|no||Filmski Grad
+41|central|0|45000|07/01/2021 18:49:53|2|-1|False||no|Novi Železnik
+64|district|1|135000|03/01/2023 16:05:25|2|2|False|no|yes|Žarkovo
+51|gas|0|88000|03/01/2023 15:29:59|2|1|False|no|yes|Bele Vode
+37|storageHeater|0|77000|03/31/2023 15:23:07|2|4|True|no|yes|Žarkovo
+52|electricity|0|129000|03/31/2023 14:23:09|2|4|False||yes|Banovo Brdo
+47||0|40000|03/01/2023 14:07:45|1|-1|False|no|yes|Žarkovo
+65|district|1|140000|02/01/2023 13:32:09|2.5|2|False|yes|yes|Cerak Vinogradi
+74|district|1|270000|03/14/2023 14:23:18|3|3|False|no|yes|Banovo Brdo
+37|storageHeater|0|50000|03/31/2023 12:29:44|1|-3|False|no||Železnik
+68|gas|0|170000|03/31/2023 12:25:41|2.5|0|False|no|yes|Filmski Grad
+42|central|0|76900|03/31/2023 12:17:23|2|5|True||yes|Žarkovo
+55|central|1|110000|01/16/2023 17:25:26|2.5|100|False|no||Žarkovo
+33|gas|1|99000|01/17/2023 11:25:30|1|2|False|no|yes|Filmski Grad
+79|central|0|137000|01/30/2023 11:25:43|2.5|0|False|no|yes|Cerak
+110|district|0|195000|07/16/2022 16:18:45|5|6|False|no|yes|Cerak Vinogradi
+107|central|0|153000|08/19/2022 09:20:43|4|0|False|no||Žarkovo
+48|storageHeater|0|129000|03/31/2023 09:05:21|2|4|False||yes|Banovo Brdo
+158||0|475000|01/31/2023 08:29:53|4|2|False|yes||Banovo Brdo
+73|district|0|205000|03/31/2023 02:07:13|3|0|False|no|yes|Žarkovo
+160|gas|0|464000|04/30/2023 00:17:57|4|2|False|||Golf Naselje
+166|gas|1|572000|04/30/2023 00:17:57|5|4|True|||Banovo Brdo
+129|storageHeater|0|125000|03/01/2023 00:06:12|4|1|False||yes|Žarkovo
+43|district|0|99820|11/01/2022 00:00:32|2|2|True||yes|Žarkovo
+31|district|0|72059|11/01/2022 00:00:29|1|1|False||yes|Žarkovo
+50|central|0|180000|03/30/2023 22:15:55|2|3|False|no|yes|Banovo Brdo
+46|electricity|0|116900|01/30/2023 22:15:15|2|1|True|no|yes|Banovo Brdo
+62|gas|0|95000|04/29/2023 22:17:08|3|0|False|no|yes|Košutnjak
+57|district|2|180140|02/28/2023 20:46:13|2|4|False||yes|Banovo Brdo
+77|district|1|205000|12/30/2022 20:17:39|3|4|False|no|yes|Banovo Brdo
+48|electricity|0|110000|03/30/2023 19:32:30|2|2|False|no|yes|Žarkovo
+41|district|0|105000|02/28/2023 19:29:02|1|6|False|no|yes|Čukarička Padina
+67|gas|0|99000|05/30/2022 18:49:59|2.5|-1|False||yes|Železnik
+82|gas|0|129000|05/30/2022 18:49:58|3|1|False||yes|Železnik
+134|gas|0|201000|05/30/2022 18:49:58|4.5|1|False||yes|Železnik
+83||0|115000|03/30/2023 18:22:53|2.5|-1|False|no||Žarkovo
+83|district|0|139900|02/28/2023 18:06:13|3|1|False|no|yes|Filmski Grad
+102||1|140000|03/10/2023 17:30:59|4|6|False|no||Cerak
+61|district|0|177000|03/30/2023 16:17:23|1.5|4|False|no|yes|Banovo Brdo
+67|electricity|0|117000|02/28/2023 16:07:14|2|2|True|no|yes|Žarkovo
+60|district|1|127000|02/28/2023 15:31:30|2|6|False|no|yes|Žarkovo
+70|district|0|165000|03/30/2023 15:37:11|3|1|False|no||Banovo Brdo
+41|district|1|87000|01/30/2023 15:28:23|1|6|True|no|yes|Cerak Vinogradi
+92|central|0|235000|03/30/2021 14:30:58|4|0|False|semi|yes|Banovo Brdo
+44|district|1|126000|04/29/2023 13:38:15|1|3|False|no|yes|Čukarička Padina
+23|district|0|64000|04/29/2023 13:28:08|1|0|False|no|yes|Banovo Brdo
+41|district|1|105000|02/23/2023 12:22:56|1.5|6|False|no|yes|Čukarička Padina
+79|gas|0|90850|05/30/2022 12:49:57|2.5|1|False||no|Železnik
+59|gas|0|170000|11/30/2022 12:24:03|3|0|False|no||Filmski Grad
+56||0|95000|04/25/2023 12:05:37|2.5|0|False|||Žarkovo
+50|electricity|0|74900|03/30/2023 11:15:29|2|3|False||no|Bele Vode
+84|district|1|275000|10/01/2022 16:19:07|3|2|False|no|yes|Čukarička Padina
+36|central|1|108000|03/29/2023 22:08:07|1.5|2|False|no||Banovo Brdo
+58|district|1|160000|04/28/2023 21:58:21|2|4|False|no|yes|Banovo Brdo
+75|central|1|79000|07/19/2022 21:21:05|2.5|-3|False|no||Julino Brdo
+145|norwegianRadiators|0|319000|08/02/2022 17:22:49|5|3|True|no|yes|Banovo Brdo
+45||0|62500|10/10/2022 15:23:19|1.5|2|True|no||Čukarica
+70|district|1|189000|04/28/2023 20:07:07|2.5|5|False|no|yes|Banovo Brdo
+108|district|0|240000|12/29/2022 17:31:36|4|3|True|no|yes|Bele Vode
+77|district|1|154360|04/28/2023 17:25:28|2.5|5|False|no|yes|Julino Brdo
+57|district|0|105000|03/29/2023 17:24:13|2.5|0|False|semi|yes|Cerak
+51|district|0|120000|03/29/2023 15:32:04|2|5|True|no|yes|Banovo Brdo
+95||0|325000|04/28/2023 15:26:05|4|0|False||yes|Ada Ciganlija
+60|central|0|85000|04/28/2023 14:27:51|3|-1|False|no||Filmski Grad
+60|gas|0|115000|04/28/2023 14:24:43|2.5|1|False||yes|Žarkovo
+43|district|1|112000|04/28/2023 14:07:11|1|3|False|no|yes|Čukarička Padina
+69|district|1|189000|04/28/2023 13:37:26|2.5|5|False|no|yes|Banovo Brdo
+54|district|1|135000|03/29/2023 12:05:57|3|0|False|no|yes|Banovo Brdo
+42|central|0|76900|04/28/2023 12:06:24|2.5|5|True|no|yes|Žarkovo
+58|district|0|126000|04/28/2023 11:32:08|2|1|False||yes|Cerak Vinogradi
+49|central|1|102000|02/09/2023 14:21:54|2|5|True|no||Žarkovo
+137|gas|0|349350|03/03/2023 16:21:39|4|4|True|no||Banovo Brdo
+55|central|1|110000|03/07/2023 20:22:49|2.5|4|False|no||Žarkovo
+38|gas|0|88000|04/28/2023 09:47:59|1.5|0|False|yes|partially|Filmski Grad
+92|district|1|253962|04/27/2023 19:31:31|3|2|False|no||Banovo Brdo
+79|district|1|253962|04/27/2023 19:31:30|3|4|False|no||Banovo Brdo
+56|district|1|180139|04/27/2023 19:31:30|2|3|False|no||Banovo Brdo
+131|district|1|462598|04/27/2023 19:31:29|3|6|False|no||Banovo Brdo
+113|district|1|312180|04/27/2023 19:31:28|4|2|False|no||Banovo Brdo
+64|electricity|0|183150|04/28/2022 18:50:55|2.5|-1|False||no|Banovo Brdo
+40|storageHeater|0|58000|04/27/2023 16:29:50|2|1|False|no||Sremčica
+43|district|0|86000|03/28/2023 15:36:05|2|2|False|no|no|Žarkovo
+42|gas|0|42000|10/28/2022 14:10:28|1|-1|False|no||Železnik
+52|electricity|0|125000|04/27/2023 14:06:27|2|1|False|no|yes|Banovo Brdo
+74|district|1|259000|04/27/2023 14:06:26|2.5|3|False|no|yes|Banovo Brdo
+72|district|0|175000|05/28/2022 13:36:55|4|3|True|no|yes|Golf Naselje
+83|district|1|150000|03/28/2023 13:30:20|3|4|False|no||Filmski Grad
+54||0|135000|12/28/2022 13:29:34|2|1|False|no|yes|Banovo Brdo
+80|electricity|0|98000|11/28/2022 13:16:31|3|5|True||no|Bele Vode
+62||1|143000|11/28/2022 13:05:54|2.5|11|False||yes|Banovo Brdo
+40|district|1|90000|07/28/2022 12:17:16|1|7|False||no|Čukarička Padina
+72|district|1|200000|10/28/2022 12:12:14|3|5|True|no|yes|Banovo Brdo
+64|central|1|179000|03/28/2023 12:05:26|2|5|True|no|yes|Banovo Brdo
+60|district|1|140000|03/03/2023 16:21:40|2.5|4|False|no|yes|Žarkovo
+61|gas|0|155550|03/03/2023 16:21:39|3|2|False|no||Banovo Brdo
+68|gas|0|173400|03/03/2023 16:21:39|3|1|False|no||Banovo Brdo
+47|gas|0|120000|03/03/2023 16:21:39|1.5|-1|False|no||Banovo Brdo
+38|central|0|76000|03/07/2023 20:22:49|0.5|0|False|no||Žarkovo
+50|electricity|0|75000|04/24/2023 15:35:40|2.5|-1|False|no|yes|Žarkovo
+41|district|1|105000|03/27/2023 13:30:17|1|6|False|no|yes|Čukarička Padina
+47|electricity|0|92000|12/13/2022 18:26:27|2|1|False|no||Čukarička Padina
+54|gas|0|82000|03/28/2023 00:28:11|2|-1|False|no|yes|Žarkovo
+42|central|0|77000|03/28/2023 00:19:43|2|5|True||yes|Žarkovo
+130|district|0|510000|01/28/2023 00:05:11|4|2|False||yes|Banovo Brdo
+142|district|0|600000|01/28/2023 00:05:09|5|3|False||yes|Banovo Brdo
+31|district|0|62000|03/27/2023 22:15:43|1|1|False|no|no|Julino Brdo
+45|electricity|0|70000|11/27/2022 22:10:42|2|4|True|no||Julino Brdo
+91|district|0|150000|10/27/2021 20:19:57|3.5|1|False||yes|Filmski Grad
+55|district|0|130000|03/27/2023 20:07:04|2|3|False|no|yes|Banovo Brdo
+40|electricity|0|70000|12/14/2021 14:27:38|2|3|False|no||Žarkovo
+41|district|1|107000|03/27/2023 19:32:13|1.5|6|False|no|yes|Čukarička Padina
+61|electricity|0|88000|02/27/2023 18:12:35|2|1|False|no|yes|Bele Vode
+73|district|0|139900|02/27/2023 18:12:33|3|1|False|no|yes|Filmski Grad
+73|district|0|165000|03/27/2023 17:34:06|3|1|False|no||Filmski Grad
+147|gas|0|490000|04/26/2023 17:08:44|4|2|False|no|yes|Golf Naselje
+130|district|1|165000|03/27/2023 16:58:18|5|5|True|yes|in_progress|Banovo Brdo
+142|gas|0|600000|03/27/2023 16:10:00|4.5|3|True|no|yes|Golf Naselje
+34|central|0|73000|12/26/2022 14:34:04|1|0|False|no|yes|Bele Vode
+59|storageHeater|0|88000|02/27/2023 15:26:05|2|0|False|no|yes|Bele Vode
+48|district|1|158000|09/21/2022 16:23:12|2|0|False|no|yes|Banovo Brdo
+142|gas|0|610000|12/19/2022 16:24:50|5|3|True|no|yes|Banovo Brdo
+147|gas|0|500000|12/19/2022 16:24:51|4|2|False|no|yes|Banovo Brdo
+76|district|1|270000|03/16/2023 13:29:06|3|3|False|no|yes|Banovo Brdo
+70|district|1|189000|04/20/2023 13:34:29|3|5|False|no|yes|Banovo Brdo
+48|district|0|158000|10/27/2022 14:30:17|2|-1|False||yes|Banovo Brdo
+108|gas|1|350000|04/26/2023 14:23:13|4|1|False||no|Filmski Grad
+101|district|1|230000|03/27/2023 14:06:27|3|5|True|no|yes|Banovo Brdo
+73|district|0|139900|02/27/2023 13:31:34|3|1|False|no|yes|Filmski Grad
+48|gas|0|105000|02/27/2023 13:31:33|2|3|True|no|yes|Žarkovo
+48|gas|0|105000|02/27/2023 13:31:33|2|3|True|no|yes|Žarkovo
+43|district|1|85000|04/26/2023 13:32:49|2.5|0|False|no||Železnik
+64|electricity|0|75000|06/27/2022 13:08:34|2.5|2|True|||Železnik
+73|district|0|139900|02/27/2023 12:47:42|3|1|False|no|yes|Žarkovo
+80|district|1|200000|10/16/2018 21:29:20|3|5|True|no|yes|Golf Naselje
+183|district|0|250000|04/27/2018 12:13:25|5|4|False||yes|Žarkovo
+77|district|1|205000|03/27/2023 10:22:03|4|4|False||yes|Banovo Brdo
+150|district|0|274000|01/27/2021 09:19:31|5|3|True||yes|Golf Naselje
+169|gas|0|371800|10/27/2018 00:56:06|6|2|True||yes|Banovo Brdo
+74|gas|1|165000|04/25/2023 18:21:04|3|1|False||no|Filmski Grad
+122|district|1|195000|07/26/2022 18:10:03|5|6|False|no|yes|Cerak Vinogradi
+134|gas|0|227800|03/26/2021 18:02:10|4|2|True|no||Železnik
+76|gas|0|114000|03/26/2021 18:02:07|3|2|True|no||Železnik
+55|district|0|159900|04/25/2023 18:07:51|2|4|True|no||Banovo Brdo
+61|district|0|202000|12/30/2022 18:24:38|2|2|False|no||Banovo Brdo
+73||0|150000|03/26/2023 14:23:54|2|2|False|no|yes|Banovo Brdo
+159|electricity|0|350000|04/25/2023 13:38:35|4.5|1|False|no|yes|Banovo Brdo
+44|district|0|66000|04/25/2023 13:38:12|1.5|-1|False|no||Žarkovo
+74||1|165000|03/26/2023 13:20:53|3.5|5|False||yes|Čukarička Padina
+60|central|1|148623|04/09/2023 21:30:34|3|1|False|no||Banovo Brdo
+178|district|1|430000|04/25/2023 09:34:06|4|2|False|no|yes|Košutnjak
+47|storageHeater|0|50000|04/25/2023 00:05:30|2|1|False||yes|Makiš
+61|storageHeater|0|95000|02/25/2023 22:27:35|2|1|False|no|yes|Bele Vode
+65|gas|0|117000|10/25/2022 22:10:47|3|1|False|no||Žarkovo
+25|central|0|45000|04/24/2023 22:07:44|0.5|2|False|no||Žarkovo
+58||1|140000|04/24/2023 22:07:43|2|4|False|no|yes|Čukarička Padina
+130|gas|0|450000|04/24/2023 19:52:21|4|0|False|semi|yes|Banovo Brdo
+116|gas|1|350070|06/25/2021 19:41:29|2|5|False|no||Banovo Brdo
+52|electricity|0|50000|03/25/2022 18:33:17|2|-1|False||no|Železnik
+73|district|0|146000|02/25/2023 18:19:30|3|1|False||yes|Filmski Grad
+82|gas|0|81000|11/25/2022 18:17:24|3.5|1|False||yes|Sremčica
+85|district|0|235000|04/24/2023 18:05:38|3.5|2|False|no|yes|Ada Ciganlija
+53|district|1|119500|10/25/2022 16:18:51|3|4|True|no|yes|Filmski Grad
+52|electricity|0|129000|03/25/2023 16:07:09|2|4|False|no|yes|Banovo Brdo
+130|central|1|169000|02/25/2023 15:50:09|4.5|5|True|semi|no|Filmski Grad
+83||0|149500|04/24/2023 14:39:17|3.5|0|False|no|yes|Cerak Vinogradi
+53||1|119500|02/25/2023 14:11:48|2.5|4|True||no|Filmski Grad
+65|gas|1|197700|06/25/2021 13:42:11|5|4|False|no||Banovo Brdo
+77|district|0|125000|01/25/2023 13:26:25|2.5|0|False|no|yes|Žarkovo
+102|gas|0|140000|04/24/2023 13:35:03|4|0|False|no||Cerak
+178|gas|0|356000|11/25/2022 12:43:07|5|4|False|no|yes|Banovo Brdo
+35|district|1|63640|04/10/2023 11:53:03|1|2|False|no|yes|Železnik
+61|electricity|0|88000|02/25/2023 11:29:39|2|1|False|no|yes|Bele Vode
+63|airConditioning|0|139000|04/24/2023 10:25:37|2.5|3|False||yes|Cerak Vinogradi
+132|gas|1|336753|03/25/2023 10:10:10|4|4|True||no|Banovo Brdo
+137|gas|1|349375|03/25/2023 10:10:10|4|4|True||no|Banovo Brdo
+60|gas|1|150800|03/25/2023 10:10:10|3|3|False||no|Banovo Brdo
+60|gas|1|150800|03/25/2023 10:10:09|3|2|False||no|Banovo Brdo
+66|gas|1|172276|03/25/2023 10:10:08|3|1|False||no|Banovo Brdo
+61|gas|1|151850|03/25/2023 10:10:08|3|1|False||no|Banovo Brdo
+68|gas|1|177996|03/25/2023 10:10:07|3|1|False||no|Banovo Brdo
+66|gas|1|172276|03/25/2023 10:10:07|3|-1|False||no|Banovo Brdo
+68|gas|1|177996|03/25/2023 10:10:06|3|-1|False||no|Banovo Brdo
+77|district|0|205000|03/25/2023 10:09:14|3|4|False||yes|Banovo Brdo
+160|central|0|350000|03/25/2023 10:09:09|4|-1|False||yes|Banovo Brdo
+105|central|0|230000|03/25/2023 10:08:35|3|1|True||yes|Golf Naselje
+61|district|1|160000|03/25/2023 10:06:52|2.5|-1|False||yes|Banovo Brdo
+75|district|0|230000|03/25/2023 10:06:47|2.5|1|False||yes|Banovo Brdo
+74|district|1|120000|03/25/2023 10:06:35|3|1|False||yes|Žarkovo
+102|district|1|140000|03/25/2023 10:06:34|4.5|6|False||no|Stari Cerak
+51|district|0|110000|03/25/2023 10:06:26|4|5|True||yes|Banovo Brdo
+294||0|600000|02/24/2023 20:16:01|5|3|True|no|yes|Golf Naselje
+38|electricity|0|80000|04/23/2023 20:16:36|2|-1|False|yes|in_progress|Golf Naselje
+89|central|0|155000|03/24/2023 19:27:44|2|2|False|no|yes|Cerak
+120|district|0|299000|10/24/2022 19:11:12|4|2|True|yes|yes|Banovo Brdo
+137|district|1|391849|11/24/2022 18:12:28|4|4|True|no||Banovo Brdo
+47|district|1|105000|04/23/2023 18:07:00|1.5|6|False|no||Čukarička Padina
+174|electricity|0|400000|03/24/2023 15:16:13|5|0|False||yes|Julino Brdo
+61|storageHeater|0|88000|02/24/2023 14:29:33|2.5|0|False|no|yes|Bele Vode
+90|gas|0|190000|01/24/2023 13:29:49|4|1|True|no|yes|Cerak
+63|central|0|75000|12/24/2022 13:30:48|2|3|True|no||Železnik
+61|electricity|0|88000|02/24/2023 12:08:27|2|1|False||yes|Bele Vode
+80|electricity|0|120000|02/24/2023 12:07:53|4|5|True|no|yes|Banovo Brdo
+164|district|0|450000|03/06/2023 16:24:21|4|0|False|no|yes|Banovo Brdo
+74|district|1|217000|12/24/2022 11:30:31|4|4|False|no|yes|Banovo Brdo
+108|district|0|240000|12/24/2022 10:27:10|4|3|True|no|yes|Bele Vode
+55|electricity|0|117000|04/23/2023 07:34:23|2|1|True|no|yes|Banovo Brdo
+148|district|0|500000|02/23/2023 20:16:11|4|2|False|no||Golf Naselje
+94|central|0|169000|01/23/2023 19:40:16|4|3|True||yes|Žarkovo
+100|gas|0|160000|02/23/2023 19:33:26|5|1|False|no|yes|Bele Vode
+100|electricity|0|255000|04/22/2023 18:20:22|4.5|2|False||no|Banovo Brdo
+65|electricity|0|169000|04/22/2023 18:20:21|4|0|False||no|Banovo Brdo
+132|gas|0|330000|04/22/2023 18:20:19|4|3|False||no|Banovo Brdo
+51|electricity|0|72000|04/22/2023 16:07:56|1.5|1|False|no||Železnik
+125|district|0|250000|10/23/2020 15:59:24|3.5|5|False|no|yes|Banovo Brdo
+55|storageHeater|0|122000|03/23/2023 15:25:55|1.5|1|True|no|yes|Banovo Brdo
+85||1|204000|11/23/2022 15:05:52|3.5|0|False||yes|Banovo Brdo
+90|district|0|155000|03/23/2023 14:23:51|3|2|True|no|yes|Žarkovo
+70|central|0|200000|03/23/2023 14:17:55|3|1|False||yes|Banovo Brdo
+41|district|1|105000|03/23/2023 14:13:12|1.5|6|False|no|yes|Čukarička Padina
+73|district|0|158000|02/23/2023 14:03:34|3|2|False||yes|Cerak
+51|gas|0|77000|09/23/2022 13:05:42|2.5|2|True||yes|Bele Vode
+59|gas|0|89000|09/23/2022 13:05:42|2.5|2|True||yes|Bele Vode
+112|gas|0|190000|01/23/2023 11:29:59|4.5|1|False|no|yes|Cerak
+28|district|0|51000|03/23/2023 10:27:43|1|5|False|no||Žarkovo
+160|gas|0|371800|06/26/2020 15:54:56|3|2|False|no||Banovo Brdo
+60|district|0|162000|12/16/2022 14:20:13|3|0|False|no||Banovo Brdo
+87|central|1|248000|04/21/2023 19:27:10|3.5|-1|False|no||Banovo Brdo
+100|central|1|350000|04/21/2023 19:27:09|2.5|5|True|no||Banovo Brdo
+57|gas|1|173250|06/22/2022 17:41:52|2.5|3|False|no||Banovo Brdo
+57|gas|1|173430|06/22/2022 17:41:52|2|4|False|no||Banovo Brdo
+108|gas|1|326970|06/22/2022 17:41:50|3|5|False|no||Banovo Brdo
+59|central|1|187000|04/21/2023 17:26:43|2.5|4|False|no||Banovo Brdo
+60|central|1|175000|04/21/2023 16:39:26|3|2|False|no||Banovo Brdo
+72|electricity|0|149900|04/21/2023 16:36:27|3|3|False|no|yes|Banovo Brdo
+65|gas|0|122000|04/21/2023 16:07:57|2.5|1|True|no||Cerak
+62|district|0|168000|04/21/2023 16:05:33|2.5|2|False|yes|yes|Banovo Brdo
+61|district|0|150000|11/22/2022 13:17:53|3|0|False||yes|Bele Vode
+107|central|0|150000|03/22/2023 12:28:25|4|-1|False|no||Žarkovo
+31|district|0|43000|10/22/2022 12:17:14|1|0|False||yes|Železnik
+58|district|0|135000|03/22/2023 12:15:22|3|0|False||yes|Banovo Brdo
+100|district|0|270000|12/16/2022 14:20:13|2.5|0|False|no||Banovo Brdo
+86|district|0|232200|12/16/2022 14:20:13|3.5|0|False|no||Banovo Brdo
+60|district|1|134700|06/22/2022 00:50:11|2.5|6|True||yes|Cerak Vinogradi
+95|district|0|239900|09/21/2022 21:23:36|3.5|3|True|no||Cerak
+122|district|1|195000|07/21/2022 18:30:56|5.5|6|False||yes|Cerak Vinogradi
+49|district|1|73000|11/21/2022 18:17:45|1.5|6|True||no|Žarkovo
+72|district|1|160000|02/21/2022 17:49:18|2.5|5|True|no|yes|Banovo Brdo
+122|central|1|135000|04/21/2022 17:32:57|5|9|False|no|yes|Železnik
+43|central|0|86800|12/21/2022 17:10:42|2|0|False|||Julino Brdo
+31|gas|0|62000|12/21/2022 17:10:41|1|0|False|||Julino Brdo
+54||0|108200|12/21/2022 17:10:41|3|0|False||in_progress|Julino Brdo
+73|district|0|205000|03/21/2023 16:24:20|3|1|False|no|yes|Žarkovo
+41|district|1|90000|03/21/2023 16:24:08|1.5|6|True|no|yes|Ada Ciganlija
+69|district|1|189000|04/20/2023 16:13:54|2.5|5|False|no|yes|Banovo Brdo
+103|central|0|129000|12/21/2022 16:10:42|4|0|False||in_progress|Bele Vode
+68|district|0|169000|04/20/2023 15:30:34|3|2|False|no||Banovo Brdo
+54|district|1|135000|03/21/2023 15:27:32|3|0|False|no|yes|Banovo Brdo
+67|gas|0|100500|02/21/2023 15:28:06|3|-1|False|no||Železnik
+63|gas|0|129800|01/11/2023 16:16:23|2.5|1|True|no|yes|Filmski Grad
+58|district|0|135000|03/21/2023 14:23:01|3|0|False|no|yes|Banovo Brdo
+83|central|0|165000|11/21/2022 14:10:16|3|3|False|no|yes|Julino Brdo
+70|district|0|110000|02/21/2023 13:30:10|4|4|False||no|Bele Vode
+36|district|0|119000|04/20/2023 13:05:34|1.5|1|False||yes|Banovo Brdo
+62|electricity|0|158100|04/20/2023 12:20:58|2.5|1|False||no|Banovo Brdo
+115|electricity|0|249000|04/21/2022 12:06:19|2.5|2|True||yes|Banovo Brdo
+90|district|1|197000|02/21/2022 11:53:42|3.5|9|False|no|yes|Žarkovo
+48|gas|0|105000|01/21/2023 10:24:46|1.5|3|True|no||Žarkovo
+170|district|0|340000|09/21/2022 10:15:03|5|3|False|yes|yes|Cerak
+200||0|370000|03/21/2023 00:24:20|5|2|False|no|yes|Bele Vode
+54|central|0|82000|07/21/2022 00:16:43|2|-1|False||yes|Žarkovo
+122|district|1|195000|07/21/2022 00:16:40|4|6|False||yes|Cerak Vinogradi
+45|district|0|81000|09/21/2021 00:00:51|1.5|5|True||no|Žarkovo
+74|district|0|300000|02/20/2023 22:16:18|3.5|1|False|no|yes|Banovo Brdo
+150|underfloor|1|330000|01/20/2023 21:27:51|4|6|True|no||Banovo Brdo
+51|district|1|145000|04/19/2023 20:18:52|1.5|3|False|no|yes|Banovo Brdo
+40|electricity|0|116000|04/19/2023 20:18:41|2|2|True|no|yes|Cerak
+67|district|1|155000|04/19/2023 20:07:51|3|6|False||yes|Čukarička Padina
+72|district|1|280000|02/20/2023 19:31:33|3|1|False|no||Filmski Grad
+36|district|1|60000|04/19/2023 17:34:45|1|5|False|no||Železnik
+53|electricity|0|90000|04/20/2022 16:54:17|3|-1|False||yes|Košutnjak
+89|central|0|169000|01/20/2023 16:38:55|3.5|3|True||yes|Žarkovo
+48|gas|0|105000|01/17/2023 18:46:14|1.5|3|True|yes|yes|Žarkovo
+97|district|0|215000|03/20/2023 16:24:47|3.5|3|True|semi|yes|Banovo Brdo
+26|marbleRadiator|0|58300|02/08/2023 17:53:10|1|1|False|no|yes|Cerak
+39|central|1|120000|03/20/2023 15:49:01|1.5|5|False|no|yes|Banovo Brdo
+129|electricity|0|125000|12/20/2022 15:27:01|4|1|False|no|yes|Železnik
+65||0|145000|04/19/2023 15:26:30|3|-1|False|no||Banovo Brdo
+25|norwegianRadiators|0|63000|04/13/2023 19:33:43|1|1|False|yes|yes|Žarkovo
+42|electricity|0|95000|03/20/2023 14:16:42|2|-1|False||yes|Banovo Brdo
+47|electricity|0|106000|03/20/2023 14:06:16|2|0|False|no|yes|Banovo Brdo
+183|district|0|250000|03/10/2023 00:06:47|5|4|False||yes|Žarkovo
+83||0|215000|04/19/2023 10:16:57|3|3|True||yes|Golf Naselje
+160|central|0|372000|10/19/2022 22:12:03|6|2|True|no|yes|Banovo Brdo
+108|gas|0|350000|04/18/2023 20:17:40|4|1|False|yes|yes|Filmski Grad
+50|storageHeater|0|135000|10/19/2022 20:05:10|3|0|False||yes|Banovo Brdo
+220|central|0|710000|10/19/2022 19:30:51|5|1|False||no|Banovo Brdo
+63|district|1|139000|01/19/2023 17:39:52|2|0|False||no|Čukarička Padina
+76|central|0|114000|04/18/2023 15:30:45|3|2|True|no|yes|Železnik
+78|district|1|173500|09/19/2022 15:19:40|3.5|6|False||yes|Banovo Brdo
+178|district|0|170000|09/19/2022 14:26:11|5|0|False|no|yes|Sremčica
+110|district|1|195000|07/19/2022 14:12:34|5.5|6|False|no|yes|Cerak Vinogradi
+89|central|0|159000|01/19/2023 14:15:25|4|3|True|no|yes|Žarkovo
+107|central|1|420000|04/18/2023 14:06:34|4|1|False||yes|Banovo Brdo
+65|district|0|140000|02/19/2023 12:08:20|3|1|False||yes|Cerak Vinogradi
+69|district|1|189000|04/18/2023 10:26:41|2.5|5|False|no|yes|Banovo Brdo
+60|electricity|0|75000|03/19/2021 10:19:47|3|3|True||no|Železnik
+60|gas|1|172515|08/18/2022 22:12:27|3|2|False|no||Banovo Brdo
+66|gas|1|189504|08/18/2022 22:12:25|3|1|False|no||Banovo Brdo
+68|gas|1|195767|08/18/2022 22:12:24|3|2|False|no||Banovo Brdo
+132|gas|1|377692|08/18/2022 22:12:24|4|4|True|no||Banovo Brdo
+55|electricity|0|117000|01/18/2023 19:32:34|2|1|True|no|yes|Banovo Brdo
+61|district|1|183700|03/18/2023 19:26:53|2|2|False|yes||Banovo Brdo
+67|district|0|98000|01/18/2023 17:29:57|2.5|2|False|no|yes|Železnik
+55|storageHeater|0|117000|01/18/2023 14:28:59|2|1|True|no|yes|Banovo Brdo
+84|electricity|1|232000|04/17/2023 13:19:11|2|5|True||no|Banovo Brdo
+95|district|1|240000|03/18/2023 12:06:05|3.5|3|False|no|yes|Čukarička Padina
+74|storageHeater|0|130000|01/18/2022 11:40:43|3|1|False|no|yes|Žarkovo
+47|storageHeater|0|106000|03/18/2023 11:23:12|2|-1|False|no|yes|Banovo Brdo
+47|norwegianRadiators|0|106000|03/18/2023 10:26:47|2|-1|False|no|yes|Banovo Brdo
+76|gas|0|114000|05/18/2021 09:19:28|2.5|2|False||no|Železnik
+199|central|0|370000|04/17/2021 23:15:10|6|3|True|no|yes|Banovo Brdo
+154||1|360000|11/17/2022 20:12:14|3|2|False|yes|yes|Banovo Brdo
+50|central|0|94000|04/16/2023 19:59:48|2.5|1|False|no|no|Žarkovo
+83|district|0|215000|02/17/2023 17:29:50|3.5|3|True|no|yes|Banovo Brdo
+135|gas|0|225000|10/17/2022 16:10:37|2.5|-1|False|no|yes|Bele Vode
+40|electricity|0|37000|02/17/2023 15:31:53|2|-2|False|no|yes|Bele Vode
+63|storageHeater|0|82000|08/17/2022 13:17:54|4|-1|False|semi||Novi Železnik
+48|electricity|1|120000|03/17/2023 12:05:21|2|1|False|no|yes|Banovo Brdo
+47||0|105000|03/17/2023 11:31:00|2|-1|False|no|yes|Banovo Brdo
+79||1|276645|03/16/2023 20:14:00|4|2|False|no||Golf Naselje
+41||1|150007|03/16/2023 20:13:59|2|2|False|no||Golf Naselje
+99||1|343035|03/16/2023 20:13:59|4|3|True|no||Golf Naselje
+91||1|318607|03/16/2023 20:13:59|4|3|True|no||Golf Naselje
+101|central|1|363000|03/16/2023 18:12:25|2.5|5|True|no||Banovo Brdo
+60|central|0|181500|03/16/2023 18:12:24|2|4|False|no||Banovo Brdo
+87|central|0|253000|03/16/2023 18:12:24|3.5|0|False|no||Banovo Brdo
+60|central|1|181500|03/16/2023 18:12:24|2.5|4|False|no||Banovo Brdo
+53||1|197461|03/16/2023 18:12:23|3|-1|False|no||Golf Naselje
+79||1|285428|03/16/2023 18:12:23|4|1|False|no||Golf Naselje
+51||1|185686|03/16/2023 18:12:23|2|1|False|no||Golf Naselje
+142|central|0|610000|12/16/2022 17:25:18|4|3|True|no|yes|Golf Naselje
+145|central|0|200000|08/16/2022 14:18:11|4|1|False|no|yes|Žarkovo
+55|district|1|123000|02/16/2023 13:30:23|1.5|0|False|no|yes|Banovo Brdo
+100|district|0|137000|03/16/2023 11:32:46|2.5|5|True|no|yes|Banovo Brdo
+147|gas|0|500000|12/16/2022 10:18:53|4|2|False|no|yes|Golf Naselje
+78|district|1|173400|03/09/2023 16:22:02|3.5|6|False|no|yes|Banovo Brdo
+80||0|160000|10/16/2017 09:31:20|4|4|False||yes|Čukarica
+60|central|0|93000|03/16/2023 07:43:49|3|2|False|no|yes|Bele Vode
+88|district|0|240000|12/15/2022 22:12:20|4|3|True|no|yes|Bele Vode
+147||1|500000|12/15/2022 18:26:03|4|2|False|no|yes|Banovo Brdo
+143||1|610000|12/15/2022 18:26:02|5|3|True|no|yes|Banovo Brdo
+30|district|0|84900|11/15/2022 18:12:15|1.5|6|True|no|yes|Žarkovo
+100|district|1|199000|03/15/2023 17:28:58|3.5|9|True|no|yes|Cerak Vinogradi
+61|district|1|183700|12/15/2022 16:10:09|2|2|False|no||Banovo Brdo
+122|district|1|195000|07/15/2022 15:27:39|4.5|6|False|no|yes|Cerak Vinogradi
+73|district|0|146000|03/15/2023 13:24:40|3|1|False|yes|yes|Filmski Grad
+104||0|130000|12/15/2022 12:05:46|4|5|False|no|yes|Banovo Brdo
+41|district|0|101000|02/15/2023 11:26:32|1.5|6|False|no|yes|Čukarička Padina
+75|gas|0|230000|10/15/2022 11:05:49|3|2|False|||Banovo Brdo
+42|gas|0|64000|08/19/2022 09:23:56|2|2|True|no||Bele Vode
+65|airConditioning|0|115000|03/07/2023 21:50:06|2.5|-1|False|no|no|Žarkovo
+53|central|0|102000|06/14/2022 22:09:58|1.5|1|False|no|no|Žarkovo
+112|gas|0|170000|05/14/2022 21:56:47|4.5|1|False|no|yes|Cerak
+53|gas|1|109500|10/14/2022 20:24:08|3|4|True|no||Filmski Grad
+135|gas|0|225000|10/14/2022 20:24:07|5|1|False|no|yes|Bele Vode
+60|central|1|174900|03/14/2023 20:12:31|3|2|False|no||Banovo Brdo
+85|district|0|235000|03/14/2023 16:24:54|4|2|False|yes|yes|Banovo Brdo
+105||0|245000|03/14/2023 16:24:41|3|1|False||yes|Banovo Brdo
+130|central|0|500000|12/14/2022 16:13:17|4|2|False|no|yes|Golf Naselje
+142||0|600000|12/14/2022 16:13:17|4|3|True|no|yes|Golf Naselje
+71|central|0|92000|03/14/2023 15:30:28|2.5|2|True|no||Železnik
+107|district|1|306000|02/14/2023 14:06:24|3|4|False|no||Banovo Brdo
+130|gas|0|499900|12/14/2022 12:24:59|4|2|False|no|yes|Golf Naselje
+142|gas|0|610000|12/14/2022 12:24:58|5|3|True|no|yes|Golf Naselje
+53|gas|1|119500|12/08/2022 12:22:10|2.5|4|True|no||Filmski Grad
+88|district|0|240000|12/14/2022 00:17:24|4|3|True||yes|Bele Vode
+54|storageHeater|0|79000|09/14/2022 00:00:15|2.5|2|True||no|Banovo Brdo
+53|gas|3|107200|10/05/2022 00:42:56|3|4|True|no|in_progress|Filmski Grad
+65|district|1|128000|02/13/2023 22:08:29|2.5|4|False|no|yes|Čukarička Padina
+49|district|0|180000|03/13/2023 20:25:29|2|3|False|no|yes|Banovo Brdo
+113|gas|0|150000|03/13/2023 19:08:23|4|-1|False||no|Bele Vode
+103|gas|0|135000|11/13/2022 18:21:24|4|1|False|no|yes|Žarkovo
+142|gas|0|610000|12/13/2022 18:18:24|5|3|True||yes|Golf Naselje
+130|gas|0|500000|12/13/2022 18:18:18|4|2|False||yes|Golf Naselje
+58|district|1|155000|04/12/2023 18:20:52|2|2|False||yes|Filmski Grad
+53||0|120000|10/13/2022 16:22:40|3|4|True|no||Filmski Grad
+74|district|0|300000|02/13/2023 16:09:02|3|1|False||yes|Banovo Brdo
+54||0|150000|04/12/2023 16:07:00|2|-1|False|no|yes|Banovo Brdo
+100||0|2700|04/12/2023 16:06:54|3|0|False|||Banovo Brdo
+58|district|1|155000|04/12/2023 15:16:21|2|2|False||yes|Filmski Grad
+43|norwegianRadiators|0|88000|04/12/2023 15:05:54|2.5|3|False|no|yes|Filmski Grad
+123||0|1222222|07/13/2022 15:05:37|3|0|False|||Bele Vode
+60||1|180000|02/13/2023 14:05:24|1.5|3|False||yes|Cerak Vinogradi
+58|district|1|155000|04/12/2023 13:30:19|2|2|False|no|yes|Filmski Grad
+146|district|0|204000|12/13/2022 10:26:41|6|4|False|yes|in_progress|Banovo Brdo
+68|district|0|102000|04/12/2023 10:29:55|4|2|False|no||Filmski Grad
+74|electricity|0|124850|01/10/2020 19:55:08|3|1|False||yes|Žarkovo
+50|central|0|79000|05/07/2022 15:55:22|3|-1|False||no|Julino Brdo
+135|gas|0|225000|09/12/2022 17:19:35|5|1|False||yes|Bele Vode
+76|gas|0|114000|11/12/2022 14:18:20|3|2|True||yes|Železnik
+55|central|0|99900|12/31/2022 13:23:39|2.5|2|False||yes|Železnik
+67|gas|0|93800|02/07/2023 20:21:17|3|-1|False||yes|Železnik
+55|central|0|103000|02/23/2023 14:22:44|3|-1|False||yes|Žarkovo
+62|district|0|150000|04/10/2023 19:22:31|2|2|False||yes|Banovo Brdo
+66|district|0|174900|01/12/2023 22:19:46|3|-1|False|no||Banovo Brdo
+85|electricity|0|120000|05/12/2022 20:19:29|4|5|True||yes|Banovo Brdo
+45|central|0|56700|04/11/2023 19:31:08|2|5|True|no||Žarkovo
+158|central|0|470000|01/12/2023 18:15:12|4|2|False|no|yes|Golf Naselje
+58|district|1|155000|04/11/2023 18:08:16|2|2|False|no|yes|Filmski Grad
+158|central|0|474000|11/05/2021 16:09:56|4|1|False|no|yes|Košutnjak
+72|district|1|200000|08/04/2022 18:20:39|3|5|True|no|yes|Banovo Brdo
+31|district|1|78000|04/11/2023 16:05:23|0.5|1|False|no||Čukarička Padina
+68|district|0|102000|04/11/2023 14:17:13|3.5|3|False||no|Filmski Grad
+48|district|1|155500|10/23/2022 09:24:37|2|0|False|no|yes|Banovo Brdo
+46|storageHeater|0|31900|02/11/2023 22:38:21|2.5|4|True|no|yes|Rušanj
+80|district|1|200000|04/11/2022 20:19:57|3|4|True||yes|Banovo Brdo
+54|district|1|155000|04/10/2023 20:11:49|2|2|False|no|yes|Filmski Grad
+58|district|1|154900|04/10/2023 20:06:36|1|2|False|no|yes|Filmski Grad
+107|district|1|165000|05/11/2022 17:36:58|4|7|False|no|yes|Čukarička Padina
+129|electricity|0|125000|01/11/2023 17:34:14|4|2|False||yes|Žarkovo
+125|central|0|349000|01/11/2023 17:27:55|3|1|False|no|yes|Banovo Brdo
+67||1|213280|04/10/2023 16:25:38|2.5|2|False|no||Banovo Brdo
+70||1|218184|04/10/2023 16:25:38|3|2|False|no||Banovo Brdo
+74||1|229258|04/10/2023 16:25:37|2.5|2|False|no||Banovo Brdo
+97||1|290145|04/10/2023 16:25:37|4|2|False|no||Banovo Brdo
+98||1|300000|04/10/2023 16:25:37|3.5|2|False|no||Banovo Brdo
+103||1|315168|04/10/2023 16:25:37|4|2|False|no||Banovo Brdo
+112||1|353859|04/10/2023 16:25:37|4|4|False|no||Banovo Brdo
+75||1|229069|04/10/2023 16:25:37|3|2|False|no||Banovo Brdo
+68|district|1|175000|04/10/2023 15:26:10|3|1|False|no|yes|Ada Ciganlija
+100||0|129990|02/11/2022 15:07:36|3.5|6|False|yes|yes|Banovo Brdo
+120|district|0|280000|01/11/2023 15:03:55|5|3|False|no|yes|Golf Naselje
+85|district|0|235000|03/11/2023 14:21:25|4|2|False|no|yes|Banovo Brdo
+53|gas|1|109500|01/11/2023 13:31:48|2.5|4|True|no||Filmski Grad
+37||1|89000|03/11/2023 10:06:42|1|3|False|no|yes|Banovo Brdo
+154||0|360000|11/10/2022 20:18:40|3|2|False|no|yes|Banovo Brdo
+23|district|0|64000|02/10/2023 14:40:18|0.5|0|False|no|yes|Banovo Brdo
+77|district|1|119000|10/10/2022 12:10:14|3|2|False|no|yes|Julino Brdo
+129|storageHeater|0|125000|01/10/2023 11:30:30|4|1|False|no|yes|Žarkovo
+165||0|600000|03/10/2023 11:24:18|5|4|True|no|yes|Banovo Brdo
+74|central|1|130000|04/01/2022 17:33:09|3|1|False|no|yes|Žarkovo
+38|central|0|70000|11/09/2022 18:17:01|2|-1|False||no|Golf Naselje
+60|district|1|127000|02/09/2023 15:28:57|2.5|6|False|no|yes|Žarkovo
+75|district|2|135000|04/08/2023 15:23:56|3|2|False||yes|Žarkovo
+52|district|0|97000|04/08/2023 15:22:03|2.5|0|False|no|yes|Žarkovo
+68|central|1|167730|09/09/2022 14:36:25|2.5|3|False||no|Banovo Brdo
+72|central|1|168542|09/09/2022 14:36:25|2.5|-3|False||no|Banovo Brdo
+68|central|1|167730|09/09/2022 14:36:25|2.5|2|False||no|Banovo Brdo
+68|central|1|164300|09/09/2022 14:36:25|2.5|-1|False||no|Banovo Brdo
+61|central|1|148800|09/09/2022 14:36:25|2.5|3|False||no|Banovo Brdo
+62|central|1|149760|09/09/2022 14:36:25|2.5|-1|False||no|Banovo Brdo
+60|central|1|147780|09/09/2022 14:36:25|2.5|3|False||no|Banovo Brdo
+61|central|1|148800|09/09/2022 14:36:25|2.5|2|False||no|Banovo Brdo
+60|central|1|147780|09/09/2022 14:36:25|2.5|2|False||no|Banovo Brdo
+52|central|1|124800|09/09/2022 14:36:24|2|-1|False||no|Banovo Brdo
+83|central|0|66500|03/09/2022 14:27:10|3|-2|False||yes|Sremčica
+90|electricity|0|119000|12/09/2022 13:16:49|4|4|True||no|Bele Vode
+140|gas|0|490000|11/09/2022 12:01:16|4|2|False|semi|yes|Golf Naselje
+45|district|0|81000|11/09/2020 11:35:43|1.5|5|True|no||Žarkovo
+120|central|0|299000|01/09/2023 09:32:52|4|2|True||yes|Košutnjak
+60|electricity|0|90000|04/08/2023 09:27:04|2|1|False|yes||Železnik
+51||0|120000|03/09/2023 00:24:48|2|5|False||no|Banovo Brdo
+51||0|120000|03/09/2023 00:24:47|2|5|False||no|Banovo Brdo
+127|district|1|280000|03/08/2023 20:10:54|4|6|False||yes|Cerak Vinogradi
+45|district|1|98000|04/07/2023 20:06:47|1.5|7|False||yes|Cerak Vinogradi
+85|district|0|235000|03/08/2023 11:24:48|3.5|2|False|yes|yes|Banovo Brdo
+57|district|1|134900|04/07/2023 17:34:17|2.5|6|False|no|yes|Cerak Vinogradi
+137|central|1|335650|09/08/2022 16:36:04|4|4|True||no|Banovo Brdo
+132|central|1|323400|09/08/2022 16:36:04|4|4|True||no|Banovo Brdo
+85|district|0|235000|03/08/2023 11:24:48|3.5|2|False|yes|yes|Banovo Brdo
+57|district|1|134900|04/07/2023 17:34:17|2.5|6|False|no|yes|Cerak Vinogradi
+137|central|1|335650|09/08/2022 16:36:04|4|4|True||no|Banovo Brdo
+132|central|1|323400|09/08/2022 16:36:04|4|4|True||no|Banovo Brdo
+68|central|1|167730|09/08/2022 16:36:01|2.5|1|False||no|Banovo Brdo
+66|central|1|162340|09/08/2022 16:36:01|2.5|1|False||no|Banovo Brdo
+61|central|1|148800|09/08/2022 16:36:01|2.5|1|False||no|Banovo Brdo
+60|central|1|147780|09/08/2022 16:36:01|2.5|1|False||no|Banovo Brdo
+47|central|1|110600|09/08/2022 16:36:00|1.5|-3|False||no|Banovo Brdo
+31|district|1|86000|12/08/2022 16:30:20|1|3|False||yes|Čukarička Padina
+56|district|1|85000|04/07/2023 16:23:00|2.5|13|False|no|yes|Železnik
+123|gas|0|178000|04/07/2023 16:23:00|4|2|False|no|yes|Žarkovo
+178|central|0|430000|11/08/2022 16:17:31|4|2|False|no|yes|Golf Naselje
+63|electricity|0|140000|03/08/2023 15:07:13|3|1|False|||Bele Vode
+200|central|0|370000|04/14/2021 15:09:02|6|3|True|no||Banovo Brdo
+154|norwegianRadiators|0|360000|11/10/2022 20:24:01|3|2|False|no|yes|Banovo Brdo
+74|district|0|300000|02/03/2023 21:31:07|3|1|False|no|yes|Banovo Brdo
+85|district|0|235000|04/07/2023 14:26:21|3.5|2|False|no|yes|Banovo Brdo
+45|district|1|138000|02/08/2023 14:05:40|1.5|2|False|||Banovo Brdo
+71|central|0|92300|05/09/2022 18:06:34|2.5|2|True|no||Železnik
+72|district|1|280000|04/07/2023 12:24:50|3|1|False|no||Košutnjak
+129|electricity|0|125000|02/08/2023 12:15:32|4|1|False||yes|Železnik
+39|district|1|120000|11/29/2022 10:24:31|1.5|5|False|no|yes|Banovo Brdo
+60|district|1|134900|02/08/2023 09:27:02|2.5|0|True|no|yes|Cerak Vinogradi
+41|storageHeater|0|75000|03/07/2023 23:28:39|1.5|3|False|no||Bele Vode
+78|district|1|173500|12/07/2022 20:23:20|4|6|False|no|yes|Banovo Brdo
+51|electricity|0|88000|03/07/2023 19:31:38|2|0|False|no|yes|Bele Vode
+37|electricity|0|57000|04/06/2023 18:29:21|1|-1|False||no|Sremčica
+84|central|0|188000|12/01/2022 12:17:43|4|1|False||yes|Cerak
+30|district|1|47000|02/07/2023 16:17:46|1|-1|False|no|yes|Železnik
+72|district|0|175000|04/07/2022 15:37:17|4|3|True|no|yes|Golf Naselje
+89|central|0|159000|03/07/2023 15:24:41|3.5|3|True|no|yes|Žarkovo
+78|district|1|173400|03/07/2023 14:27:08|3.5|6|True|no|yes|Banovo Brdo
+79||0|118500|03/07/2023 14:17:42|3|2|True||no|Železnik
+62|district|0|95000|03/07/2023 14:08:17|2.5|5|False||yes|Banovo Brdo
+74|district|2|185000|03/07/2023 13:07:07|3.5|9|False||yes|Banovo Brdo
+60|district|1|134900|12/07/2022 12:24:46|2.5|6|True|no|yes|Cerak Vinogradi
+48|district|1|105000|12/07/2022 12:14:13|1.5|1|False|no|yes|Železnik
+55|gas|0|90000|03/07/2023 12:06:43|2.5|-1|False|no|yes|Bele Vode
+48|airConditioning|0|90000|09/07/2022 12:05:51|2|1|False|no|yes|Banovo Brdo
+48|gas|0|94000|07/05/2022 17:25:42|2.5|5|True|no|yes|Cerak
+100|electricity|0|199000|02/04/2023 15:30:58|4|1|False|no|yes|Banovo Brdo
+99|district|1|230000|10/17/2022 12:23:37|3|5|True||yes|Banovo Brdo
+86|central|1|257647|02/04/2023 14:35:08|3.5|-1|False|no|yes|Banovo Brdo
+60|central|1|162000|02/04/2023 14:35:08|2|4|False|no|yes|Banovo Brdo
+64|central|1|192070|02/04/2023 14:35:08|2.5|3|False|no|yes|Banovo Brdo
+100|central|1|330000|02/04/2023 14:35:08|2.5|4|False|no|yes|Banovo Brdo
+44|district|0|84000|04/03/2023 11:01:24|2|0|False|semi|in_progress|Novi Železnik
+87|central|1|247950|02/03/2023 21:31:10|3.5|-1|False|no|yes|Čukarička Padina
+122|district|1|195000|03/03/2023 19:32:53|5|6|False|no|yes|Cerak Vinogradi
+74|district|0|300000|02/03/2023 18:24:18|3|1|False||yes|Banovo Brdo
+76|underfloor|1|220000|03/03/2023 17:23:29|2.5|3|True|no|yes|Žarkovo
+57|district|1|165000|03/03/2023 15:30:54|1.5|2|False|no|yes|Čukarička Padina
+56|electricity|0|78900|03/03/2023 13:33:11|2|2|False|no|yes|Železnik
+67|district|2|199080|03/02/2023 15:03:25|2|6|False||yes|Banovo Brdo
+59||1|180000|03/01/2023 16:23:41|2.5|3|False|yes||Cerak Vinogradi
+82||1|200000|02/01/2021 16:05:18|3|5|True||yes|Golf Naselje
+121|district|1|545000|02/01/2023 15:34:20|4|3|False|no|yes|Banovo Brdo
+95||0|300000|06/01/2022 14:05:16|4|3|True|yes|yes|Cerak Vinogradi
+84|district|1|275000|10/01/2022 12:17:20|3|2|False||yes|Čukarička Padina
+100|central|1|330000|02/04/2023 14:35:08|2.5|4|False|no|yes|Banovo Brdo
+44|district|0|84000|04/03/2023 11:01:24|2|0|False|semi|in_progress|Novi Železnik
+87|central|1|247950|02/03/2023 21:31:10|3.5|-1|False|no|yes|Čukarička Padina
+122|district|1|195000|03/03/2023 19:32:53|5|6|False|no|yes|Cerak Vinogradi
+74|district|0|300000|02/03/2023 18:24:18|3|1|False||yes|Banovo Brdo
+76|underfloor|1|220000|03/03/2023 17:23:29|2.5|3|True|no|yes|Žarkovo
+57|district|1|165000|03/03/2023 15:30:54|1.5|2|False|no|yes|Čukarička Padina
+56|electricity|0|78900|03/03/2023 13:33:11|2|2|False|no|yes|Železnik
+67|district|2|199080|03/02/2023 15:03:25|2|6|False||yes|Banovo Brdo
+59||1|180000|03/01/2023 16:23:41|2.5|3|False|yes||Cerak Vinogradi
+82||1|200000|02/01/2021 16:05:18|3|5|True||yes|Golf Naselje
+121|district|1|545000|02/01/2023 15:34:20|4|3|False|no|yes|Banovo Brdo
+95||0|300000|06/01/2022 14:05:16|4|3|True|yes|yes|Cerak Vinogradi
+84|district|1|275000|10/01/2022 12:17:20|3|2|False||yes|Čukarička Padina
+65|district|0|100000|03/01/2021 11:19:30|2.5|2|False||yes|Železnik
+82|gas|1|135000|01/31/2023 00:22:59|3|6|True||no|Žarkovo
+80|district|2|236830|02/28/2023 20:52:20|3|4|False||yes|Banovo Brdo
+120|district|1|332020|06/30/2022 17:23:53|4|5|True|no||Banovo Brdo
+147||0|500000|12/30/2022 08:40:26|4|2|False||yes|Golf Naselje
+142||0|610000|12/30/2022 08:40:25|4|3|True||yes|Golf Naselje
+120|district|1|332020|06/30/2022 17:23:53|4|5|True|no||Banovo Brdo
+147||0|500000|12/30/2022 08:40:26|4|2|False||yes|Golf Naselje
+142||0|610000|12/30/2022 08:40:25|4|3|True||yes|Golf Naselje
+84|district|0|154000|12/29/2022 23:25:16|3.5|-1|False|no|yes|Cerak Vinogradi
+165||0|2350|04/29/2022 19:31:14|5|4|True|no|yes|Banovo Brdo
+110|district|1|195000|09/29/2022 18:22:39|4|6|False|no|yes|Cerak Vinogradi
+78|district|1|175000|12/28/2021 09:10:16|4|6|True|no|yes|Banovo Brdo
+96|district|1|249000|02/27/2023 17:31:10|3.5|5|False|no||Banovo Brdo
+145|underfloor|0|339000|10/27/2022 14:24:48|4|1|False|no|yes|Banovo Brdo
+61|district|1|135000|02/27/2023 12:07:34|2.5|4|False|no|yes|Julino Brdo
+141||0|350000|07/27/2022 09:21:12|5|1|False|yes||Banovo Brdo
+49|district|0|99900|12/26/2022 20:31:11|2.5|4|True|no|yes|Cerak
+129|electricity|0|125000|12/26/2022 20:33:10|3.5|1|False||yes|Žarkovo
+74|norwegianRadiators|0|132600|08/26/2021 12:51:03|3|1|False||yes|Repište
+330|central|0|500000|09/25/2020 20:38:20|4|-1|False|yes|yes|Banovo Brdo
+61|electricity|0|88000|02/25/2023 12:21:51|2|1|False|no|yes|Bele Vode
+270|gas|1|688500|06/24/2022 18:53:49|4|100|False||yes|Banovo Brdo
+76|gas|0|114000|05/24/2022 18:52:19|2.5|3|True||yes|Železnik
+51|electricity|0|88000|02/24/2023 18:22:07|2|0|False||yes|Bele Vode
+94|electricity|0|96000|12/24/2022 18:21:45|4|4|True||no|Bele Vode
+70|gas|2|250000|01/26/2023 13:00:37|3|1|False||in_progress|Banovo Brdo
+76|central|1|76000|01/24/2023 00:22:09|3|-2|False||no|Julino Brdo
+68|district|0|102000|03/22/2023 19:24:24|3|2|False|no|yes|Sremčica
+84|central|0|120000|03/22/2022 14:54:12|3|3|True|no|yes|Julino Brdo
+83|norwegianRadiators|0|90000|05/21/2022 23:01:33|3.5|5|False|no||Žarkovo
+40|district|1|90000|07/21/2022 18:21:10|1.5|7|False|no||Čukarička Padina
+72|district|0|175000|05/21/2022 11:36:50|4|3|True|no|yes|Golf Naselje
+54|central|0|82000|07/20/2022 15:24:07|2|-1|False|no|yes|Žarkovo
+48|gas|0|105000|01/20/2023 00:24:01|1.5|3|True||yes|Bele Vode
+48|gas|0|105000|01/19/2023 19:32:17|1.5|3|True|no|yes|Žarkovo
+61|district|1|107000|01/19/2023 11:35:25|2|-1|False|no|yes|Cerak Vinogradi
+64|district|1|128000|02/07/2023 09:32:11|2.5|4|False|no|yes|Čukarička Padina
+77|district|1|119000|12/16/2022 19:25:49|3|2|False|no|yes|Žarkovo
+130|central|0|500000|12/16/2022 16:25:54|4|2|False|no|yes|Golf Naselje
+38|central|0|70000|11/15/2022 12:22:25|2|-1|False|no||Filmski Grad
+43|district|0|80000|02/14/2023 18:08:33|2|3|True||yes|Cerak
+64|district|1|110000|09/14/2022 18:10:32|2|0|False|no|yes|Banovo Brdo
+72|district|0|175000|05/14/2022 11:36:43|4|3|True|no|yes|Golf Naselje
+74|central|0|130000|03/13/2020 16:05:30|3|1|False||yes|Žarkovo
+36||0|120000|12/12/2022 12:35:47|1|2|False||yes|Banovo Brdo
+57|central|0|103000|03/08/2023 20:36:11|2|-1|False|no|yes|Žarkovo
+45|district|1|138000|02/08/2023 17:22:12|1.5|2|False|no||Banovo Brdo
+122|central|1|115000|09/08/2022 16:35:35|5|9|False||yes|Železnik
+61|gas|0|95000|08/08/2022 16:22:08|2|1|False|yes||Novi Železnik
+41|district|1|107000|02/08/2023 12:23:49|1.5|6|False|no|yes|Čukarička Padina
+43|district|1|85000|11/07/2022 22:22:08|1.5|8|True|no|yes|Čukarička Padina
+74||0|300000|02/03/2023 21:10:48|3.5|1|False|no|yes|Košutnjak
+72|district|1|200000|06/03/2021 15:35:33|3|5|False|no|yes|Golf Naselje
+200|heatPump|0|850000|08/03/2022 14:31:10|5|-1|False|no|no|Golf Naselje
+50|district|0|80000|11/02/2022 15:31:07|2|3|False||no|Žarkovo
+57|central|0|115000|12/02/2022 15:24:42|2|1|False|no|yes|Žarkovo
+72|district|1|280000|02/23/2023 18:20:02|3|1|False||no|Filmski Grad
+26|marbleRadiator|0|58300|02/19/2023 21:51:50|0.5|1|False|no|yes|Filmski Grad
+72|district|1|280000|02/17/2023 10:54:59|3|1|False|yes|in_progress|Filmski Grad
+41|district|1|87000|02/11/2023 18:18:12|1|6|True|yes|yes|Cerak Vinogradi
+48|gas|0|105000|01/18/2023 20:18:41|1.5|100|False|yes|yes|Žarkovo
+74|district|0|230000|01/16/2023 08:59:36|2.5|0|False|no|yes|Golf Naselje
+22|district|0|62000|01/07/2023 16:59:44|0.5|-1|False|no|in_progress|Žarkovo
+100|storageHeater|0|96000|12/27/2022 11:26:51|3.5|4|True|no|yes|Bele Vode
+41|storageHeater|0|81000|12/21/2022 23:49:52|1|3|False|yes|in_progress|Bele Vode
+72|district|1|280000|02/17/2023 10:54:59|3|1|False|yes|in_progress|Filmski Grad
+41|district|1|87000|02/11/2023 18:18:12|1|6|True|yes|yes|Cerak Vinogradi
+48|gas|0|105000|01/18/2023 20:18:41|1.5|100|False|yes|yes|Žarkovo
+74|district|0|230000|01/16/2023 08:59:36|2.5|0|False|no|yes|Golf Naselje
+22|district|0|62000|01/07/2023 16:59:44|0.5|-1|False|no|in_progress|Žarkovo
+100|storageHeater|0|96000|12/27/2022 11:26:51|3.5|4|True|no|yes|Bele Vode
+41|storageHeater|0|81000|12/21/2022 23:49:52|1|3|False|yes|in_progress|Bele Vode
+46|electricity|0|79000|12/15/2022 14:52:09|2|0|False|no|in_progress|Žarkovo
+44|district|0|80000|11/30/2022 16:51:01|1.5|4|False|no|no|Žarkovo
+100|district|0|120000|04/15/2022 18:23:34|3|3|True|no|in_progress|Cerak
+28|district|1|220000|11/14/2022 08:41:10|1|5|False|no|yes|Čukarička Padina
+92|gas|0|150000|11/10/2022 17:09:39|3.5|100|False|no|in_progress|Filmski Grad
+24|electricity|0|25000|10/07/2022 11:00:38|0.5|-1|False|no|yes|Makiš
+74|district|0|89930|05/11/2022 12:34:05|3|2|False|no|in_progress|Julino Brdo
+36|district|3|110000|08/25/2022 14:29:29|1|2|False|no|yes|Banovo Brdo
+84|electricity|0|190000|08/21/2022 21:40:41|4.5|0|False|yes|yes|Cerak
+88|district|1|135000|06/14/2022 09:52:57|4|4|True|no|no|Košutnjak
+78|district|1|175000|11/24/2021 11:54:53|4|6|True|no|yes|Banovo Brdo
+49|district|0|79000|10/17/2018 16:44:34|1.5|3|False|no|in_progress|Žarkovo
+55|marbleRadiator|0|85000|06/20/2021 14:31:11|2.5|3|False|no|no|Žarkovo
+41|gas|0|67000|05/11/2021 20:40:10|2|1|True||yes|Bele Vode
+58|gas|1|1|05/24/2020 19:08:01|2|0|False|no|no|Žarkovo
