@@ -33,7 +33,22 @@ namespace REPF.Backend.Controllers
         //Real price:
         //32|central|0|55000|04/12/2023 00:25:34|1.5|-1|Petlovo Brdo
 
-        [HttpPost]
+//        {
+//  "location": "Kanarevo Brdo",
+//  "quadrature": 78,
+//  "roomCount": 3,
+//  "floor": 4,
+//  "isLastFloor": false,
+//  "registeredStatus": "yes",
+//  "furnishedStatus": "no",
+//  "heatingType": "Centralno",
+//  "elevator": 0
+//}
+
+
+
+
+    [HttpPost]
         public async Task<IActionResult> GetForecast(ForecastRequestParameters forecastRequestParameters, CancellationToken cancellationToken)
         {
             ForecastRequest request = new ForecastRequest()
@@ -43,6 +58,10 @@ namespace REPF.Backend.Controllers
                 Elevator=forecastRequestParameters.Elevator,
                 HeatingType = HeatingType.HeatingTypeMap[forecastRequestParameters.HeatingType],
                 M2=forecastRequestParameters.Quadrature,
+                FurnishedStatus=forecastRequestParameters.FurnishedStatus,
+                IsLastFloor=forecastRequestParameters.IsLastFloor,
+                RedactedFloor=forecastRequestParameters.Floor,
+                RegisteredStatus= forecastRequestParameters.RegisteredStatus
             };
 
 

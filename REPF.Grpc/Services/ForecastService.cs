@@ -12,7 +12,9 @@ namespace REPF.Grpc.Services
     public class ForecastService:Forecaster.ForecasterBase
     {
         private readonly PredictionEngine<ForecastRequest, ForecastResponse> _predictionEngine;
-        private readonly string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\MLModel\\cukarica-fetch_from_05.05.2023.csv";
+        //private readonly string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\MLModel\\fetch_from_03.05.2023.csv";
+        //private readonly string dataPath = @"C:\Users\nebojsa.marjanovic\source\repos\REPF.Backend\REPF.Grpc\MLModel\cukarica-fetch_from_05.05.2023.csv";
+        private readonly string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\MLModel\\fetch_from_03.05.2023.csv";
         private MLContext mlContext;
         private IDataView dataView;
         private IDataView trainData;
@@ -53,10 +55,10 @@ namespace REPF.Grpc.Services
                 HeatingType = request.HeatingType,
                 Location = request.PlaceTitle,
                 Price = 0,
-                RedactedFloor = 0,
+                RedactedFloor = request.RedactedFloor,
                 RoomCount = (float)request.RoomCount,
                 FurnishedStatus = request.FurnishedStatus,
-                IsLastFloor = request.IsLastFloor.ToString(),
+                IsLastFloor = request.IsLastFloor,
                 RegisteredStatus = request.RegisteredStatus
             };
 
@@ -86,13 +88,27 @@ namespace REPF.Grpc.Services
             //    .Append(mLContext.Transforms.Concatenate("Features", "Quadrature",  "Elevator", "RoomCount",  "LocationEncoded", "FurnishedStatusEncoded", "RegisteredStatusEncoded", "HeatingTypeEncoded", "IsLastFloorEncoded"))
             //    .Append(mLContext.Regression.Trainers.FastTreeTweedie()));
 
+            //var pipeline = mLContext.Transforms.CopyColumns(outputColumnName: "Label", inputColumnName: "Price")
+            //    .Append(mlContext.Transforms.DropColumns("CreatedAt"))
+            //    .Append(mlContext.Transforms.Categorical.OneHotEncoding(new[] { new InputOutputColumnPair("HeatingTypeEncoded", "HeatingType"), new InputOutputColumnPair("IsLastFloorEncoded", "IsLastFloor"), new InputOutputColumnPair("FurnishedStatusEncoded", "FurnishedStatus"), new InputOutputColumnPair("RegisteredStatusEncoded", "RegisteredStatus"), new InputOutputColumnPair("LocationEncoded", "Location") }, outputKind: OneHotEncodingEstimator.OutputKind.Indicator))
+            //                    .Append(mlContext.Transforms.ReplaceMissingValues(new[] { new InputOutputColumnPair("Quadrature", "Quadrature"), new InputOutputColumnPair("Elevator", "Elevator"), new InputOutputColumnPair("RoomCount", "RoomCount"), new InputOutputColumnPair("RedactedFloor", "RedactedFloor") }))
+            //                     //.Append(mlContext.Transforms.Concatenate("Features", new[] { "LocationEncoded", "Quadrature", "Elevator", "RoomCount", "RedactedFloor", "HeatingTypeEncoded", "IsLastFloorEncoded", "FurnishedStatusEncoded", "RegisteredStatusEncoded" }))
+            //                     .Append(mlContext.Transforms.Concatenate("Features", new[] { "LocationEncoded", "Quadrature", "RoomCount", "Elevator" }))
+            //                     .Append(mlContext.Transforms.NormalizeMinMax("Features"))
+            ////.Append(mlContext.Regression.Trainers.FastTree());
+            //                        .Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 7, MinimumExampleCountPerLeaf = 11, NumberOfTrees = 30, MaximumBinCountPerFeature = 565, FeatureFraction = 0.99999999, LearningRate = 0.625672421380262}));
+
             var pipeline = mLContext.Transforms.CopyColumns(outputColumnName: "Label", inputColumnName: "Price")
                 .Append(mlContext.Transforms.DropColumns("CreatedAt"))
-                .Append(mlContext.Transforms.Categorical.OneHotEncoding(new[] { new InputOutputColumnPair("HeatingType", "HeatingType"), new InputOutputColumnPair("IsLastFloor", "IsLastFloor"), new InputOutputColumnPair("FurnishedStatus", "FurnishedStatus"), new InputOutputColumnPair("RegisteredStatus", "RegisteredStatus"), new InputOutputColumnPair("Location", "Location") }, outputKind: OneHotEncodingEstimator.OutputKind.Indicator))
-                                .Append(mlContext.Transforms.ReplaceMissingValues(new[] { new InputOutputColumnPair("Quadrature", "Quadrature"), new InputOutputColumnPair("Elevator", "Elevator"), new InputOutputColumnPair("RoomCount", "RoomCount"), new InputOutputColumnPair("RedactedFloor", "RedactedFloor") }))
-                                .Append(mlContext.Transforms.Concatenate("Features", new[] { "Location", "Quadrature", "Elevator", "RoomCount" }))
-                                 .Append(mlContext.Regression.Trainers.FastTree());
-            //.Append(mLContext.Regression.Trainers.FastTreeTweedie());
+                .Append(mlContext.Transforms.ReplaceMissingValues(new[] { new InputOutputColumnPair("QuadratureReplaced", "Quadrature"), new InputOutputColumnPair("ElevatorReplaced", "Elevator"), new InputOutputColumnPair("RoomCountReplaced", "RoomCount") }))
+                .Append(mlContext.Transforms.Categorical.OneHotEncoding(inputColumnName: "Location", outputColumnName: "LocationEncoded"))
+                .Append(mlContext.Transforms.Concatenate("Features", new[] { "LocationEncoded", "QuadratureReplaced", "RoomCountReplaced", "ElevatorReplaced" }))
+                                 .Append(mlContext.Transforms.NormalizeMinMax("Features"))
+                                                                                    //.Append(mlContext.Regression.Trainers.FastTree());
+                                                                                    //.Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 7, MinimumExampleCountPerLeaf = 11, NumberOfTrees = 30, MaximumBinCountPerFeature = 565, FeatureFraction = 0.99999999, LearningRate = 0.625672421380262 }));
+                                                                                    .Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 4, MinimumExampleCountPerLeaf = 2, NumberOfTrees = 705, MaximumBinCountPerFeature = 1022, FeatureFraction = 0.99999999, LearningRate = 0.30498982295545 }));
+
+
 
             //FastTreeTweedie - 16.55%
             //FastTree - 17.34%
@@ -121,11 +137,18 @@ namespace REPF.Grpc.Services
 
             Console.WriteLine($"*       RSquared Score:      {metrics.RSquared:0.##}");
 
+            Console.WriteLine($"*       Mean Absolute Error:      {metrics.MeanAbsoluteError:#.##}");
+
+            Console.WriteLine($"*       Mean Squared Error:      {metrics.MeanSquaredError:#.##}");
+
             Console.WriteLine($"*       Root Mean Squared Error:      {metrics.RootMeanSquaredError:#.##}");
+
 
             var mean = testData.GetColumn<Single>("Price").Average();
 
             Console.WriteLine($"*       Root Mean Squared Error (%):      {metrics.RootMeanSquaredError/mean*100:#.##}%");
+
+            Console.WriteLine($"*       RSquared:      {metrics.RSquared:0.##}");
 
 
             Console.WriteLine($"*************************************************");

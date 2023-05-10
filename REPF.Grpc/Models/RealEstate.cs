@@ -21,7 +21,7 @@ namespace REPF.Grpc.Models
         [LoadColumn(6)]
         public float RedactedFloor { get; set; }
         [LoadColumn(7)]
-        public string IsLastFloor { get; set; }
+        public bool IsLastFloor { get; set; }
 
         [LoadColumn(8)]
         public string? FurnishedStatus { get; set; }
