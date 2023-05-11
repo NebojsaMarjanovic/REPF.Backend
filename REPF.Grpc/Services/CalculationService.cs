@@ -2,14 +2,12 @@
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Trainers.FastTree;
-using Microsoft.ML.Transforms;
 using REPF.Grpc.Models;
-using static Microsoft.ML.DataOperationsCatalog;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 namespace REPF.Grpc.Services
 {
-    public class ForecastService:Forecaster.ForecasterBase
+    public class CalculationService:Calculator.CalculatorBase
     {
         private readonly string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\MLModel\\fetch_from_03.05.2023.csv";
         private MLContext mlContext;
@@ -18,7 +16,7 @@ namespace REPF.Grpc.Services
         private IDataView testData;
 
 
-        public ForecastService()
+        public CalculationService()
         {
             mlContext = new MLContext(seed: 0);
             dataView = mlContext.Data.LoadFromTextFile<RealEstate>(dataPath, separatorChar: '|', hasHeader: true);
@@ -34,7 +32,7 @@ namespace REPF.Grpc.Services
         }
 
 
-        public override Task<ForecastResponse> Forecast(ForecastRequest request, ServerCallContext context)
+        public override Task<CalculationResponse> Calculate(CalculationRequest request, ServerCallContext context)
         {
 
             var realEstateSample = new RealEstate()
@@ -119,7 +117,7 @@ namespace REPF.Grpc.Services
 
 
 
-        public ForecastResponse TestSinglePrediction(ITransformer model, RealEstate realEstate)
+        public CalculationResponse TestSinglePrediction(ITransformer model, RealEstate realEstate)
         {
             var predictionFunction = mlContext.Model.CreatePredictionEngine<RealEstate, RealEstatePrediction>(model);
 
@@ -129,7 +127,7 @@ namespace REPF.Grpc.Services
             Console.WriteLine($"Predicted price: {prediction.Price:0.####}, actual price: 180000");
             Console.WriteLine($"**********************************************************************");
 
-            return new ForecastResponse()
+            return new CalculationResponse()
             {
                 Price = prediction.Price
             };

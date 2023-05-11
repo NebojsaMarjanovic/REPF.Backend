@@ -1,9 +1,9 @@
 ﻿using REPF.Backend.Enumerations;
 using System.ComponentModel.DataAnnotations;
 
-namespace REPF.Backend.Models.Input
+namespace REPF.Backend.Models
 {
-    public class CalculationRequestParameters
+    public class ForecastRequestParameters
     {
         [Required]
         public Location Location { get; set; }

@@ -2,9 +2,7 @@
 using Grpc.Net.Client;
 using Microsoft.AspNetCore.Mvc;
 using REPF.Backend.Enumerations;
-using REPF.Backend.Models.Input;
-using REPF.Backend.Models.Output;
-using REPF.Backend.Utilities;
+using REPF.Backend.Models;
 using REPF.Grpc;
 
 namespace REPF.Backend.Controllers
@@ -13,45 +11,18 @@ namespace REPF.Backend.Controllers
     [ApiController]
     public class PriceController : ControllerBase
     {
-        private readonly Forecaster.ForecasterClient _client;
+        private readonly Calculator.CalculatorClient _client;
 
-        public PriceController(Forecaster.ForecasterClient client)
+        public PriceController(Calculator.CalculatorClient client)
         {
-            //grpc client initialization
             _client = client;
         }
 
-        //Request: 
-        /*{
-            "location": "Petlovo Brdo",
-            "quadrature": 32,
-            "roomCount": 1.5,
-            "heatingType": "central",
-            "elevator": 0
-        }*/
-
-        //Real price:
-        //32|central|0|55000|04/12/2023 00:25:34|1.5|-1|Petlovo Brdo
-
-//        {
-//  "location": "Kanarevo Brdo",
-//  "quadrature": 78,
-//  "roomCount": 3,
-//  "floor": 4,
-//  "isLastFloor": false,
-//  "registeredStatus": "yes",
-//  "furnishedStatus": "no",
-//  "heatingType": "Centralno",
-//  "elevator": 0
-//}
-
-
-
 
     [HttpPost]
-        public async Task<IActionResult> GetForecast(ForecastRequestParameters forecastRequestParameters, CancellationToken cancellationToken)
+        public async Task<IActionResult> GetCalculation(CalculationRequestParameters forecastRequestParameters, CancellationToken cancellationToken)
         {
-            ForecastRequest request = new ForecastRequest()
+            CalculationRequest request = new CalculationRequest()
             {
                 PlaceTitle = forecastRequestParameters.Location.ToString(),
                 RoomCount = forecastRequestParameters.RoomCount,
@@ -65,7 +36,7 @@ namespace REPF.Backend.Controllers
             };
 
 
-            var result =  await _client.ForecastAsync(request);
+            var result =  await _client.CalculateAsync(request, cancellationToken: cancellationToken);
 
             return Ok(result);
 

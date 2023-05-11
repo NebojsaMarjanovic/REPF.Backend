@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using REPF.Backend.Enumerations;
-using REPF.Backend.Models.Input;
 
 namespace REPF.Backend.Controllers
 {

@@ -6,13 +6,13 @@ option csharp_namespace = "REPF.Grpc";
 package forecast;
 
 // The greeting service definition.
-service Forecaster {
+service Calculator {
   // Sends a greeting
-  rpc Forecast (ForecastRequest) returns (ForecastResponse);
+  rpc Calculate (CalculationRequest) returns (CalculationResponse);
 }
 
 // The request message containing the user's name.
-message ForecastRequest {
+message CalculationRequest {
   int32 m2 = 1;
   string heatingType = 2;
   int32 elevator = 3;
@@ -26,6 +26,6 @@ message ForecastRequest {
 }
 
 // The response message containing the greetings.
-message ForecastResponse {
+message CalculationResponse {
   double price = 1;
 }

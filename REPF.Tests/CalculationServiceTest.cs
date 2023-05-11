@@ -6,7 +6,7 @@ using REPF.Grpc.Services;
 
 namespace REPF.Tests
 {
-    public class ForecastServiceTest
+    public class CalculationServiceTest
     {
        
         RealEstate request = new RealEstate()
@@ -23,7 +23,7 @@ namespace REPF.Tests
             Price = 0
         };
 
-        ForecastService sut = new ForecastService();
+        CalculationService sut = new CalculationService();
 
 
         [Fact]

@@ -25,9 +25,9 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 75|central|0|135000|03/04/2023 14:05:33|2|3|True|||Rakovica
 45|district|0|99000|11/08/2022 15:18:15|2|1|False||yes|Labudovo Brdo
 85|district|0|99000|03/07/2023 13:21:26|3|3|True||no|Resnik
-46|central|0|73000|04/29/2023 15:25:04|1.5|-1|False||no|Vidikova��ka Pa
+46|central|0|73000|04/29/2023 15:25:04|1.5|-1|False||no|Vidikovačka Padina
 92|district|0|113000|01/11/2023 15:24:56|3.5|3|True||yes|Resnik
-33|electricity|0|62000|04/20/2023 14:25:25|1.5|1|False||yes|Vidikova��ka Pa
+33|electricity|0|62000|04/20/2023 14:25:25|1.5|1|False||yes|Vidikovačka Padina
 130|gas|0|142000|03/16/2023 17:21:43|3.5|-1|False||no|Petlovo Brdo
 36|central|0|54000|09/13/2022 16:20:34|2.5|4|True||no|Petlovo Brdo
 130|district|1|230000|04/07/2023 14:23:24|5|7|True||yes|Vidikovac
@@ -36,7 +36,7 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 46|central|0|88500|03/04/2023 10:28:35|2|4|True|yes|yes|Rakovica - Centar
 66|district|0|125000|02/06/2023 09:31:30|2|3|False|no||Vidikovac
 28|central|0|51000|05/02/2023 18:22:34|0.5|3|False||no|Labudovo Brdo
-92|district|1|180000|06/03/2022 18:04:57|3.5|1|False|no|yes|Stari Ko��ut
+92|district|1|180000|06/03/2022 18:04:57|3.5|1|False|no|yes|Stari Košutnjak
 105|district|1|168000|08/03/2022 17:30:49|4|5|False||yes|Vidikovac
 88|district|3|159000|03/03/2023 16:07:58|3.5|4|False||yes|Vidikovac
 96|district|1|175000|09/03/2022 14:17:07|4|0|False|no|yes|Vidikovac
@@ -52,10 +52,10 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 104|central|0|100000|12/02/2022 14:10:16|4|-1|False|no||Kijevo
 60|district|1|110000|05/01/2023 14:11:37|2|4|False|no|yes|Miljakovac
 80|electricity|1|193000|12/02/2022 13:17:38|3|4|False||yes|Miljakovac
-92|district|1|210000|06/02/2022 12:49:34|3.5|1|False|yes|yes|Stari Ko��ut
+92|district|1|210000|06/02/2022 12:49:34|3.5|1|False|yes|yes|Stari Košutnjak
 61|district|0|130000|02/09/2023 16:21:37|2|-1|False|no|yes|Miljakovac
 90|district|0|143900|08/31/2022 22:18:46|4|5|False|no|yes|Miljakovac
-25|central|0|43000|04/30/2023 19:38:01|0.5|4|True|yes||Vidikova��ka Pa
+25|central|0|43000|04/30/2023 19:38:01|0.5|4|True|yes||Vidikovačka Padina
 48|central|0|84000|03/01/2023 19:19:30|1.5|-1|False||no|Petlovo Brdo
 70|district|1|140000|02/01/2023 19:16:08|2.5|0|False|yes|yes|Miljakovac
 50|district|0|112000|12/01/2022 18:10:19|2|2|False|yes|yes|Kanarevo Brdo
@@ -71,12 +71,12 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 121|central|0|120000|03/31/2023 07:07:23|3|0|False|no|yes|Resnik
 121|central|0|120000|03/31/2023 07:07:22|3|1|False|no|yes|Resnik
 61|storageHeater|0|82350|03/31/2023 07:07:20|2.5|-1|False|no|yes|Resnik
-33|central|0|55000|04/30/2023 01:22:01|1.5|1|False||no|Vidikova��ka Pa
+33|central|0|55000|04/30/2023 01:22:01|1.5|1|False||no|Vidikovačka Padina
 105|district|0|148000|06/30/2022 20:22:34|4.5|3|False|no|yes|Labudovo Brdo
 51|gas|0|80000|01/30/2023 20:15:15|1.5|1|False|no|yes|Petlovo Brdo
 43|district|1|104000|03/30/2023 20:07:13|1.5|4|False|no|yes|Miljakovac
 88|central|0|75000|10/30/2019 18:48:05|2.5|1|False||no|Vidikovac
-33|central|0|61900|11/30/2022 18:19:56|1.5|0|False|no||Vidikova��ka Pa
+33|central|0|61900|11/30/2022 18:19:56|1.5|0|False|no||Vidikovačka Padina
 69|district|1|140000|01/30/2023 18:15:23|2.5|-1|False|no|yes|Vidikovac
 41|central|0|63000|12/30/2022 17:28:02|1.5|2|False|no||Petlovo Brdo
 46|central|0|85000|02/28/2023 17:29:58|2|4|True|no|yes|Rakovica - Centar
@@ -84,7 +84,7 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 61|district|1|109000|03/30/2023 13:30:24|3|0|False|no|yes|Petlovo Brdo
 84|district|0|215000|11/30/2022 13:30:26|4|2|True||yes|Skojevsko Naselje
 36|district|0|95000|02/27/2023 18:22:34|1|5|False|no||Vidikovac
-60|electricity|0|80000|03/10/2023 19:05:39|2|4|True||yes|Kne��
+60|electricity|0|80000|03/10/2023 19:05:39|2|4|True||yes|Kneževac
 61||1|110000|10/26/2022 18:05:25|2.5|14|False||yes|Vidikovac
 55||0|95000|04/24/2023 11:05:37|2|2|False|||Labudovo Brdo
 136||0|190000|03/10/2023 19:05:35|5|0|False|yes|in_progress|Rakovica
@@ -92,8 +92,8 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 87|district|3|160000|04/12/2023 18:47:42|3.5|12|False||yes|Vidikovac
 89|district|1|185000|03/29/2023 20:24:58|4|4|False|no|yes|Skojevsko Naselje
 120|central|0|134000|03/29/2023 20:20:49|5|1|False|semi|yes|Petlovo Brdo
-35|central|0|65000|03/29/2023 20:17:22|1.5|2|False|yes|yes|Vidikova��ka Pa
-57|central|0|89000|03/29/2023 20:13:30|2.5|1|False|yes|yes|Vidikova��ka Pa
+35|central|0|65000|03/29/2023 20:17:22|1.5|2|False|yes|yes|Vidikovačka Padina
+57|central|0|89000|03/29/2023 20:13:30|2.5|1|False|yes|yes|Vidikovačka Padina
 67|district|1|109990|03/29/2023 20:11:22|3|5|True||no|Miljakovac
 305|central|1|325000|10/14/2022 15:24:41|3.5|6|True|no||Vidikovac
 59|district|1|139000|10/17/2022 13:22:51|2|8|False|no|yes|Skojevsko Naselje
@@ -102,10 +102,10 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 112|central|0|160000|11/07/2022 16:19:15|5|1|True|no|yes|Petlovo Brdo
 51|district|1|110000|03/29/2023 16:26:43|2|-1|False|no||Vidikovac
 64|district|0|79500|11/29/2022 16:10:53|2.5|-1|False|no|yes|Miljakovac II
-71|central|0|129000|01/29/2023 15:29:38|2.5|4|False|no||Vidikova��ka Pa
+71|central|0|129000|01/29/2023 15:29:38|2.5|4|False|no||Vidikovačka Padina
 54|district|1|120000|12/29/2022 15:27:50|1.5|1|False|no|yes|Vidikovac
 72|gas|0|129900|08/29/2022 15:30:41|3|-1|False||yes|Petlovo Brdo
-37|central|0|63500|03/29/2023 14:07:06|1.5|1|False|no||Kne��
+37|central|0|63500|03/29/2023 14:07:06|1.5|1|False|no||Kneževac
 95|electricity|0|129000|12/29/2022 13:30:00|5|2|False|no|yes|Miljakovac
 46||0|117300|11/02/2022 20:22:56|2.5|0|False|yes|yes|Kanarevo Brdo
 84|district|0|159000|04/15/2023 16:22:07|2|0|False|no|yes|Labudovo Brdo
@@ -121,7 +121,7 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 50|district|0|85000|04/27/2023 15:33:07|2|3|False|no|yes|Petlovo Brdo
 70|district|1|104900|04/27/2023 15:33:06|2.5|4|True|no||Miljakovac
 77|electricity|0|135000|12/28/2022 14:16:28|2|2|True|no||Rakovica - Centar
-23|central|0|50000|04/27/2023 14:24:50|0.5|-1|False||yes|Kne��
+23|central|0|50000|04/27/2023 14:24:50|0.5|-1|False||yes|Kneževac
 37|district|1|99000|03/28/2023 13:31:24|1|3|False|no|yes|Skojevsko Naselje
 88|district|0|115000|03/28/2023 13:31:23|3|3|False|no|yes|Resnik
 300|gas|1|620000|04/27/2023 12:07:41|4|7|True|no||Vidikovac
@@ -129,9 +129,9 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 96|district|1|174000|01/28/2023 11:29:58|3.5|0|False|no|yes|Vidikovac
 77|district|1|165000|11/21/2022 15:18:44|3|4|False||yes|Miljakovac II
 79|district|0|158000|12/08/2022 09:18:28|3|1|False||yes|Miljakovac
-91|district|1|200000|08/28/2022 11:00:15|3.5|5|False||yes|Stari Ko��ut
+91|district|1|200000|08/28/2022 11:00:15|3.5|5|False||yes|Stari Košutnjak
 59|district|1|115000|04/20/2023 10:36:10|2.5|4|False|no|yes|Labudovo Brdo
-57|central|0|89000|04/25/2023 14:14:51|2.5|1|False|no|yes|Vidikova��ka Pa
+57|central|0|89000|04/25/2023 14:14:51|2.5|1|False|no|yes|Vidikovačka Padina
 120|gas|0|134000|04/25/2023 14:55:00|3|1|False|yes|yes|Petlovo Brdo
 89|district|1|170000|02/27/2023 20:15:53|3|7|False|no|yes|Vidikovac
 75|electricity|0|165000|03/27/2023 19:34:13|2.5|1|False|no|yes|Rakovica - Centar
@@ -158,15 +158,15 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 72|district|0|160000|01/27/2023 00:17:39|3|1|False|no|yes|Miljakovac
 70|central|0|135000|04/25/2023 23:16:14|3|8|False|no|yes|Vidikovac
 34|district|0|67000|12/23/2022 18:24:40|0.5|0|False|no|yes|Rakovica - Centar
-35||1|56000|04/25/2023 11:34:19|1.5|1|False|no||Kne��
+35||1|56000|04/25/2023 11:34:19|1.5|1|False|no||Kneževac
 30|district|0|56000|09/26/2022 17:28:03|1.5|-1|False|no|yes|Miljakovac
 46|central|0|85000|04/25/2023 15:36:43|2|4|True|no|yes|Rakovica - Centar
 89|district|1|168000|01/26/2023 15:30:02|3|8|False|no|yes|Vidikovac
 56|central|0|110000|12/26/2022 15:26:15|2.5|2|False|no|yes|Rakovica - Centar
 30|district|0|56000|09/26/2022 14:36:33|1.5|-1|False||yes|Miljakovac
-62||0|90000|10/26/2022 14:10:13|2.5|-1|False|no||Stari Ko��ut
+62||0|90000|10/26/2022 14:10:13|2.5|-1|False|no||Stari Košutnjak
 59|district|1|115000|12/07/2022 22:25:02|2.5|4|False|no||Labudovo Brdo
-92|district|0|185000|04/25/2023 13:38:05|3.5|3|False|no|yes|Stari Ko��ut
+92|district|0|185000|04/25/2023 13:38:05|3.5|3|False|no|yes|Stari Košutnjak
 84||1|120000|03/26/2023 13:20:48|3|5|False||yes|Miljakovac
 54|district|1|97800|02/08/2023 00:19:05|2|5|False||yes|Rakovica
 74|district|0|162000|12/26/2022 12:16:23|3|3|False|no|yes|Skojevsko Naselje
@@ -206,28 +206,28 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 89|district|1|185000|04/23/2023 20:11:43|4|4|False|no|yes|Skojevsko Naselje
 130|district|1|230000|01/24/2023 19:37:51|5|7|True|yes|yes|Vidikovac
 35|district|1|78000|02/24/2023 19:06:36|1|8|False||yes|Miljakovac
-37|central|0|65000|04/23/2023 18:34:32|1.5|1|False|no||Vidikova��ka Pa
-30|central|0|50000|02/24/2023 18:05:55|1|2|False|no||Kne��
+37|central|0|65000|04/23/2023 18:34:32|1.5|1|False|no||Vidikovačka Padina
+30|central|0|50000|02/24/2023 18:05:55|1|2|False|no||Kneževac
 39|district|1|104000|03/24/2023 17:32:47|1.5|4|False|no|yes|Miljakovac II
 41|district|1|100000|03/24/2023 17:30:24|1|3|False|no|yes|Skojevsko Naselje
 75|district|1|230000|01/24/2023 17:30:26|5|7|True|no|yes|Vidikovac
 65|district|0|78|03/25/2023 11:29:33|2|0|False|no|in_progress|Petlovo Brdo
 87|district|1|180000|08/24/2022 16:17:00|4|8|False|no|yes|Vidikovac
 88|district|1|115000|12/24/2022 16:17:36|3|5|True|no|yes|Miljakovac
-41|central|0|82200|11/24/2022 16:10:42|2|0|False|no||Kne��
+41|central|0|82200|11/24/2022 16:10:42|2|0|False|no||Kneževac
 37|central|0|73800|11/24/2022 16:10:42|1.5|0|False|no||Rakovica - Centar
-37|central|0|73800|11/24/2022 16:10:42|1.5|0|False|no||Kne��
-37|central|0|73800|11/24/2022 16:10:42|1.5|2|True|no||Kne��
-41|central|0|82200|11/24/2022 16:10:42|2|2|True|no||Kne��
-37|central|0|73800|11/24/2022 16:10:42|1.5|2|True|no||Kne��
-92||1|298000|03/24/2023 15:15:36|3.5|0|False|||Stari Ko��ut
+37|central|0|73800|11/24/2022 16:10:42|1.5|0|False|no||Kneževac
+37|central|0|73800|11/24/2022 16:10:42|1.5|2|True|no||Kneževac
+41|central|0|82200|11/24/2022 16:10:42|2|2|True|no||Kneževac
+37|central|0|73800|11/24/2022 16:10:42|1.5|2|True|no||Kneževac
+92||1|298000|03/24/2023 15:15:36|3.5|0|False|||Stari Košutnjak
 37|gas|0|102000|03/24/2023 15:03:04|1.5|-1|False|no|yes|Vidikovac
 72|gas|0|129900|01/24/2023 13:29:28|3|-1|False|no|yes|Petlovo Brdo
 88|district|1|115000|12/24/2022 13:30:33|3|5|True|no|yes|Miljakovac II
 47|central|0|101000|09/24/2022 13:25:48|1|2|False|no|yes|Skojevsko Naselje
 82|central|0|99900|03/24/2023 13:15:01|3|2|False||yes|Rakovica - Centar
-134|district|0|235000|11/24/2022 12:20:54|4|3|False|no|yes|Stari Ko��ut
-33|electricity|0|66000|03/24/2023 12:06:12|1|1|False|no|yes|Vidikova��ka Pa
+134|district|0|235000|11/24/2022 12:20:54|4|3|False|no|yes|Stari Košutnjak
+33|electricity|0|66000|03/24/2023 12:06:12|1|1|False|no|yes|Vidikovačka Padina
 30|central|0|50000|04/22/2023 21:00:08|1.5|3|False|no|in_progress|Rakovica - Centar
 72|electricity|0|135000|01/23/2023 19:40:10|2|2|True||no|Rakovica - Centar
 77|district|1|162500|11/23/2022 16:19:08|3|4|False|no|yes|Miljakovac
@@ -241,16 +241,16 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 36||0|69000|02/23/2023 08:29:26|1|5|True|yes||Miljakovac I
 54|district|0|97000|02/23/2023 01:07:21|2.5|4|True|no|yes|Miljakovac
 129|central|0|195000|08/22/2022 23:21:27|4|-1|False|no|yes|Kanarevo Brdo
-92|district|1|190000|03/22/2023 20:11:11|3.5|3|False||yes|Stari Ko��ut
-92|district|1|298000|02/22/2023 19:25:30|4|2|False|no|yes|Stari Ko��ut
+92|district|1|190000|03/22/2023 20:11:11|3.5|3|False||yes|Stari Košutnjak
+92|district|1|298000|02/22/2023 19:25:30|4|2|False|no|yes|Stari Košutnjak
 61||0|98000|12/22/2022 19:25:38|3|1|True|no||Petlovo Brdo
 115|district|2|180000|07/22/2022 18:30:58|5|8|False||yes|Vidikovac
 78|district|0|154900|07/22/2022 18:11:17|3|3|False|no|yes|Miljakovac
 75|district|1|119000|09/22/2022 17:05:40|3.5|9|False||yes|Skojevsko Naselje
 39|district|1|79000|12/05/2022 20:14:08|1|5|False|no|yes|Miljakovac II
-92|district|1|185000|08/22/2022 15:30:34|3.5|3|False||yes|Stari Ko��ut
+92|district|1|185000|08/22/2022 15:30:34|3.5|3|False||yes|Stari Košutnjak
 64|central|0|70000|01/22/2023 13:30:54|3|4|True|no|yes|Kanarevo Brdo
-101|central|0|140000|04/21/2023 13:33:06|3|3|False||yes|Vidikova��ka Pa
+101|central|0|140000|04/21/2023 13:33:06|3|3|False||yes|Vidikovačka Padina
 90|district|0|165000|07/22/2022 13:17:07|4|3|True||yes|Labudovo Brdo
 48|central|3|100000|02/01/2022 11:25:28|2|14|False|no|yes|Vidikovac
 75|district|1|119000|04/21/2023 10:22:55|3.5|10|False|no|yes|Skojevsko Naselje
@@ -262,11 +262,11 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 46|central|0|88500|03/20/2023 12:21:41|2|4|True||yes|Rakovica
 62|electricity|0|90200|03/21/2023 18:19:36|2.5|4|True||yes|Rakovica
 35|district|0|70000|03/21/2023 18:15:18|1.5|-1|False|no||Skojevsko Naselje
-96||1|280000|04/20/2023 18:07:00|4|3|True|no|yes|Stari Ko��ut
+96||1|280000|04/20/2023 18:07:00|4|3|True|no|yes|Stari Košutnjak
 28|district|0|50000|03/21/2023 17:21:21|1.5|-3|False|no|yes|Miljakovac I
 36|district|0|50000|01/21/2023 16:15:49|2|1|True|no|yes|Kanarevo Brdo
 95|district|1|180000|03/21/2023 16:06:20|3|5|True|no|yes|Skojevsko Naselje
-101|central|0|140000|04/20/2023 15:33:04|3|3|False|no|yes|Vidikova��ka Pa
+101|central|0|140000|04/20/2023 15:33:04|3|3|False|no|yes|Vidikovačka Padina
 88|district|1|115000|12/21/2022 15:28:20|3|5|False|no|yes|Miljakovac II
 120|gas|0|134000|01/11/2023 16:16:24|5|1|False|no|yes|Petlovo Brdo
 51|district|1|105000|04/20/2023 13:36:33|1.5|0|False|no|yes|Vidikovac
@@ -279,7 +279,7 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 56|gas|0|129900|07/20/2022 21:21:26|3|-1|False|yes|yes|Petlovo Brdo
 77|district|2|139000|01/20/2023 19:42:41|3.5|13|False||yes|Vidikovac
 115|district|0|115000|01/20/2023 19:32:53|4|3|False|no|yes|Resnik
-36|central|0|55000|10/20/2022 18:16:51|1|3|True||no|Kne��
+36|central|0|55000|10/20/2022 18:16:51|1|3|True||no|Kneževac
 41|district|1|98400|02/20/2023 18:12:57|1|-1|False|no|yes|Skojevsko Naselje
 82|central|0|100000|02/20/2023 17:08:31|3|2|True||yes|Vidikovac
 120|gas|0|134000|02/07/2023 19:01:06|5|1|False|yes|yes|Petlovo Brdo
@@ -289,7 +289,7 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 100|district|0|200000|04/03/2023 16:27:32|2.5|3|False|no|yes|Vidikovac
 48|central|1|97000|04/19/2023 15:33:45|1.5|3|False|no||Skojevsko Naselje
 65|district|0|119000|08/20/2022 15:17:50|3|10|True||yes|Skojevsko Naselje
-35|norwegianRadiators|1|50000|02/20/2023 15:06:19|1.5|1|False||yes|Kne��
+35|norwegianRadiators|1|50000|02/20/2023 15:06:19|1.5|1|False||yes|Kneževac
 60|electricity|0|50000|07/20/2022 14:30:34|2|1|False||no|Vidikovac
 58|central|0|104400|10/20/2022 12:19:01|3|2|False|yes|yes|Rakovica - Centar
 305|central|1|324990|03/20/2023 12:19:00|4|7|True||no|Vidikovac
@@ -303,7 +303,7 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 72|gas|0|129900|07/19/2022 14:12:35|3|-1|False|no|yes|Petlovo Brdo
 53|district|1|93000|04/18/2023 13:35:00|2|-1|False|no|yes|Miljakovac II
 45|district|0|85990|04/18/2023 13:22:54|1.5|1|False|no|yes|Miljakovac
-42|central|0|84000|12/19/2022 12:23:45|2|1|False|semi||Vidikova��ka Pa
+42|central|0|84000|12/19/2022 12:23:45|2|1|False|semi||Vidikovačka Padina
 75|central|0|135000|12/19/2022 11:25:28|2|2|True|no|yes|Rakovica - Centar
 84|district|0|215000|01/19/2023 10:39:35|4|2|True|semi|yes|Skojevsko Naselje
 84|district|0|102000|04/18/2023 10:36:13|3.5|3|False|no|yes|Resnik
@@ -324,7 +324,7 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 64|central|0|70000|11/18/2022 09:18:23|2|4|True||yes|Kanarevo Brdo
 52|district|1|97000|10/17/2022 18:10:35|1.5|11|True|no|yes|Vidikovac
 56|district|0|100800|03/17/2023 17:31:31|2|-1|False|no|yes|Miljakovac
-30|storageHeater|0|59700|03/17/2023 15:26:42|1|3|False|no||Kne��
+30|storageHeater|0|59700|03/17/2023 15:26:42|1|3|False|no||Kneževac
 107|central|0|205000|03/17/2023 14:15:07|3|4|False|yes|partially|Miljakovac
 43|central|0|95000|03/17/2023 13:29:17|2|3|False|no|yes|Miljakovac
 64|storageHeater|0|70000|11/17/2022 13:29:02|3|4|True|no|yes|Kanarevo Brdo
@@ -332,8 +332,8 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 116|gas|0|148000|09/17/2022 12:10:52|5|1|True|no||Petlovo Brdo
 110|electricity|0|160000|03/17/2022 01:11:55|3.5|100|False||yes|Kanarevo Brdo
 70|gas|0|78000|02/17/2022 00:42:37|3|100|False||no|Petlovo Brdo
-92|district|0|185000|03/16/2023 19:31:53|3.5|3|False|no|yes|Stari Ko��ut
-37|central|0|52000|05/16/2022 19:18:39|1.5|3|True||no|Kne��
+92|district|0|185000|03/16/2023 19:31:53|3.5|3|False|no|yes|Stari Košutnjak
+37|central|0|52000|05/16/2022 19:18:39|1.5|3|True||no|Kneževac
 46||1|117300|03/16/2023 19:11:12|2.5|0|False||yes|Kanarevo Brdo
 29|electricity|0|65000|01/16/2023 18:23:50|1|2|False||no|Rakovica
 88|district|1|150000|01/16/2023 18:18:03|3|7|False|no|yes|Vidikovac
@@ -342,7 +342,7 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 100|electricity|0|100000|05/16/2022 15:43:40|3|1|False|no|yes|Rakovica - Centar
 53|electricity|0|85000|02/16/2023 14:08:20|2.5|-1|False||yes|Petlovo Brdo
 50|district|0|87000|03/16/2023 14:06:52|2|3|False|no|yes|Kanarevo Brdo
-70|norwegianRadiators|0|60000|06/16/2022 12:52:16|3|-1|False||no|Kne��
+70|norwegianRadiators|0|60000|06/16/2022 12:52:16|3|-1|False||no|Kneževac
 104|district|1|168000|01/16/2023 12:24:26|3|5|False||yes|Vidikovac
 36|district|0|50000|02/16/2023 12:18:24|1.5|1|False||yes|Kanarevo Brdo
 71|gas|0|82000|02/16/2023 12:17:17|3.5|3|True||no|Labudovo Brdo
@@ -361,27 +361,27 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 80|district|0|142000|03/15/2023 14:33:17|3|2|False|no|yes|Vidikovac
 115|district|0|99900|08/15/2022 14:30:10|4|3|False||yes|Resnik
 48|electricity|0|91000|03/15/2023 14:06:50|2.5|1|False||yes|Vidikovac
-44|central|0|74900|02/15/2023 14:05:21|2|4|True||yes|Kne��
+44|central|0|74900|02/15/2023 14:05:21|2|4|True||yes|Kneževac
 42|electricity|0|60900|02/15/2023 12:07:34|1.5|0|False|no|yes|Petlovo Brdo
 38|central|0|75000|03/15/2023 11:47:47|2|2|True|yes|yes|Miljakovac III
 69|electricity|0|115000|11/15/2022 00:16:52|2.5|3|True||no|Rakovica
 78|central|0|75000|11/15/2022 00:15:54|4|5|True||no|Vidikovac
 80|district|0|155000|04/14/2022 18:50:01|3|2|False||yes|Vidikovac
 145|district|0|135000|02/14/2022 18:43:40|5|-1|False||yes|Miljakovac
-48|central|0|69000|03/14/2023 17:32:23|1|1|False|no||Vidikova��ka Pa
+48|central|0|69000|03/14/2023 17:32:23|1|1|False|no||Vidikovačka Padina
 64|district|1|138000|11/14/2022 16:27:05|2|2|False|no|yes|Vidikovac
 43|district|1|86500|02/14/2023 15:23:30|1|1|False|no|yes|Kanarevo Brdo
 36|district|0|71900|01/14/2023 14:19:51|1|1|False|no|yes|Miljakovac
 300|gas|1|620000|04/13/2023 13:06:34|4|7|True|yes|in_progress|Vidikovac
 90|storageHeater|0|85000|04/13/2023 12:58:26|3|4|True|no|yes|Kanarevo Brdo
 60|district|0|80000|04/13/2023 12:23:35|1.5|-1|False|no||Kanarevo Brdo
-33|central|0|68000|04/13/2023 11:27:37|1.5|3|False|yes|yes|Kne��
+33|central|0|68000|04/13/2023 11:27:37|1.5|3|False|yes|yes|Kneževac
 99|central|0|100000|02/14/2019 00:45:47|4|1|False||yes|Vidikovac
 42|district|1|104000|03/14/2023 00:19:44|2|4|False||yes|Miljakovac
 61|district|0|130000|02/13/2023 23:26:50|2|-1|False|no|yes|Miljakovac
 62|storageHeater|0|105000|02/13/2023 23:26:48|2|0|False|no|yes|Kanarevo Brdo
 40|district|1|72000|02/13/2023 19:28:12|1.5|5|False|no|yes|Miljakovac II
-44|central|0|85000|11/13/2022 19:26:29|1.5|4|True|semi||Vidikova��ka Pa
+44|central|0|85000|11/13/2022 19:26:29|1.5|4|True|semi||Vidikovačka Padina
 46|norwegianRadiators|0|117000|03/13/2023 19:18:51|2.5|0|False||yes|Kanarevo Brdo
 43|central|0|49500|03/13/2023 17:24:00|1.5|-3|False|no|yes|Miljakovac
 109|gas|1|325000|02/04/2022 16:19:42|4|7|True|no|yes|Vidikovac
@@ -394,12 +394,12 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 84|district|0|159000|04/10/2023 17:22:45|2|0|False||yes|Labudovo Brdo
 71|district|1|195000|04/12/2023 07:12:33|3|3|False|yes|yes|Vidikovac
 32|central|0|55000|04/12/2023 00:25:34|1.5|-1|False|no|yes|Petlovo Brdo
-51|central|0|90000|04/12/2023 00:05:16|1.5|2|False||no|Kne��
+51|central|0|90000|04/12/2023 00:05:16|1.5|2|False||no|Kneževac
 30|district|1|56000|01/12/2023 19:34:23|1|-1|False||yes|Miljakovac
 64|district|1|140000|11/12/2022 16:20:36|2.5|2|False|no|yes|Vidikovac
 97|district|1|168000|04/11/2023 15:34:34|3|5|False|no|yes|Vidikovac
 81|electricity|0|140000|04/06/2023 17:52:58|4|4|True|no|yes|Kanarevo Brdo
-134|district|0|235000|03/08/2023 17:57:24|4|3|False|yes|yes|Stari Ko��ut
+134|district|0|235000|03/08/2023 17:57:24|4|3|False|yes|yes|Stari Košutnjak
 74|district|1|230000|04/11/2023 12:12:52|5|7|True|no|yes|Vidikovac
 65|district|1|119000|08/22/2022 11:22:52|3|10|True|no|yes|Skojevsko Naselje
 71|district|1|175000|04/11/2023 07:10:10|3|3|False|yes|yes|Vidikovac
@@ -418,7 +418,7 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 72|electricity|0|139000|03/11/2023 11:48:30|2|2|True|no|yes|Rakovica
 110|gas|1|325000|04/11/2022 11:02:49|4|7|True|no|yes|Vidikovac
 74|district|1|145000|08/10/2022 20:30:52|4|7|True||yes|Miljakovac
-30|electricity|0|59700|02/10/2023 19:19:06|1|3|False||no|Vidikova��ka Pa
+30|electricity|0|59700|02/10/2023 19:19:06|1|3|False||no|Vidikovačka Padina
 95|central|0|120000|07/10/2021 12:52:29|5|2|True||yes|Miljakovac
 130|district|1|230000|01/10/2023 11:30:29|5|7|True|yes|yes|Vidikovac
 30|electricity|0|59000|04/08/2023 22:11:09|1.5|3|False|no||Rakovica - Centar
@@ -430,7 +430,7 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 46|district|0|73000|12/09/2021 14:00:24|2.5|5|False||yes|Miljakovac
 88|district|1|115000|02/09/2023 01:17:28|3|5|True||yes|Miljakovac
 74|district|1|125800|04/07/2023 20:06:31|3.5|0|False||yes|Labudovo Brdo
-76|central|0|123900|09/08/2022 18:12:40|4|1|True|no|yes|Kne��
+76|central|0|123900|09/08/2022 18:12:40|4|1|True|no|yes|Kneževac
 65|electricity|0|80000|03/08/2023 17:30:34|3|3|False|no||Labudovo Brdo
 102|district|0|145000|03/08/2023 17:30:30|4.5|3|False|no|yes|Labudovo Brdo
 56|district|0|109000|04/07/2023 15:33:06|2|3|False|no|yes|Kanarevo Brdo
@@ -441,20 +441,20 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 40|central|0|65000|04/07/2023 14:07:49|1.5|-1|False|no|yes|Rakovica - Centar
 33|central|0|68000|04/07/2023 13:54:39|1|3|False|yes|yes|Labudovo Brdo
 73|district|1|128000|02/01/2023 11:35:18|2.5|-1|False|no|no|Vidikovac
-92|district|1|190000|04/07/2023 10:57:28|3.5|3|True|no|yes|Stari Ko��ut
-44|gas|1|93900|04/07/2023 09:29:13|1.5|2|False|no|yes|Kne��
+92|district|1|190000|04/07/2023 10:57:28|3.5|3|True|no|yes|Stari Košutnjak
+44|gas|1|93900|04/07/2023 09:29:13|1.5|2|False|no|yes|Kneževac
 67|district|0|119000|04/03/2023 16:12:41|2.5|4|True|no|yes|Kanarevo Brdo
 49|electricity|0|98500|01/08/2023 00:15:54|2|2|False|no|yes|Kanarevo Brdo
-48|central|0|81000|03/08/2023 00:07:58|2|100|False|no|yes|Kne��
+48|central|0|81000|03/08/2023 00:07:58|2|100|False|no|yes|Kneževac
 56|district|0|84000|12/08/2022 00:00:10|2.5|-1|False||no|Miljakovac
 51|norwegianRadiators|0|110000|12/07/2022 20:25:56|2.5|2|True|no|yes|Rakovica
 75|district|1|230000|04/06/2023 19:38:30|5|7|True|no|yes|Vidikovac
 88|district|0|159000|02/07/2023 19:30:12|3.5|4|False|no|yes|Vidikovac
-29|central|0|56900|04/06/2023 15:40:56|1.5|4|True|no||Kne��
+29|central|0|56900|04/06/2023 15:40:56|1.5|4|True|no||Kneževac
 86|gas|0|140000|04/07/2022 15:33:23|3|-1|False|no|yes|Petlovo Brdo
 50|district|0|87000|04/06/2023 13:33:05|2|3|False|no|yes|Kanarevo Brdo
 49|district|1|97900|12/07/2022 12:12:18|1.5|4|False|no|yes|Rakovica - Centar
-48|electricity|0|79000|12/07/2022 00:17:21|1|4|True||yes|Kne��
+48|electricity|0|79000|12/07/2022 00:17:21|1|4|True||yes|Kneževac
 30|district|0|56000|11/07/2022 00:17:05|1|-1|False||yes|Miljakovac
 51|gas|0|80000|08/06/2022 18:17:08|2|1|False||yes|Petlovo Brdo
 104|gas|0|120000|08/06/2022 18:17:05|3|2|True||yes|Petlovo Brdo
@@ -463,7 +463,7 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 120|district|0|149000|12/06/2022 14:23:15|4|3|False|no|yes|Labudovo Brdo
 72|district|1|158000|01/06/2023 14:15:49|2.5|11|False|no|yes|Vidikovac
 92|district|1|168000|01/06/2023 14:15:43|3.5|10|False|no|yes|Vidikovac
-35|central|0|70000|03/06/2023 13:05:37|2|3|False|no|yes|Kne��
+35|central|0|70000|03/06/2023 13:05:37|2|3|False|no|yes|Kneževac
 43|central|0|95000|02/06/2023 13:10:08|2|3|False||yes|Miljakovac
 22|district|0|56000|01/06/2023 11:32:47|1|-1|False|no|yes|Miljakovac
 36|district|1|96000|02/06/2023 10:38:53|1|5|False|no|in_progress|Vidikovac
@@ -473,12 +473,12 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 73|district|0|200000|04/04/2023 13:24:40|3|3|False|no|yes|Vidikovac
 157|district|1|360000|10/05/2022 13:10:54|5|7|True|semi|yes|Vidikovac
 45|central|0|77000|11/05/2020 00:50:43|1|4|True||no|Labudovo Brdo
-36|electricity|0|57600|04/04/2023 00:18:50|1.5|3|False||no|Kne��
+36|electricity|0|57600|04/04/2023 00:18:50|1.5|3|False||no|Kneževac
 129|central|0|200000|07/04/2022 19:19:13|4|-3|False|no|yes|Kanarevo Brdo
 127|central|0|129011|09/04/2020 19:06:26|4|1|True|no|yes|Petlovo Brdo
 94|district|1|89000|07/04/2021 15:38:11|3.5|4|False|no||Labudovo Brdo
 68|district|2|135000|03/04/2023 15:07:15|2|5|False||yes|Vidikovac
-47|central|0|65000|01/03/2023 00:22:37|1.5|0|False||no|Kne��
+47|central|0|65000|01/03/2023 00:22:37|1.5|0|False||no|Kneževac
 44|central|0|75000|03/02/2023 17:31:25|2|4|True|no|yes|Rakovica - Centar
 88|district|1|115000|01/02/2023 12:27:19|3|5|True|no|yes|Miljakovac
 71||1|96011|03/31/2022 22:07:19|2.5|9|False||no|Petlovo Brdo
@@ -487,54 +487,54 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 33|central|0|88500|03/01/2023 10:24:08|2|4|True|no|yes|Rakovica
 37|district|1|83000|12/31/2022 00:22:45|1.5|2|False||yes|Miljakovac
 54|district|0|112000|11/30/2022 17:24:56|2.5|2|False|no|yes|Kanarevo Brdo
-42||0|69900|01/30/2023 14:23:17|2.5|0|False|no||Kne��
+42||0|69900|01/30/2023 14:23:17|2.5|0|False|no||Kneževac
 149|gas|0|142000|09/29/2022 20:10:50|4|-1|False|no||Petlovo Brdo
-92|district|1|298000|07/29/2022 18:24:05|4|2|False|no|yes|Stari Ko��ut
+92|district|1|298000|07/29/2022 18:24:05|4|2|False|no|yes|Stari Košutnjak
 84|district|0|148500|07/29/2022 12:25:29|3.5|3|True||yes|Vidikovac
 90|gas|0|129900|01/26/2023 14:32:56|3|-1|False|no|yes|Petlovo Brdo
 56|district|0|95000|02/25/2023 13:32:42|2|-1|False|no|yes|Miljakovac
-45|norwegianRadiators|0|45000|03/24/2023 19:19:22|1.5|-1|False||no|Kne��
+45|norwegianRadiators|0|45000|03/24/2023 19:19:22|1.5|-1|False||no|Kneževac
 88|district|1|115000|12/24/2022 14:35:18|3|5|False||yes|Miljakovac
 59||1|125000|02/24/2023 14:06:33|2|5|False|no|yes|Skojevsko Naselje
 129|central|0|200000|08/23/2022 17:25:09|4|-3|False|no|yes|Kanarevo Brdo
 54|district|0|119000|12/23/2022 15:30:00|2|1|False|no||Rakovica - Centar
-33|central|0|61000|01/16/2023 18:32:25|1.5|0|False|no||Vidikova��ka Pa
-30|electricity|0|57000|02/16/2023 15:08:33|1.5|2|False||no|Kne��
+33|central|0|61000|01/16/2023 18:32:25|1.5|0|False|no||Vidikovačka Padina
+30|electricity|0|57000|02/16/2023 15:08:33|1.5|2|False||no|Kneževac
 52|gas|0|85000|12/15/2022 21:22:34|2.5|2|False|no|yes|Petlovo Brdo
 64|district|1|138000|12/15/2022 16:25:50|2|2|False|no|yes|Vidikovac
-92|district|1|195000|03/15/2023 13:39:16|3.5|3|False|semi|yes|Stari Ko��ut
+92|district|1|195000|03/15/2023 13:39:16|3.5|3|False|semi|yes|Stari Košutnjak
 36|district|0|63000|11/14/2022 22:24:10|1.5|-3|False|no|yes|Miljakovac
 62|electricity|0|105000|02/14/2023 18:08:40|2|0|False|no|yes|Kanarevo Brdo
 72|gas|0|129900|12/14/2022 12:11:05|3|-1|False|no|yes|Petlovo Brdo
-92|district|1|190000|07/11/2022 17:22:42|3.5|3|False|no|yes|Stari Ko��ut
+92|district|1|190000|07/11/2022 17:22:42|3.5|3|False|no|yes|Stari Košutnjak
 130|district|1|230000|01/10/2023 11:31:24|5|7|True|no|yes|Vidikovac
 111||0|180000|08/08/2022 15:21:13|4|5|False|yes||Skojevsko Naselje
-42||0|85000|12/06/2022 13:31:25|1.5|1|False||yes|Kne��
+42||0|85000|12/06/2022 13:31:25|1.5|1|False||yes|Kneževac
 77|district|1|162000|12/05/2022 20:31:13|3|4|False||yes|Miljakovac
 110|gas|1|325000|04/04/2022 14:53:37|4|7|True|no||Vidikovac
 72|gas|0|134900|02/01/2023 17:32:17|3|-1|False|no|yes|Petlovo Brdo
 33|storageHeater|0|66000|03/01/2023 13:41:23|1|1|False|yes|yes|Rakovica
 72|storageHeater|0|135000|11/14/2022 11:08:19|2|2|True|yes|in_progress|Rakovica - Centar
-32|electricity|0|58000|02/23/2023 18:20:13|1.5|1|False||no|Kne��
+32|electricity|0|58000|02/23/2023 18:20:13|1.5|1|False||no|Kneževac
 45|central|1|104000|02/23/2023 18:20:05|1.5|-1|False||no|Vidikovac
 21|district|0|48000|02/18/2023 20:24:32|0.5|3|False||in_progress|Kanarevo Brdo
-92|district|1|190000|07/11/2022 17:22:42|3.5|3|False|no|yes|Stari Ko��ut
+92|district|1|190000|07/11/2022 17:22:42|3.5|3|False|no|yes|Stari Košutnjak
 130|district|1|230000|01/10/2023 11:31:24|5|7|True|no|yes|Vidikovac
 111||0|180000|08/08/2022 15:21:13|4|5|False|yes||Skojevsko Naselje
-42||0|85000|12/06/2022 13:31:25|1.5|1|False||yes|Kne��
+42||0|85000|12/06/2022 13:31:25|1.5|1|False||yes|Kneževac
 77|district|1|162000|12/05/2022 20:31:13|3|4|False||yes|Miljakovac
 110|gas|1|325000|04/04/2022 14:53:37|4|7|True|no||Vidikovac
 72|gas|0|134900|02/01/2023 17:32:17|3|-1|False|no|yes|Petlovo Brdo
 33|storageHeater|0|66000|03/01/2023 13:41:23|1|1|False|yes|yes|Rakovica
 72|storageHeater|0|135000|11/14/2022 11:08:19|2|2|True|yes|in_progress|Rakovica - Centar
-32|electricity|0|58000|02/23/2023 18:20:13|1.5|1|False||no|Kne��
+32|electricity|0|58000|02/23/2023 18:20:13|1.5|1|False||no|Kneževac
 45|central|1|104000|02/23/2023 18:20:05|1.5|-1|False||no|Vidikovac
 21|district|0|48000|02/18/2023 20:24:32|0.5|3|False||in_progress|Kanarevo Brdo
 37|central|0|55500|01/22/2023 22:09:54|1.5|-2|False|no|in_progress|Petlovo Brdo
 40|electricity|0|80000|03/11/2022 20:21:48|1.5|5|True|no|yes|Labudovo Brdo
 130|district|2|230000|12/10/2022 19:27:55|5|7|True|yes|yes|Vidikovac
 59|district|0|103000|12/09/2022 15:41:48|2|0|False|yes|yes|Labudovo Brdo
-30|electricity|0|37000|12/05/2022 15:08:13|0.5|-1|False|no|no|Kne��
+30|electricity|0|37000|12/05/2022 15:08:13|0.5|-1|False|no|no|Kneževac
 71|district|1|122000|11/23/2022 13:57:25|3|0|False|no|yes|Miljakovac I
 43|central|0|95000|11/04/2022 16:25:07|1.5|3|False|no|yes|Miljakovac I
 52|district|0|115500|10/28/2022 09:56:10|2|3|False|no|in_progress|Vidikovac
@@ -547,4 +547,4 @@ m2|heatingType|elevator|price|createdAt|roomCount|redactedFloor|lastFloor|furnis
 41|electricity|0|25000|11/10/2021 11:57:51|2.5|0|False|yes|no|Kijevo
 85|underfloor|0|99999|11/05/2020 12:08:15|3|0|False|semi|in_progress|Rakovica
 32|electricity|0|34999|02/17/2019 21:14:06|1|-1|False|no|in_progress|Rakovica - Centar
-45|storageHeater|0|49500|10/17/2018 11:51:32|1.5|1|True|no|in_progress|Stari Ko��ut
+45|storageHeater|0|49500|10/17/2018 11:51:32|1.5|1|True|no|in_progress|Stari Košutnjak
