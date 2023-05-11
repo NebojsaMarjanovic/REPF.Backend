@@ -14,9 +14,12 @@ namespace REPF.Backend.Enumerations
                 {"Centralno", "district"},
                 {"Struja", "electricity"},
                 {"Gas", "gas"},
+                {"TA peć", "storageHeater"},
+                {"Klima", "airConditioning"},
+                {"Podno", "underfloor" },
+                {"Norveški radijatori", "norwegianRadiators" },
+                {"Bez grejanja", "none"}
             }.ToImmutableDictionary();
-            //FALE KLIMA I RADIJATOR - STORAGEHEATER I AIRCONDITIONER
         }
-
     }
 }

@@ -12,7 +12,7 @@ builder.Services.AddCors();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddGrpcClient<Forecaster.ForecasterClient>(o =>
+builder.Services.AddGrpcClient<Calculator.CalculatorClient>(o =>
 {
     o.Address = new Uri("http://localhost:5001");
 });
