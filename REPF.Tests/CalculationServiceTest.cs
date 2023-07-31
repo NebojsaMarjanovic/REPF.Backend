@@ -9,7 +9,7 @@ namespace REPF.Tests
     public class CalculationServiceTest
     {
        
-        RealEstate request = new RealEstate()
+        CalculationParameters request = new CalculationParameters()
         {
             Location = "Kanarevo Brdo",
             Quadrature = 78,
