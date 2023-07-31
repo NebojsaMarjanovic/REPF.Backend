@@ -1,31 +1,21 @@
 syntax = "proto3";
 
-
-option csharp_namespace = "REPF.Grpc";
+option csharp_namespace = "REPF.Grpc.Protos";
 
 package forecast;
 
-// The greeting service definition.
-service Calculator {
-  // Sends a greeting
-  rpc Calculate (CalculationRequest) returns (CalculationResponse);
+service ForecastService{
+	rpc Forecast (ForecastRequest) returns (ForecastResponse);
 }
 
-// The request message containing the user's name.
-message CalculationRequest {
-  int32 m2 = 1;
-  string heatingType = 2;
-  int32 elevator = 3;
-  double price = 4;
-  double roomCount = 5;
-  string placeTitle = 6;
-  string furnishedStatus=7;
-  string registeredStatus=8;
-  bool isLastFloor=9;
-  int32 redactedFloor=10;
+message ForecastRequest{
+	string location = 1;
+	double roomCount=2;
 }
 
-// The response message containing the greetings.
-message CalculationResponse {
-  double price = 1;
+message ForecastResponse{
+	repeated double historicalData=1;
+	repeated double lowerBoundForecast=2;
+	repeated double forecast=3;
+	repeated double upperBoundForecast=4;
 }

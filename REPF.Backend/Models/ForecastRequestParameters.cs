@@ -6,11 +6,10 @@ namespace REPF.Backend.Models
     public class ForecastRequestParameters
     {
         [Required]
-        public Location Location { get; set; }
+        public string Location { get; set; }
 
         [Required]
         public double RoomCount { get; set; }
 
-        //dodati: redactedFloor (sprat), lastFloor (true/false), registered, furnished
     }
 }
