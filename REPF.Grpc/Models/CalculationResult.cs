@@ -2,7 +2,7 @@
 
 namespace REPF.Grpc.Models
 {
-    public class RealEstatePrediction
+    public class CalculationResult
     {
         [ColumnName("Score")]
         public float Price { get; set; }

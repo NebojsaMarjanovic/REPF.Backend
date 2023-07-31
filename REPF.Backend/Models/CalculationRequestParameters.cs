@@ -17,14 +17,14 @@ namespace REPF.Backend.Models
         [Required]
         public int Floor { get; set; }
 
-        [Required]
-        public bool IsLastFloor { get; set; }
+        //[Required]
+        //public bool IsLastFloor { get; set; }
 
-        [Required]
-        public string RegisteredStatus { get; set; }
+        //[Required]
+        //public string RegisteredStatus { get; set; }
 
-        [Required]
-        public string FurnishedStatus { get; set; }
+        //[Required]
+        //public string FurnishedStatus { get; set; }
 
         [Required]
         public string HeatingType { get; set; }

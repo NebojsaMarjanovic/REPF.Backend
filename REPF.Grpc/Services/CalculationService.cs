@@ -7,9 +7,9 @@ using REPF.Grpc.Models;
 
 namespace REPF.Grpc.Services
 {
-    public class CalculationService:Calculator.CalculatorBase
+    public class CalculationService:CalculateService.CalculateServiceBase
     {
-        private readonly string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\MLModel\\fetch_from_03.05.2023.csv";
+        private readonly string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\Files\\fetch_from_03.05.2023.csv";
         private MLContext mlContext;
         private IDataView dataView;
         private IDataView trainData;
@@ -19,7 +19,7 @@ namespace REPF.Grpc.Services
         public CalculationService()
         {
             mlContext = new MLContext(seed: 0);
-            dataView = mlContext.Data.LoadFromTextFile<RealEstate>(dataPath, separatorChar: '|', hasHeader: true);
+            dataView = mlContext.Data.LoadFromTextFile<CalculationParameters>(dataPath, separatorChar: '|', hasHeader: true);
 
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
             dataView = mlContext.Data.FilterRowsByMissingValues(dataView, "Quadrature", "Elevator", "RoomCount");
@@ -28,14 +28,13 @@ namespace REPF.Grpc.Services
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             trainData = split.TrainSet;
             testData = split.TestSet;
-            
         }
 
 
         public override Task<CalculationResponse> Calculate(CalculationRequest request, ServerCallContext context)
         {
 
-            var realEstateSample = new RealEstate()
+            var realEstateSample = new CalculationParameters()
             {
                 Quadrature = request.M2,
                 CreatedAt = DateTime.Now,
@@ -54,6 +53,7 @@ namespace REPF.Grpc.Services
             var model = Train();
             var metrics = Evaluate(model);
             var singlePrediction = TestSinglePrediction(model, realEstateSample);
+            singlePrediction.Price = Math.Round(singlePrediction.Price/100d,0)*100;
 
 
             return Task.FromResult(singlePrediction);
@@ -117,9 +117,9 @@ namespace REPF.Grpc.Services
 
 
 
-        public CalculationResponse TestSinglePrediction(ITransformer model, RealEstate realEstate)
+        public CalculationResponse TestSinglePrediction(ITransformer model, CalculationParameters realEstate)
         {
-            var predictionFunction = mlContext.Model.CreatePredictionEngine<RealEstate, RealEstatePrediction>(model);
+            var predictionFunction = mlContext.Model.CreatePredictionEngine<CalculationParameters, CalculationResult>(model);
 
             var prediction = predictionFunction.Predict(realEstate);
 

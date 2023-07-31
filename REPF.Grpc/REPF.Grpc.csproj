@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Protos\forecast.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\calculate.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\forecast.proto" GrpcServices="Server" />
   </ItemGroup>
 
@@ -14,6 +19,7 @@
     <PackageReference Include="Grpc.AspNetCore" Version="2.52.0" />
     <PackageReference Include="Microsoft.ML" Version="2.0.1" />
     <PackageReference Include="Microsoft.ML.LightGbm" Version="2.0.1" />
+    <PackageReference Include="Microsoft.ML.TimeSeries" Version="2.0.1" />
   </ItemGroup>
 
   <ItemGroup>

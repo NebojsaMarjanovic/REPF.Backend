@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+
+option csharp_namespace = "REPF.Grpc";
+
+package forecast;
+
+service CalculateService {
+	rpc Calculate (CalculationRequest) returns (CalculationResponse);
+}
+
+
+message CalculationRequest {
+  int32 m2 = 1;
+  string heatingType = 2;
+  int32 elevator = 3;
+  double price = 4;
+  double roomCount = 5;
+  string placeTitle = 6;
+  string furnishedStatus=7;
+  string registeredStatus=8;
+  bool isLastFloor=9;
+  int32 redactedFloor=10;
+}
+
+message CalculationResponse {
+  double price = 1;
+}
+
+

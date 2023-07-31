@@ -1,5 +1,6 @@
 
 using REPF.Grpc;
+using REPF.Grpc.Protos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,10 +13,17 @@ builder.Services.AddCors();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddGrpcClient<Calculator.CalculatorClient>(o =>
+builder.Services.AddGrpcClient<ForecastService.ForecastServiceClient>(o =>
 {
     o.Address = new Uri("http://localhost:5001");
 });
+
+builder.Services.AddGrpcClient<CalculateService.CalculateServiceClient>(o =>
+{
+    o.Address = new Uri("http://localhost:5001");
+});
+
+
 
 
 

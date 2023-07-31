@@ -4,12 +4,12 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace REPF.Grpc.Models
 {
-    public class RealEstate
+    public class CalculationParameters
     {
         [LoadColumn(0)]
         public float Quadrature { get; set; }
         [LoadColumn(1)]
-        public string HeatingType { get; set; } //district-centralno; central-etazno
+        public string HeatingType { get; set; } = null!;
         [LoadColumn(2)]
         public float Elevator { get; set; }
         [LoadColumn(3)]
@@ -29,6 +29,6 @@ namespace REPF.Grpc.Models
         public string? RegisteredStatus { get; set; }
 
         [LoadColumn(10)]
-        public string Location { get; set; }
+        public string Location { get; set; } = null!;
     }
 }

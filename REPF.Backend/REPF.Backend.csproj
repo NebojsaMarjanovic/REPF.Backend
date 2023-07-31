@@ -7,22 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Protos\calculate.proto" />
     <None Remove="Protos\forecast.proto" />
+    <None Remove="Protos\repf.proto" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.22.1" />
-    <PackageReference Include="Grpc.Net.Client" Version="2.52.0" />
-    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.52.0" />
-    <PackageReference Include="Grpc.Tools" Version="2.53.0">
+    <PackageReference Include="Google.Protobuf" Version="3.23.4" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.55.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.55.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.56.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <Protobuf Include="Protos\calculate.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\forecast.proto" GrpcServices="Client" />
   </ItemGroup>
 
