@@ -9,7 +9,54 @@ namespace REPF.Grpc.Services
 {
     public class ForecastService:REPF.Grpc.Protos.ForecastService.ForecastServiceBase
     {
+        private MLContext mlContext;
+        private IDataView data;
+        private IDataView trainData;
+        private IDataView testData;
+
         public override async Task<ForecastResponse> Forecast(ForecastRequest request, ServerCallContext context)
+        {
+            mlContext = new MLContext();
+
+
+            var realEstates = LoadData(request.Location, request.RoomCount);
+
+            data = mlContext.Data.LoadFromEnumerable(realEstates);
+
+            trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year-2018)*100);
+            testData = mlContext.Data.FilterRowsByColumn(data, "Month", lowerBound: (DateTime.Now.Year-2018)*100);
+
+
+            var forecaster = Train(mlContext,trainData);
+            var forecastEngine = forecaster.CreateTimeSeriesEngine<ForecastParameters, ForecastResult>(mlContext);
+
+            var evaluationResult = Evaluate(forecaster, mlContext, testData);
+
+            var forecastResult = MakeForecast(forecastEngine, mlContext, testData);
+
+            var response = new ForecastResponse();
+
+            foreach (var realEstate in realEstates)
+            {
+                var date = DateOnly.ParseExact(realEstate.Date, "MM/dd/yyyy");
+                response.HistoricalData.Add(date.ToString("MM/yyyy"), realEstate.AveragePrice);
+            }
+
+            var lastDate = DateOnly.ParseExact(realEstates.Last().Date, "MM/dd/yyyy");
+
+            for(int i=6; i<forecastResult.Forecast.Length; i++)
+            {
+                lastDate = lastDate.AddMonths(1);
+                
+                response.LowerBoundForecast.Add(lastDate.ToString("MM/yyyy"), forecastResult.LowerBoundForecast[i]);
+                response.Forecast.Add(lastDate.ToString("MM/yyyy"), forecastResult.Forecast[i]);
+                response.UpperBoundForecast.Add(lastDate.ToString("MM/yyyy"), forecastResult.UpperBoundForecast[i]);
+            }
+
+            return await Task.FromResult(response);
+        }
+
+        public IEnumerable<ForecastParameters>? LoadData(string location, double roomCount)
         {
             string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\Files\\historical_data.csv";
 
@@ -26,47 +73,11 @@ namespace REPF.Grpc.Services
 
                                 });
 
-            realEstates = realEstates.Where(x => x.Location == request.Location && x.RoomCount == request.RoomCount).ToList();
-
-            var mlContext = new MLContext();
-
-            var data = mlContext.Data.LoadFromEnumerable(realEstates);
-
-            IDataView trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: 500);
-            IDataView testData = mlContext.Data.FilterRowsByColumn(data, "Month", lowerBound: 500);
-
-            var pipelinePrediction = mlContext.Forecasting.ForecastBySsa(nameof(ForecastResult.Forecast), nameof(ForecastParameters.AveragePrice),
-                windowSize: 3, seriesLength: 6, trainSize: 48, horizon: 18,
-                confidenceLowerBoundColumn: "LowerBoundForecast",
-                confidenceUpperBoundColumn: "UpperBoundForecast");
-            var model = pipelinePrediction.Fit(trainData);
-
-            var forecaster = pipelinePrediction.Fit(trainData);
-            var forecastEngine = forecaster.CreateTimeSeriesEngine<ForecastParameters, ForecastResult>(mlContext);
-
-            var evaluationResult = Evaluate(testData, forecaster, mlContext);
-
-            var forecastResult = Forecast(testData, 18, forecastEngine, mlContext);
-
-            var response = new ForecastResponse();
-
-            foreach (var realEstate in realEstates)
-            {
-                response.HistoricalData.Add(realEstate.AveragePrice);
-            }
-
-            for(int i=6; i<forecastResult.Forecast.Length; i++)
-            {
-                response.LowerBoundForecast.Add(forecastResult.LowerBoundForecast[i]);
-                response.Forecast.Add(forecastResult.Forecast[i]);
-                response.UpperBoundForecast.Add(forecastResult.UpperBoundForecast[i]);
-            }
-
-            return await Task.FromResult(response);
+            return realEstates.Where(x => x.Location == location && x.RoomCount == roomCount).ToList();
         }
 
 
-        private Tuple<float,double> Evaluate(IDataView testData, ITransformer model, MLContext mlContext)
+        public Tuple<float,double> Evaluate(ITransformer model, MLContext mlContext, IDataView testData)
         {
             IDataView predictions = model.Transform(testData);
 
@@ -86,14 +97,14 @@ namespace REPF.Grpc.Services
             return Tuple.Create(MAE, RMSE);
         }
 
-        private ForecastResult Forecast(IDataView testData, int horizon, TimeSeriesPredictionEngine<ForecastParameters, ForecastResult> forecaster, MLContext mlContext)
-            {
-
+        public ForecastResult MakeForecast(TimeSeriesPredictionEngine<ForecastParameters, ForecastResult> forecaster,
+            MLContext mlContext, IDataView testData)
+        { 
                 var forecast = forecaster.Predict();
 
                 IEnumerable<string> forecastOutput =
                     mlContext.Data.CreateEnumerable<ForecastParameters>(testData, reuseRowObject: false)
-                        .Take(horizon)
+                        .Take(12-DateTime.Now.Month+12)
                         .Select((ForecastParameters forecastedValue, int index) =>
                         {
                             string rentalDate = forecastedValue.Date;
@@ -128,5 +139,18 @@ namespace REPF.Grpc.Services
             return forecast;
 
         }
+   
+        public ITransformer? Train(MLContext mlContext, IDataView trainData)
+        {
+            var pipelinePrediction = mlContext.Forecasting.ForecastBySsa(nameof(ForecastResult.Forecast), nameof(ForecastParameters.AveragePrice),
+               windowSize: 3, seriesLength: 6, trainSize: 48, horizon: 18,
+               confidenceLowerBoundColumn: "LowerBoundForecast",
+               confidenceUpperBoundColumn: "UpperBoundForecast");
+
+            var forecaster = pipelinePrediction.Fit(trainData);
+
+            return forecaster;
+        }
+    
     }
 }

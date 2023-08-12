@@ -2,57 +2,49 @@
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Trainers.FastTree;
+using Microsoft.ML.Transforms;
 using REPF.Grpc.Models;
-
+using System.Data.SqlClient;
 
 namespace REPF.Grpc.Services
 {
     public class CalculationService:CalculateService.CalculateServiceBase
     {
         private readonly string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\Files\\fetch_from_03.05.2023.csv";
-        private MLContext mlContext;
-        private IDataView dataView;
-        private IDataView trainData;
-        private IDataView testData;
-
-
-        public CalculationService()
-        {
-            mlContext = new MLContext(seed: 0);
-            dataView = mlContext.Data.LoadFromTextFile<CalculationParameters>(dataPath, separatorChar: '|', hasHeader: true);
-
-            dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
-            dataView = mlContext.Data.FilterRowsByMissingValues(dataView, "Quadrature", "Elevator", "RoomCount");
-
-
-            var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
-            trainData = split.TrainSet;
-            testData = split.TestSet;
-        }
-
 
         public override Task<CalculationResponse> Calculate(CalculationRequest request, ServerCallContext context)
         {
 
-            var realEstateSample = new CalculationParameters()
-            {
-                Quadrature = request.M2,
-                CreatedAt = DateTime.Now,
-                Elevator = request.Elevator,
-                HeatingType = request.HeatingType,
-                Location = request.PlaceTitle,
-                Price = 0,
-                RedactedFloor = request.RedactedFloor,
-                RoomCount = (float)request.RoomCount,
-                FurnishedStatus = request.FurnishedStatus,
-                IsLastFloor = request.IsLastFloor,
-                RegisteredStatus = request.RegisteredStatus
-            };
+            var mlContext = new MLContext(seed: 0);
+            DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<CalculationParameters>();
+
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=REPF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string sqlCommand = "SELECT Id, Municipality, Neighborhood, Price, SquareFootage, Rooms, Floor, IsLastFloor, HeatingType, HasElevator, IsRegistered FROM RealEstates";
+
+            DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 
 
-            var model = Train();
-            var metrics = Evaluate(model);
-            var singlePrediction = TestSinglePrediction(model, realEstateSample);
+            //var dataView = mlContext.Data.LoadFromTextFile<CalculationParameters>(dataPath, separatorChar: '|', hasHeader: true);
+
+            var dataView = loader.Load(dbSource);
+
+            var realEstates = mlContext.Data.CreateEnumerable<CalculationParameters>(dataView, false).Where(x=>x.Municipality==request.Municipality).ToList();
+
+            dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+
+            dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+            //dataView = mlContext.Data.FilterRowsByMissingValues(dataView, "SquareFootage","Rooms");
+
+
+            var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
+            var trainData = split.TrainSet;
+            var testData = split.TestSet;
+
+
+
+            var model = Train(mlContext, trainData);
+            var metrics = Evaluate(model, mlContext, testData);
+            var singlePrediction = TestSinglePrediction(model,mlContext, request);
             singlePrediction.Price = Math.Round(singlePrediction.Price/100d,0)*100;
 
 
@@ -60,17 +52,24 @@ namespace REPF.Grpc.Services
         }
 
 
-        public ITransformer? Train()
+        public ITransformer? Train(MLContext mlContext, IDataView trainData)
         {
-            var pipeline = mlContext.Transforms.CopyColumns(outputColumnName: "Label", inputColumnName: "Price")
-                .Append(mlContext.Transforms.DropColumns("CreatedAt"))
-                .Append(mlContext.Transforms.ReplaceMissingValues(new[] { new InputOutputColumnPair("QuadratureReplaced", "Quadrature"), new InputOutputColumnPair("ElevatorReplaced", "Elevator"), new InputOutputColumnPair("RoomCountReplaced", "RoomCount") }))
-                .Append(mlContext.Transforms.Categorical.OneHotEncoding(inputColumnName: "Location", outputColumnName: "LocationEncoded"))
-                .Append(mlContext.Transforms.Concatenate("Features", new[] { "LocationEncoded", "QuadratureReplaced", "RoomCountReplaced", "ElevatorReplaced" }))
-                .Append(mlContext.Transforms.NormalizeMinMax("Features"))
-                .Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 4, MinimumExampleCountPerLeaf = 2, NumberOfTrees = 705, MaximumBinCountPerFeature = 1022, FeatureFraction = 0.99999999, LearningRate = 0.30498982295545 }));
+            var pipeline = mlContext.Transforms.CopyColumns(outputColumnName:"Label", inputColumnName:"Price") 
+                                    .Append(mlContext.Transforms.Categorical.OneHotEncoding(new[] 
+                                    { new InputOutputColumnPair(@"Municipality", @"Municipality"), 
+                                        new InputOutputColumnPair(@"IsLastFloor", @"IsLastFloor"), 
+                                        new InputOutputColumnPair(@"HeatingType", @"HeatingType"), 
+                                        new InputOutputColumnPair(@"HasElevator", @"HasElevator"), 
+                                        new InputOutputColumnPair(@"IsRegistered", @"IsRegistered") }, 
+                                        outputKind: OneHotEncodingEstimator.OutputKind.Indicator))
+                                    .Append(mlContext.Transforms.ReplaceMissingValues(new[] { new InputOutputColumnPair(@"SquareFootage", @"SquareFootage"), new InputOutputColumnPair(@"Rooms", @"Rooms"), new InputOutputColumnPair(@"Floor", @"Floor") }))
+                                    .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName: @"Neighborhood", outputColumnName: @"Neighborhood"))
+                                    .Append(mlContext.Transforms.Concatenate(@"Features", new[] { @"Municipality", @"IsLastFloor", @"HeatingType", @"HasElevator", @"IsRegistered", @"SquareFootage", @"Rooms", @"Floor", @"Neighborhood" }))
+                                    .Append(mlContext.Transforms.NormalizeMinMax(@"Features", @"Features"))
+                                        //.Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 10, MinimumExampleCountPerLeaf = 2, NumberOfTrees = 705, MaximumBinCountPerFeature = 1022, FeatureFraction = 0.99999999, LearningRate = 0.30498982295545 }));
+                                     .Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 11, MinimumExampleCountPerLeaf = 4, NumberOfTrees = 79, MaximumBinCountPerFeature = 300, FeatureFraction = 0.313806953660382, LearningRate = 0.423485295561442, LabelColumnName = @"Price", FeatureColumnName = @"Features" }));
 
-
+           
 
             Console.WriteLine("=============== Create and Train the Model ===============");
 
@@ -82,7 +81,7 @@ namespace REPF.Grpc.Services
             return trainedModel;
         }
 
-        public RegressionMetrics Evaluate(ITransformer model)
+        public RegressionMetrics Evaluate(ITransformer model, MLContext mlContext, IDataView testData)
         {
            
 
@@ -117,9 +116,9 @@ namespace REPF.Grpc.Services
 
 
 
-        public CalculationResponse TestSinglePrediction(ITransformer model, CalculationParameters realEstate)
+        public CalculationResponse TestSinglePrediction(ITransformer model, MLContext mlContext, CalculationRequest realEstate)
         {
-            var predictionFunction = mlContext.Model.CreatePredictionEngine<CalculationParameters, CalculationResult>(model);
+            var predictionFunction = mlContext.Model.CreatePredictionEngine<CalculationRequest, CalculationResult>(model);
 
             var prediction = predictionFunction.Predict(realEstate);
 

@@ -29,15 +29,15 @@ namespace REPF.Backend.Controllers
         {
             CalculationRequest request = new CalculationRequest()
             {
-                PlaceTitle = calculationRequestParameters.Location.ToString(),
-                RoomCount = calculationRequestParameters.RoomCount,
-                Elevator=calculationRequestParameters.Elevator,
+                Municipality = calculationRequestParameters.Municipality,
+                Neighborhood = calculationRequestParameters.Neighborhood,
+                Rooms = (float)calculationRequestParameters.RoomCount,
+                HasElevator=calculationRequestParameters.Elevator>0,
                 HeatingType = HeatingType.HeatingTypeMap[calculationRequestParameters.HeatingType],
-                M2=calculationRequestParameters.Quadrature,
-                //FurnishedStatus=forecastRequestParameters.FurnishedStatus,
-                //IsLastFloor=forecastRequestParameters.IsLastFloor,
-                RedactedFloor=calculationRequestParameters.Floor,
-                //RegisteredStatus= forecastRequestParameters.RegisteredStatus
+                SquareFootage=calculationRequestParameters.Quadrature,
+                IsLastFloor = calculationRequestParameters.IsLastFloor,
+                Floor =calculationRequestParameters.Floor,
+                IsRegistered = calculationRequestParameters.RegisteredStatus,
             };
 
 
@@ -52,7 +52,7 @@ namespace REPF.Backend.Controllers
         {
             ForecastRequest request = new ForecastRequest()
             {
-                Location = forecastRequestParameters.Location,
+                Location = LocationMap.locations[forecastRequestParameters.Location],
                 RoomCount = forecastRequestParameters.RoomCount
             };
 

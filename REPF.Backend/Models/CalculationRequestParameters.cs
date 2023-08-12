@@ -6,7 +6,10 @@ namespace REPF.Backend.Models
     public class CalculationRequestParameters
     {
         [Required]
-        public string Location { get; set; }
+        public string Municipality { get; set; }
+
+        [Required]
+        public string Neighborhood { get; set; }
 
         [Required]
         public int Quadrature { get; set; }
@@ -17,19 +20,20 @@ namespace REPF.Backend.Models
         [Required]
         public int Floor { get; set; }
 
-        //[Required]
-        //public bool IsLastFloor { get; set; }
-
-        //[Required]
-        //public string RegisteredStatus { get; set; }
-
-        //[Required]
-        //public string FurnishedStatus { get; set; }
+        [Required]
+        public bool IsLastFloor { get; set; }
 
         [Required]
         public string HeatingType { get; set; }
 
         [Required]
         public int Elevator { get; set; }
+
+        [Required]
+        public bool RegisteredStatus { get; set; }
+
+        [Required]
+        public bool FurnishedStatus { get; set; }
+
     }
 }
