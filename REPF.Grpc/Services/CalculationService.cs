@@ -4,6 +4,7 @@ using Microsoft.ML.Data;
 using Microsoft.ML.Trainers.FastTree;
 using Microsoft.ML.Transforms;
 using REPF.Grpc.Models;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace REPF.Grpc.Services
@@ -14,27 +15,12 @@ namespace REPF.Grpc.Services
 
         public override Task<CalculationResponse> Calculate(CalculationRequest request, ServerCallContext context)
         {
-
             var mlContext = new MLContext(seed: 0);
-            DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<CalculationParameters>();
 
-            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=REPF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            string sqlCommand = "SELECT Id, Municipality, Neighborhood, Price, SquareFootage, Rooms, Floor, IsLastFloor, HeatingType, HasElevator, IsRegistered FROM RealEstates";
+            var realEstates = LoadData(mlContext, request);
 
-            DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
-
-
-            //var dataView = mlContext.Data.LoadFromTextFile<CalculationParameters>(dataPath, separatorChar: '|', hasHeader: true);
-
-            var dataView = loader.Load(dbSource);
-
-            var realEstates = mlContext.Data.CreateEnumerable<CalculationParameters>(dataView, false).Where(x=>x.Municipality==request.Municipality).ToList();
-
-            dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
-
+            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
-            //dataView = mlContext.Data.FilterRowsByMissingValues(dataView, "SquareFootage","Rooms");
-
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -131,6 +117,27 @@ namespace REPF.Grpc.Services
                 Price = prediction.Price
             };
         }
+
+        public IEnumerable<CalculationParameters>? LoadData(MLContext mlContext, CalculationRequest request)
+        {
+            DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<CalculationParameters>();
+
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=REPF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string sqlCommand = "SELECT Id, Municipality, Neighborhood, Price, SquareFootage, Rooms, Floor, IsLastFloor, HeatingType, HasElevator, IsRegistered FROM RealEstates";
+
+            DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
+
+
+            //var dataView = mlContext.Data.LoadFromTextFile<CalculationParameters>(dataPath, separatorChar: '|', hasHeader: true);
+
+            var dataView = loader.Load(dbSource);
+
+            var realEstates = mlContext.Data.CreateEnumerable<CalculationParameters>(dataView, false).Where(x => x.Municipality == request.Municipality).ToList();
+
+           
+            return realEstates;
+        }
+
 
     }
 }
