@@ -1,5 +1,4 @@
 using FluentAssertions;
-using Grpc.Core;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using REPF.Grpc;
@@ -74,7 +73,7 @@ namespace REPF.Tests
 
             var model = sut.Train(mlContext, trainData);
 
-            var singlePrediction = sut.TestSinglePrediction(model,mlContext, request);
+            var singlePrediction = sut.MakeCalculation(model,mlContext, request);
 
             singlePrediction.Price.Should().BeGreaterThan(0);
         }
@@ -99,7 +98,8 @@ namespace REPF.Tests
         [Fact]
         public void LoadData_ShouldReturnData()
         {
-            MLContext mlContext = new MLContext(seed:0);
+            MLContext mlContext = new MLContext(seed: 0);
+
             var data = sut.LoadData(mlContext, request);
 
 
