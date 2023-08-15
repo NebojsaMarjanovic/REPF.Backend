@@ -11,8 +11,6 @@ namespace REPF.Grpc.Services
 {
     public class CalculationService:CalculateService.CalculateServiceBase
     {
-        private readonly string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\Files\\fetch_from_03.05.2023.csv";
-
         public override Task<CalculationResponse> Calculate(CalculationRequest request, ServerCallContext context)
         {
             var mlContext = new MLContext(seed: 0);
@@ -30,11 +28,11 @@ namespace REPF.Grpc.Services
 
             var model = Train(mlContext, trainData);
             var metrics = Evaluate(model, mlContext, testData);
-            var singlePrediction = TestSinglePrediction(model,mlContext, request);
-            singlePrediction.Price = Math.Round(singlePrediction.Price/100d,0)*100;
+            var prediction = MakeCalculation(model,mlContext, request);
+            prediction.Price = Math.Round(prediction.Price/100d,0)*100;
 
 
-            return Task.FromResult(singlePrediction);
+            return Task.FromResult(prediction);
         }
 
 
@@ -102,7 +100,7 @@ namespace REPF.Grpc.Services
 
 
 
-        public CalculationResponse TestSinglePrediction(ITransformer model, MLContext mlContext, CalculationRequest realEstate)
+        public CalculationResponse MakeCalculation(ITransformer model, MLContext mlContext, CalculationRequest realEstate)
         {
             var predictionFunction = mlContext.Model.CreatePredictionEngine<CalculationRequest, CalculationResult>(model);
 

@@ -5,6 +5,7 @@ using REPF.Backend.Enumerations;
 using REPF.Backend.Models;
 using REPF.Grpc;
 using REPF.Grpc.Protos;
+using System.Globalization;
 
 namespace REPF.Backend.Controllers
 {
@@ -32,7 +33,7 @@ namespace REPF.Backend.Controllers
                 Municipality = calculationRequestParameters.Municipality,
                 Neighborhood = calculationRequestParameters.Neighborhood,
                 Rooms = (float)calculationRequestParameters.RoomCount,
-                HasElevator=calculationRequestParameters.Elevator>0,
+                HasElevator=calculationRequestParameters.HasElevator,
                 HeatingType = HeatingType.HeatingTypeMap[calculationRequestParameters.HeatingType],
                 SquareFootage=calculationRequestParameters.Quadrature,
                 IsLastFloor = calculationRequestParameters.IsLastFloor,
@@ -50,9 +51,16 @@ namespace REPF.Backend.Controllers
         [HttpPost("forecast")]
         public async Task<IActionResult> GetForecast(ForecastRequestParameters forecastRequestParameters, CancellationToken cancellationToken)
         {
+            if (!LocationMap.locations[forecastRequestParameters.Location]
+                .Item2
+                .Contains(forecastRequestParameters.RoomCount.ToString(CultureInfo.InvariantCulture)))
+            {
+                return NotFound("Ne postoje podaci o nekretninama sa parametrima koje ste uneli.");
+            }
+
             ForecastRequest request = new ForecastRequest()
             {
-                Location = LocationMap.locations[forecastRequestParameters.Location],
+                Location = LocationMap.locations[forecastRequestParameters.Location].Item1,
                 RoomCount = forecastRequestParameters.RoomCount
             };
 

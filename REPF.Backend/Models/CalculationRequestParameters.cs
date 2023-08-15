@@ -27,13 +27,10 @@ namespace REPF.Backend.Models
         public string HeatingType { get; set; }
 
         [Required]
-        public int Elevator { get; set; }
+        public bool HasElevator { get; set; }
 
         [Required]
         public bool RegisteredStatus { get; set; }
-
-        [Required]
-        public bool FurnishedStatus { get; set; }
 
     }
 }

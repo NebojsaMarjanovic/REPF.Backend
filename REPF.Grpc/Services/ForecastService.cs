@@ -58,7 +58,7 @@ namespace REPF.Grpc.Services
 
         public IEnumerable<ForecastParameters>? LoadData(string location, double roomCount)
         {
-            string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\Files\\historical_data.csv";
+            string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\Files\\historical_data - Copy.csv";
 
             var realEstates = File.ReadAllLines(dataPath)
                                 .Skip(1)
@@ -73,7 +73,7 @@ namespace REPF.Grpc.Services
 
                                 });
 
-            return realEstates.Where(x => x.Location == location && x.RoomCount == roomCount).ToList();
+            return realEstates.Where(x => x.Location == location && x.RoomCount == roomCount);
         }
 
 
@@ -84,6 +84,7 @@ namespace REPF.Grpc.Services
             IEnumerable<float> actual = mlContext.Data.CreateEnumerable<ForecastParameters>(testData, true).Select(observed => observed.AveragePrice);
             IEnumerable<float> forecast = mlContext.Data.CreateEnumerable<ForecastResult>(predictions, true).Select(observed => observed.Forecast[0]);
 
+            var mean = actual.Average();
             var metrics = actual.Zip(forecast, (actualValue, forecastValue) => actualValue - forecastValue);
 
             var MAE = metrics.Average(error => Math.Abs(error)); // Mean Absolute Err 
