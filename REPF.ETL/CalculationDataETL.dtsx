@@ -11,8 +11,8 @@
   DTS:LocaleID="9242"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{880D3955-92FE-4A2B-BEB6-C3615002AC8B}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{930BD7A1-9266-4831-8D75-197EC3EAF551}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -438,6 +438,74 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
+      DTS:refId="Package\4zidaDataCleanerScript"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{8c8984dc-b435-4df6-b1be-f055cc0127dd}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="4zidaDataCleanerScript"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Users\nebojsa.marjanovic\source\repos\4zida\DataCleaner\bin\Debug\net7.0\DataCleaner.exe"
+          WorkingDirectory="C:\Users\nebojsa.marjanovic\source\repos\4zida\DataCleaner\Files" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\4zidaDataScraperScript"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{8E8EEE5F-ACAC-493A-BA25-C8D662F464B1}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="4zidaDataScraperScript"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Users\nebojsa.marjanovic\source\repos\4zida\4zida\bin\Debug\net7.0\4zida.exe"
+          WorkingDirectory="C:\Users\nebojsa.marjanovic\source\repos\4zida\4zida\Files" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\HaloNekretnineDataCleanerScript"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{0d92995a-df4e-4e44-89dd-d45b554f6a31}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="HaloNekretnineDataCleanerScript"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Users\nebojsa.marjanovic\source\repos\New-HaloNekretnine\DataCleaner\bin\Debug\net7.0\DataCleaner.exe"
+          WorkingDirectory="C:\Users\nebojsa.marjanovic\source\repos\New-HaloNekretnine\New-HaloNekretnine\Files" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\HaloNekretnineDataScraperScript"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{d7a74d99-de95-452e-ad91-4cebec00c7dc}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="HaloNekretnineDataScraperScript"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Users\nebojsa.marjanovic\source\repos\New-HaloNekretnine\New-HaloNekretnine\bin\Debug\net7.0\New-HaloNekretnine.exe"
+          WorkingDirectory="C:\Users\nebojsa.marjanovic\source\repos\New-HaloNekretnine\New-HaloNekretnine\Files" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\ImportCalculationData"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -769,6 +837,219 @@
                       refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportCalculationData\CalculationDataUpload"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="CalculationDataUpload"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[RealEstates]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportCalculationData\CalculationDataUpload.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLOCALDB.REPF]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLOCALDB.REPF]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].Columns[Opstina]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Opstina"
+                      externalMetadataColumnId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Municipality]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Opstina]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].Columns[Naselje]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Naselje"
+                      externalMetadataColumnId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Neighborhood]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Naselje]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].Columns[Cena]"
+                      cachedDataType="r4"
+                      cachedName="Cena"
+                      externalMetadataColumnId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Cena]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].Columns[Kvadratura]"
+                      cachedDataType="i4"
+                      cachedName="Kvadratura"
+                      externalMetadataColumnId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[SquareFootage]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Kvadratura]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].Columns[BrojSoba]"
+                      cachedDataType="r4"
+                      cachedName="BrojSoba"
+                      externalMetadataColumnId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Rooms]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[BrojSoba]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].Columns[Sprat]"
+                      cachedDataType="i4"
+                      cachedName="Sprat"
+                      externalMetadataColumnId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Floor]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Sprat]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].Columns[PoslednjiSprat]"
+                      cachedDataType="bool"
+                      cachedName="PoslednjiSprat"
+                      externalMetadataColumnId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[IsLastFloor]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[PoslednjiSprat]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].Columns[Grejanje]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Grejanje"
+                      externalMetadataColumnId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[HeatingType]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Grejanje]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].Columns[Lift]"
+                      cachedDataType="bool"
+                      cachedName="Lift"
+                      externalMetadataColumnId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[HasElevator]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Lift]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].Columns[Registrovan]"
+                      cachedDataType="bool"
+                      cachedName="Registrovan"
+                      externalMetadataColumnId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[IsRegistered]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Registrovan]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Municipality]"
+                      dataType="wstr"
+                      length="50"
+                      name="Municipality" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Neighborhood]"
+                      dataType="wstr"
+                      length="50"
+                      name="Neighborhood" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
+                      dataType="r4"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[SquareFootage]"
+                      dataType="r4"
+                      name="SquareFootage" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Rooms]"
+                      dataType="r4"
+                      name="Rooms" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Floor]"
+                      dataType="r4"
+                      name="Floor" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[IsLastFloor]"
+                      dataType="bool"
+                      name="IsLastFloor" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[HeatingType]"
+                      dataType="wstr"
+                      length="50"
+                      name="HeatingType" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[HasElevator]"
+                      dataType="bool"
+                      name="HasElevator" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[IsRegistered]"
+                      dataType="bool"
+                      name="IsRegistered" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ImportCalculationData\CalculationDataUpload.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportCalculationData\CalculationDataUpload.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\CalculationDataUpload.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportCalculationData\CalculationDataUpload.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1404,219 +1685,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\ImportCalculationData\OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[RealEstates]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\ImportCalculationData\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLOCALDB.REPF]"
-                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLOCALDB.REPF]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Opstina]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Opstina"
-                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Municipality]"
-                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Opstina]" />
-                    <inputColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Naselje]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Naselje"
-                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Neighborhood]"
-                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Naselje]" />
-                    <inputColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cena]"
-                      cachedDataType="r4"
-                      cachedName="Cena"
-                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
-                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Cena]" />
-                    <inputColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Kvadratura]"
-                      cachedDataType="i4"
-                      cachedName="Kvadratura"
-                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SquareFootage]"
-                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Kvadratura]" />
-                    <inputColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BrojSoba]"
-                      cachedDataType="r4"
-                      cachedName="BrojSoba"
-                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rooms]"
-                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[BrojSoba]" />
-                    <inputColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sprat]"
-                      cachedDataType="i4"
-                      cachedName="Sprat"
-                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Floor]"
-                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Sprat]" />
-                    <inputColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PoslednjiSprat]"
-                      cachedDataType="bool"
-                      cachedName="PoslednjiSprat"
-                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsLastFloor]"
-                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[PoslednjiSprat]" />
-                    <inputColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Grejanje]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Grejanje"
-                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HeatingType]"
-                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Grejanje]" />
-                    <inputColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Lift]"
-                      cachedDataType="bool"
-                      cachedName="Lift"
-                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HasElevator]"
-                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Lift]" />
-                    <inputColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Registrovan]"
-                      cachedDataType="bool"
-                      cachedName="Registrovan"
-                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsRegistered]"
-                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Registrovan]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      dataType="i4"
-                      name="ID" />
-                    <externalMetadataColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Municipality]"
-                      dataType="wstr"
-                      length="50"
-                      name="Municipality" />
-                    <externalMetadataColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Neighborhood]"
-                      dataType="wstr"
-                      length="50"
-                      name="Neighborhood" />
-                    <externalMetadataColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
-                      dataType="r4"
-                      name="Price" />
-                    <externalMetadataColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SquareFootage]"
-                      dataType="r4"
-                      name="SquareFootage" />
-                    <externalMetadataColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rooms]"
-                      dataType="r4"
-                      name="Rooms" />
-                    <externalMetadataColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Floor]"
-                      dataType="r4"
-                      name="Floor" />
-                    <externalMetadataColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsLastFloor]"
-                      dataType="bool"
-                      name="IsLastFloor" />
-                    <externalMetadataColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HeatingType]"
-                      dataType="wstr"
-                      length="50"
-                      name="HeatingType" />
-                    <externalMetadataColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HasElevator]"
-                      dataType="bool"
-                      name="HasElevator" />
-                    <externalMetadataColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsRegistered]"
-                      dataType="bool"
-                      name="IsRegistered" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\ImportCalculationData\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\ImportCalculationData\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\ImportCalculationData\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\ImportCalculationData\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\ImportCalculationData\Union All"
               componentClassID="Microsoft.UnionAll"
               contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -2136,14 +2204,123 @@
               startId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output]" />
             <path
               refId="Package\ImportCalculationData.Paths[Union All Output 1]"
-              endId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\ImportCalculationData\CalculationDataUpload.Inputs[OLE DB Destination Input]"
               name="Union All Output 1"
               startId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\NekretnineDataCleanerScript"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{4d9c08fd-c9b5-4e94-8c29-51fe9c6a7c4e}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="NekretnineDataCleanerScript"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Users\nebojsa.marjanovic\source\repos\Nekretnine\DataCleaner\bin\Debug\net7.0\DataCleaner.exe"
+          WorkingDirectory="C:\Users\nebojsa.marjanovic\source\repos\Nekretnine\Nekretnine\Files" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\NekretnineDataScraperScript"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{41e45d91-a87c-4ff3-8753-0cab9769d24e}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="NekretnineDataScraperScript"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Users\nebojsa.marjanovic\source\repos\Nekretnine\Nekretnine\bin\Debug\net7.0\Nekretnine.exe"
+          WorkingDirectory="C:\Users\nebojsa.marjanovic\source\repos\Nekretnine\Nekretnine\Files" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TruncateTableRealEstates"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{CAF9EDFB-BC63-4DEA-9743-0A727ACBA15E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TruncateTableRealEstates"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C7334D51-A2FE-44F2-9208-86E28DBC6304}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE RealEstates" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{535194A5-3D80-4C86-857F-5B57A2196B40}"
+      DTS:From="Package\4zidaDataScraperScript"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\4zidaDataCleanerScript" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{AC438135-72A9-4B88-AEE0-9F51A1C91AC1}"
+      DTS:From="Package\NekretnineDataScraperScript"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\NekretnineDataCleanerScript" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{DA3D4FBC-5DA7-4AD3-BA01-ECE76C6E0D49}"
+      DTS:From="Package\HaloNekretnineDataScraperScript"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\HaloNekretnineDataCleanerScript" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{E63AFE92-0A14-4117-9485-D8EC3027D28B}"
+      DTS:From="Package\4zidaDataCleanerScript"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\TruncateTableRealEstates" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{7A52D9DD-D82C-4EFB-A192-E312EB42BF5F}"
+      DTS:From="Package\NekretnineDataCleanerScript"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\TruncateTableRealEstates" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{518CC2A6-333C-4ED2-A695-B038F032D39B}"
+      DTS:From="Package\HaloNekretnineDataCleanerScript"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\TruncateTableRealEstates" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{AF6AE558-8FC4-4981-8C9D-357E966FA24D}"
+      DTS:From="Package\TruncateTableRealEstates"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\ImportCalculationData" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -2155,11 +2332,217 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\ImportCalculationData"
-          TopLeft="303.749986421317,112.894735602543" />
+          TopLeft="1104.86106171997,296.871341769651" />
+        <NodeLayout
+          Size="192,42.6666666666667"
+          Id="Package\4zidaDataScraperScript"
+          TopLeft="77.4999965354802,182.456138347545" />
+        <NodeLayout
+          Size="218.666666666667,42.6666666666667"
+          Id="Package\NekretnineDataScraperScript"
+          TopLeft="67.0833303344748,283.222220239757" />
+        <NodeLayout
+          Size="240,42.6666666666667"
+          Id="Package\HaloNekretnineDataScraperScript"
+          TopLeft="62.2222194406724,377.491225052656" />
+        <NodeLayout
+          Size="192,42.6666666666667"
+          Id="Package\4zidaDataCleanerScript"
+          TopLeft="484.222211543057,190.058477445359" />
+        <NodeLayout
+          Size="218.666666666667,42.6666666666667"
+          Id="Package\NekretnineDataCleanerScript"
+          TopLeft="482.138878302856,289.304091518009" />
+        <NodeLayout
+          Size="240,42.6666666666667"
+          Id="Package\HaloNekretnineDataCleanerScript"
+          TopLeft="472.41665651525,383.573096330907" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="269.49999653548,207.590641229785">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="214.722215007576,0"
+              Start="0,0"
+              End="207.222215007576,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="207.222215007576,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="285.749997001141,307.596489212217">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="196.388881301714,0"
+              Start="0,0"
+              End="188.888881301714,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="188.888881301714,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="302.222219440672,401.865494025115">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="170.194437074578,0"
+              Start="0,0"
+              End="162.694437074578,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="162.694437074578,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="206.666666666667,42.6666666666667"
+          Id="Package\TruncateTableRealEstates"
+          TopLeft="812.916630326461,294.970756995197" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="580.222211543057,232.725144112026">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="336.027752116737,62.2456128831714"
+              Start="0,0"
+              End="336.027752116737,54.7456128831714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.1228064415857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.1228064415857"
+                    Point2="0,31.1228064415857"
+                    Point3="4,31.1228064415857" />
+                  <mssgle:LineSegment
+                    End="332.027752116737,31.1228064415857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="332.027752116737,31.1228064415857"
+                    Point2="336.027752116737,31.1228064415857"
+                    Point3="336.027752116737,35.1228064415857" />
+                  <mssgle:LineSegment
+                    End="336.027752116737,54.7456128831714" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="700.805544969522,313.470757589937">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="112.111085356938,0"
+              Start="0,0"
+              End="104.611085356938,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="104.611085356938,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="592.41665651525,383.573096330907">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="323.833307144544,-45.9356726690431"
+              Start="0,0"
+              End="323.833307144544,-38.4356726690431">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-18.9678363345216" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-18.9678363345216"
+                    Point2="0,-22.9678363345216"
+                    Point3="4,-22.9678363345216" />
+                  <mssgle:LineSegment
+                    End="319.833307144544,-22.9678363345216" />
+                  <mssgle:CubicBezierSegment
+                    Point1="319.833307144544,-22.9678363345216"
+                    Point2="323.833307144544,-22.9678363345216"
+                    Point3="323.833307144544,-26.9678363345216" />
+                  <mssgle:LineSegment
+                    End="323.833307144544,-38.4356726690431" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="1019.58329699313,317.254382715757">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85.2777647268447,0"
+              Start="0,0"
+              End="77.7777647268447,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="77.7777647268447,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2171,49 +2554,37 @@
         <NodeLayout
           Size="122.666666666667,42.6666666666667"
           Id="Package\ImportCalculationData\Union All"
-          TopLeft="400.624984772876,285.175436023461" />
+          TopLeft="490.624980749563,288.596488617477" />
         <NodeLayout
           Size="198.666666666667,42.6666666666667"
           Id="Package\ImportCalculationData\HaloNekretnineDataDrop"
-          TopLeft="512.291643765446,126.236840719208" />
+          TopLeft="698.541635439423,122.131577606388" />
         <NodeLayout
           Size="150.666666666667,42.6666666666667"
           Id="Package\ImportCalculationData\4zidaDataDrop"
-          TopLeft="78.2291631695504,122.245612692855" />
+          TopLeft="225.729156575787,122.245612692855" />
         <NodeLayout
           Size="177.333333333334,42.6666666666667"
           Id="Package\ImportCalculationData\NekretnineDataDrop"
-          TopLeft="271.874987846241,122.017542519921" />
+          TopLeft="464.374979240821,123.385963557528" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\ImportCalculationData\OLE DB Destination"
-          TopLeft="276.552185439351,396.135333996377" />
+          Size="189.333333333334,42.6666666666667"
+          Id="Package\ImportCalculationData\CalculationDataUpload"
+          TopLeft="457.802177336845,445.398491350214" />
         <EdgeLayout
           Id="Package\ImportCalculationData.Paths[Union All Output 1]"
-          TopLeft="461.95831810621,327.842102690128">
+          TopLeft="552.213579043204,331.263155284144">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-98.072799333525,68.293231306249"
+              EndConnector="0,114.13533606607"
               Start="0,0"
-              End="-98.072799333525,60.793231306249">
+              End="0,106.63533606607">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.1466156531245" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.1466156531245"
-                    Point2="0,34.1466156531245"
-                    Point3="-4,34.1466156531245" />
-                  <mssgle:LineSegment
-                    End="-94.072799333525,34.1466156531245" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-94.072799333525,34.1466156531245"
-                    Point2="-98.072799333525,34.1466156531245"
-                    Point3="-98.072799333525,38.1466156531245" />
-                  <mssgle:LineSegment
-                    End="-98.072799333525,60.793231306249" />
+                    End="0,106.63533606607" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2224,30 +2595,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\ImportCalculationData.Paths[Flat File Source Output2]"
-          TopLeft="611.624977098779,168.903507385874">
+          TopLeft="797.874968772756,164.798244273055">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-120.999992325903,116.271928637587"
+              EndConnector="-217.249988023193,123.798244344423"
               Start="0,0"
-              End="-120.999992325903,108.771928637587">
+              End="-217.249988023193,116.298244344423">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,71.8653718770072" />
+                    End="0,76.7761594304033" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,71.8653718770072"
-                    Point2="0,75.8653718770072"
-                    Point3="-4,75.8653718770072" />
+                    Point1="0,76.7761594304033"
+                    Point2="0,80.7761594304033"
+                    Point3="-4,80.7761594304033" />
                   <mssgle:LineSegment
-                    End="-116.999992325903,75.8653718770072" />
+                    End="-213.249988023193,80.7761594304033" />
                   <mssgle:CubicBezierSegment
-                    Point1="-116.999992325903,75.8653718770072"
-                    Point2="-120.999992325903,75.8653718770072"
-                    Point3="-120.999992325903,79.8653718770072" />
+                    Point1="-213.249988023193,80.7761594304033"
+                    Point2="-217.249988023193,80.7761594304033"
+                    Point3="-217.249988023193,84.7761594304033" />
                   <mssgle:LineSegment
-                    End="-120.999992325903,108.771928637587" />
+                    End="-217.249988023193,116.298244344423" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2258,30 +2629,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\ImportCalculationData.Paths[Flat File Source Output1]"
-          TopLeft="360.541654512907,164.684209186587">
+          TopLeft="552.499979995192,166.052630224194">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="120.527774704413,120.491226836874"
+              EndConnector="0,122.543858393283"
               Start="0,0"
-              End="120.527774704413,112.991226836874">
+              End="0,115.043858393283">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,67.3639025900799" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,67.3639025900799"
-                    Point2="0,71.3639025900799"
-                    Point3="4,71.3639025900799" />
-                  <mssgle:LineSegment
-                    End="116.527774704413,71.3639025900799" />
-                  <mssgle:CubicBezierSegment
-                    Point1="116.527774704413,71.3639025900799"
-                    Point2="120.527774704413,71.3639025900799"
-                    Point3="120.527774704413,75.3639025900799" />
-                  <mssgle:LineSegment
-                    End="120.527774704413,112.991226836874" />
+                    End="0,115.043858393283" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2292,30 +2651,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\ImportCalculationData.Paths[Flat File Source Output]"
-          TopLeft="153.562496502884,164.912279359522">
+          TopLeft="301.06248990912,164.912279359522">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="308.395821603326,120.26315666394"
+              EndConnector="222.229157507109,123.684209257956"
               Start="0,0"
-              End="308.395821603326,112.76315666394">
+              End="222.229157507109,116.184209257956">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.1315783319698" />
+                    End="0,76.7017535583825" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,56.1315783319698"
-                    Point2="0,60.1315783319698"
-                    Point3="4,60.1315783319698" />
+                    Point1="0,76.7017535583825"
+                    Point2="0,80.7017535583825"
+                    Point3="4,80.7017535583825" />
                   <mssgle:LineSegment
-                    End="304.395821603326,60.1315783319698" />
+                    End="218.229157507109,80.7017535583825" />
                   <mssgle:CubicBezierSegment
-                    Point1="304.395821603326,60.1315783319698"
-                    Point2="308.395821603326,60.1315783319698"
-                    Point3="308.395821603326,64.1315783319698" />
+                    Point1="218.229157507109,80.7017535583825"
+                    Point2="222.229157507109,80.7017535583825"
+                    Point3="222.229157507109,84.7017535583825" />
                   <mssgle:LineSegment
-                    End="308.395821603326,112.76315666394" />
+                    End="222.229157507109,116.184209257956" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2328,7 +2687,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\ImportCalculationData\OLE DB Destination">
+    design-time-name="Package\ImportCalculationData\CalculationDataUpload">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

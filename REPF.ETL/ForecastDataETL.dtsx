@@ -5,33 +5,33 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="TTBG-084"
   DTS:CreatorName="TELETRADER\nebojsa.marjanovic"
-  DTS:DTSID="{93AFD737-2DBA-4BB6-BAAA-BBA4C837B84D}"
+  DTS:DTSID="{BEC29B32-9AEA-45F9-86DA-50E61736A03A}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5228.0"
   DTS:LocaleID="9242"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{6E296274-7F46-492D-AB33-16B367F4025D}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{3AB50ACE-2A64-42B6-A91C-CA33BD29D8D4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLOCALDB.REPF]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{C7334D51-A2FE-44F2-9208-86E28DBC6304}"
+      DTS:DTSID="{EA6A5F04-8B89-4EB2-861B-969F28ED74B8}"
       DTS:ObjectName="(localdb)\MSSQLLOCALDB.REPF">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=(localdb)\MSSQLLOCALDB;Initial Catalog=REPF;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{C7334D51-A2FE-44F2-9208-86E28DBC6304}(localdb)\MSSQLLOCALDB.REPF;" />
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLOCALDB;Initial Catalog=REPF;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{EA6A5F04-8B89-4EB2-861B-969F28ED74B8}(localdb)\MSSQLLOCALDB.REPF;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[HaloNekretnineHistoricalData File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{004BAB06-B543-4918-BF14-958F933FBB99}"
+      DTS:DTSID="{33DE8798-DB1F-49AE-9060-0F1E518AFCEE}"
       DTS:ObjectName="HaloNekretnineHistoricalData File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -51,7 +51,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Lokacija"
-              DTS:DTSID="{F43A6B81-9031-4EA6-A4B1-01C2B682B9C9}"
+              DTS:DTSID="{2ABBCE6B-A5C0-404C-BB61-852661AF71CB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -59,7 +59,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="BrojSoba"
-              DTS:DTSID="{40BB6B58-7ECB-4682-AF6B-4FFB67C641A5}"
+              DTS:DTSID="{98AFDD9B-FB52-4FDC-9E12-8F6074EE9093}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -68,7 +68,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Mesec"
-              DTS:DTSID="{3DFC26CE-1BB5-4621-A912-E4316E4CDCFA}"
+              DTS:DTSID="{F87D8CFB-EA0B-42E4-9B7F-B25D826B29D4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -77,7 +77,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Datum"
-              DTS:DTSID="{3D4154B5-3E5F-49ED-9558-DE5B9734D641}"
+              DTS:DTSID="{3608F721-13D3-463A-BE23-EA671ACB0261}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -86,7 +86,7 @@
               DTS:DataScale="5"
               DTS:TextQualified="True"
               DTS:ObjectName="ProsecnaCena"
-              DTS:DTSID="{5BE076E3-F377-4E66-92DC-5BB4097C1A1E}"
+              DTS:DTSID="{963CA545-332B-4183-AA5B-79FE3730AFFD}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -96,10 +96,44 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
+      DTS:refId="Package\HistoricalDataCleanerScript"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{22EACA6A-282E-4009-B948-0933F678DDC9}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="HistoricalDataCleanerScript"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Users\nebojsa.marjanovic\source\repos\HaloNekretnine\PriceForecastor\bin\Debug\net7.0\PriceForecastor.exe"
+          WorkingDirectory="C:\Users\nebojsa.marjanovic\source\repos\HaloNekretnine\PriceForecastor\Files" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\HistoricalDataScraperScript"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{1707184E-7EF4-4F7F-B10D-40EB6ECD2CF9}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="HistoricalDataScraperScript"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Users\nebojsa.marjanovic\source\repos\HaloNekretnine\HaloNekretnine\bin\Debug\net7.0\HaloNekretnine.exe"
+          WorkingDirectory="C:\Users\nebojsa.marjanovic\source\repos\HaloNekretnine\HaloNekretnine\Files" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\ImportHistoricalData"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{bf301607-2071-4178-9254-903e383badce}"
+      DTS:DTSID="{78F1ADD3-6EFA-4A8D-BBC4-75A5607F9ABD}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="ImportHistoricalData"
@@ -110,12 +144,12 @@
           version="1">
           <components>
             <component
-              refId="Package\ImportHistoricalData\Flat File Source"
+              refId="Package\ImportHistoricalData\HistoricalDataDrop"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1033"
-              name="Flat File Source"
+              name="HistoricalDataDrop"
               usesDispositions="true"
               version="1">
               <properties>
@@ -130,24 +164,24 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\ImportHistoricalData\Flat File Source.Connections[FlatFileConnection]"
+                  refId="Package\ImportHistoricalData\HistoricalDataDrop.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[HaloNekretnineHistoricalData File Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[HaloNekretnineHistoricalData File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output]"
+                  refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[Lokacija]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[Lokacija]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Lokacija]"
+                      externalMetadataColumnId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].ExternalColumns[Lokacija]"
                       length="50"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[Lokacija]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[Lokacija]"
                       name="Lokacija"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -162,12 +196,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[BrojSoba]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[BrojSoba]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BrojSoba]"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[BrojSoba]"
+                      externalMetadataColumnId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].ExternalColumns[BrojSoba]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[BrojSoba]"
                       name="BrojSoba"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -182,13 +216,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[Mesec]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[Mesec]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Mesec]"
+                      externalMetadataColumnId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].ExternalColumns[Mesec]"
                       length="50"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[Mesec]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[Mesec]"
                       name="Mesec"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -203,13 +237,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[Datum]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[Datum]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Datum]"
+                      externalMetadataColumnId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].ExternalColumns[Datum]"
                       length="50"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[Datum]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[Datum]"
                       name="Datum"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -224,12 +258,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[ProsecnaCena]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[ProsecnaCena]"
                       dataType="decimal"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProsecnaCena]"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[ProsecnaCena]"
+                      externalMetadataColumnId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].ExternalColumns[ProsecnaCena]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[ProsecnaCena]"
                       name="ProsecnaCena"
                       scale="5"
                       truncationRowDisposition="FailComponent">
@@ -248,53 +282,53 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Lokacija]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].ExternalColumns[Lokacija]"
                       dataType="wstr"
                       length="50"
                       name="Lokacija" />
                     <externalMetadataColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BrojSoba]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].ExternalColumns[BrojSoba]"
                       dataType="r4"
                       name="BrojSoba" />
                     <externalMetadataColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Mesec]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].ExternalColumns[Mesec]"
                       dataType="wstr"
                       length="50"
                       name="Mesec" />
                     <externalMetadataColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Datum]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].ExternalColumns[Datum]"
                       dataType="wstr"
                       length="50"
                       name="Datum" />
                     <externalMetadataColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProsecnaCena]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].ExternalColumns[ProsecnaCena]"
                       dataType="decimal"
                       name="ProsecnaCena"
                       scale="5" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="65001"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -303,11 +337,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\ImportHistoricalData\OLE DB Destination"
+              refId="Package\ImportHistoricalData\HistoricalDataUpload"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="HistoricalDataUpload"
               usesDispositions="true"
               version="4">
               <properties>
@@ -360,7 +394,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\ImportHistoricalData\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\ImportHistoricalData\HistoricalDataUpload.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLOCALDB.REPF]"
                   connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLOCALDB.REPF]"
                   description="The OLE DB runtime connection used to access the database."
@@ -368,73 +402,73 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Lokacija]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].Columns[Lokacija]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Lokacija"
-                      externalMetadataColumnId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[Lokacija]" />
+                      externalMetadataColumnId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[Lokacija]" />
                     <inputColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BrojSoba]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].Columns[BrojSoba]"
                       cachedDataType="r4"
                       cachedName="BrojSoba"
-                      externalMetadataColumnId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RoomCount]"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[BrojSoba]" />
+                      externalMetadataColumnId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[RoomCount]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[BrojSoba]" />
                     <inputColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Mesec]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].Columns[Mesec]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Mesec"
-                      externalMetadataColumnId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[Mesec]" />
+                      externalMetadataColumnId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[Mesec]" />
                     <inputColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Datum]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].Columns[Datum]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Datum"
-                      externalMetadataColumnId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[Datum]" />
+                      externalMetadataColumnId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[Datum]" />
                     <inputColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProsecnaCena]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].Columns[ProsecnaCena]"
                       cachedDataType="decimal"
                       cachedName="ProsecnaCena"
                       cachedScale="5"
-                      externalMetadataColumnId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AveragePricePerSquareMeter]"
-                      lineageId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output].Columns[ProsecnaCena]" />
+                      externalMetadataColumnId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[AveragePricePerSquareMeter]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output].Columns[ProsecnaCena]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
                       dataType="wstr"
                       length="50"
                       name="Location" />
                     <externalMetadataColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RoomCount]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[RoomCount]"
                       dataType="r4"
                       name="RoomCount" />
                     <externalMetadataColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
                       dataType="r4"
                       name="Month" />
                     <externalMetadataColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
                       dataType="wstr"
                       length="50"
                       name="Date" />
                     <externalMetadataColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AveragePricePerSquareMeter]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input].ExternalColumns[AveragePricePerSquareMeter]"
                       dataType="r4"
                       name="AveragePricePerSquareMeter" />
                   </externalMetadataColumns>
@@ -442,22 +476,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\ImportHistoricalData\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\ImportHistoricalData\HistoricalDataUpload.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\ImportHistoricalData\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataUpload.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\ImportHistoricalData\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\ImportHistoricalData\HistoricalDataUpload.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\ImportHistoricalData\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\ImportHistoricalData\HistoricalDataUpload.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -469,14 +503,57 @@
           <paths>
             <path
               refId="Package\ImportHistoricalData.Paths[Flat File Source Output]"
-              endId="Package\ImportHistoricalData\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\ImportHistoricalData\HistoricalDataUpload.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
-              startId="Package\ImportHistoricalData\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\ImportHistoricalData\HistoricalDataDrop.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TruncateTableHistoricalData"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{F30B77E1-98FB-4332-A519-96AEB8822ABD}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TruncateTableHistoricalData"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EA6A5F04-8B89-4EB2-861B-969F28ED74B8}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE HistoricalData" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{9E310A6C-2B2D-418B-92A4-E636B8E8D857}"
+      DTS:From="Package\HistoricalDataScraperScript"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\HistoricalDataCleanerScript" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{7530E179-5077-4723-8700-F6D953D90CFD}"
+      DTS:From="Package\HistoricalDataCleanerScript"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\TruncateTableHistoricalData" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{E17435BD-421A-4261-BB50-3EC74F686D8E}"
+      DTS:From="Package\TruncateTableHistoricalData"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\ImportHistoricalData" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -488,11 +565,89 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="210.666666666667,42.6666666666667"
+          Id="Package\HistoricalDataCleanerScript"
+          TopLeft="370.454528893938,240.38596227289" />
+        <NodeLayout
+          Size="210.666666666667,42.6666666666667"
+          Id="Package\HistoricalDataScraperScript"
+          TopLeft="49.9999977648257,239.701751754086" />
         <NodeLayout
           Size="176,42.6666666666667"
           Id="Package\ImportHistoricalData"
-          TopLeft="445.833313403031,145.964910678036" />
+          TopLeft="1025.94692383357,239.888354622851" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="260.666664431492,261.377190346822">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="109.787864462446,0"
+              Start="0,0"
+              End="102.287864462446,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="102.287864462446,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="214.666666666667,42.6666666666667"
+          Id="Package\TruncateTableHistoricalData"
+          TopLeft="695.871181013346,240.531097837485" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="581.121195560605,261.791863388521">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="114.749985452742,0"
+              Start="0,0"
+              End="107.249985452742,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="107.249985452742,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="910.537847680013,261.543059563501">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="115.409076153553,0"
+              Start="0,0"
+              End="107.909076153553,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="107.909076153553,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -502,16 +657,16 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\ImportHistoricalData\OLE DB Destination"
+          Size="180,42.6666666666667"
+          Id="Package\ImportHistoricalData\HistoricalDataUpload"
           TopLeft="377.333322087924,241.499992802739" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\ImportHistoricalData\Flat File Source"
+          Size="169.333333333334,42.6666666666667"
+          Id="Package\ImportHistoricalData\HistoricalDataDrop"
           TopLeft="383.999988555909,69.333331267039" />
         <EdgeLayout
           Id="Package\ImportHistoricalData.Paths[Flat File Source Output]"
-          TopLeft="462.99998865525,111.999997933706">
+          TopLeft="467.99998865525,111.999997933706">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -535,7 +690,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\ImportHistoricalData\OLE DB Destination">
+    design-time-name="Package\ImportHistoricalData\HistoricalDataUpload">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
