@@ -10,7 +10,6 @@ namespace REPF.Tests
 {
     public class CalculationServiceTest
     {
-        private readonly string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\Files\\fetch_from_03.05.2023.csv";
 
         CalculationRequest request = new CalculationRequest()
         {
@@ -52,6 +51,7 @@ namespace REPF.Tests
             var model = sut.Train(mlContext, trainData);
 
             var metrics = sut.Evaluate(model, mlContext, testData);
+
 
             Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }

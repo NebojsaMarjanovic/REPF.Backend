@@ -59,7 +59,7 @@ namespace REPF.Tests
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-                metrics.Item1.Should().BeLessThanOrEqualTo(400);
+                metrics.Item1.Should().BeLessThanOrEqualTo(350);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
             }
         }
@@ -87,7 +87,7 @@ namespace REPF.Tests
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-                metrics.Item1.Should().BeLessThanOrEqualTo(400);
+                metrics.Item1.Should().BeLessThanOrEqualTo(350);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -116,7 +116,7 @@ namespace REPF.Tests
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-                metrics.Item1.Should().BeLessThanOrEqualTo(400);
+                metrics.Item1.Should().BeLessThanOrEqualTo(350);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -145,7 +145,7 @@ namespace REPF.Tests
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-                metrics.Item1.Should().BeLessThanOrEqualTo(400);
+                metrics.Item1.Should().BeLessThanOrEqualTo(350);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -174,7 +174,7 @@ namespace REPF.Tests
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-                metrics.Item1.Should().BeLessThanOrEqualTo(400);
+                metrics.Item1.Should().BeLessThanOrEqualTo(350);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -203,7 +203,7 @@ namespace REPF.Tests
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-                metrics.Item1.Should().BeLessThanOrEqualTo(400);
+                metrics.Item1.Should().BeLessThanOrEqualTo(350);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -232,7 +232,7 @@ namespace REPF.Tests
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-                metrics.Item1.Should().BeLessThanOrEqualTo(400);
+                metrics.Item1.Should().BeLessThanOrEqualTo(350);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -260,7 +260,7 @@ namespace REPF.Tests
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-                metrics.Item1.Should().BeLessThanOrEqualTo(400);
+                metrics.Item1.Should().BeLessThanOrEqualTo(350);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -289,7 +289,7 @@ namespace REPF.Tests
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-                metrics.Item1.Should().BeLessThanOrEqualTo(400);
+                metrics.Item1.Should().BeLessThanOrEqualTo(350);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -347,7 +347,7 @@ namespace REPF.Tests
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-metrics.Item1.Should().BeLessThanOrEqualTo(400);
+metrics.Item1.Should().BeLessThanOrEqualTo(250);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -376,7 +376,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-metrics.Item1.Should().BeLessThanOrEqualTo(400);
+metrics.Item1.Should().BeLessThanOrEqualTo(250);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -405,7 +405,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-metrics.Item1.Should().BeLessThanOrEqualTo(400);
+metrics.Item1.Should().BeLessThanOrEqualTo(250);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -434,7 +434,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-metrics.Item1.Should().BeLessThanOrEqualTo(400);
+metrics.Item1.Should().BeLessThanOrEqualTo(250);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -463,7 +463,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-metrics.Item1.Should().BeLessThanOrEqualTo(400);
+metrics.Item1.Should().BeLessThanOrEqualTo(250);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -492,7 +492,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-                metrics.Item1.Should().BeLessThanOrEqualTo(400);
+                metrics.Item1.Should().BeLessThanOrEqualTo(350);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -520,7 +520,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-                metrics.Item1.Should().BeLessThanOrEqualTo(400);
+                metrics.Item1.Should().BeLessThanOrEqualTo(350);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
