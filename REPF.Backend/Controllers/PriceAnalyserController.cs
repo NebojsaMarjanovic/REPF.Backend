@@ -34,7 +34,7 @@ namespace REPF.Backend.Controllers
                 Neighborhood = calculationRequestParameters.Neighborhood,
                 Rooms = (float)calculationRequestParameters.RoomCount,
                 HasElevator=calculationRequestParameters.HasElevator,
-                HeatingType = HeatingType.HeatingTypeMap[calculationRequestParameters.HeatingType],
+                HeatingType = calculationRequestParameters.HeatingType,
                 SquareFootage=calculationRequestParameters.Quadrature,
                 IsLastFloor = calculationRequestParameters.IsLastFloor,
                 Floor =calculationRequestParameters.Floor,
