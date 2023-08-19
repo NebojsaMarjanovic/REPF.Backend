@@ -48,7 +48,7 @@ namespace REPF.Tests
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -76,7 +76,7 @@ namespace REPF.Tests
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -105,7 +105,7 @@ namespace REPF.Tests
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -134,7 +134,7 @@ namespace REPF.Tests
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -163,7 +163,7 @@ namespace REPF.Tests
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -192,7 +192,7 @@ namespace REPF.Tests
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -221,7 +221,7 @@ namespace REPF.Tests
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -249,7 +249,7 @@ namespace REPF.Tests
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -278,7 +278,7 @@ namespace REPF.Tests
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -307,7 +307,7 @@ namespace REPF.Tests
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -336,7 +336,7 @@ namespace REPF.Tests
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -365,7 +365,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -394,7 +394,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -423,7 +423,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -452,7 +452,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -481,7 +481,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -492,7 +492,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
                 var metrics = sut.Evaluate(model, mlContext, testData);
 
-metrics.Item1.Should().BeLessThanOrEqualTo(400);
+                metrics.Item1.Should().BeLessThanOrEqualTo(400);
                 metrics.Item2.Should().BeLessThanOrEqualTo(200);
 
             }
@@ -509,7 +509,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
 
             foreach (var roomCount in roomCountCollection)
             {
-                var realEstates = sut.LoadData(location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
+                var realEstates = sut.LoadData(mlContext, location, double.Parse(roomCount, CultureInfo.InvariantCulture)).ToList();
                 var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
                 var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -530,7 +530,8 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
         [Fact]
         public void LoadData_ShouldReturnData()
         {
-           var data = sut.LoadData(request.Location, request.RoomCount);
+            MLContext mlContext = new MLContext(seed : 0);
+           var data = sut.LoadData(mlContext, request.Location, request.RoomCount);
 
 
             data.Count().Should().BeGreaterThan(0);
@@ -542,7 +543,9 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
         [Fact]
         public void LoadData_ShouldNotReturnData()
         {
-            var data = sut.LoadData("Smederevo", 2);
+            MLContext mlContext = new MLContext(seed: 0);
+
+            var data = sut.LoadData(mlContext, "Smederevo", 2);
 
             data.Count().Should().Be(0);
         }
@@ -552,7 +555,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
         public void EvaluateModel_ShouldHaveAcceptableMetrics()
         {
             var mlContext = new MLContext();
-            var realEstates = sut.LoadData(request.Location, request.RoomCount);
+            var realEstates = sut.LoadData(mlContext, request.Location, request.RoomCount);
             var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
             var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);
@@ -571,7 +574,7 @@ metrics.Item1.Should().BeLessThanOrEqualTo(400);
         public void TrainModel_ShouldReturnTrainedModel()
         {
             var mlContext = new MLContext();
-            var realEstates = sut.LoadData(request.Location, request.RoomCount);
+            var realEstates = sut.LoadData(mlContext, request.Location, request.RoomCount);
             var data = mlContext.Data.LoadFromEnumerable(realEstates);
 
             var trainData = mlContext.Data.FilterRowsByColumn(data, "Month", upperBound: (DateTime.Now.Year - 2018) * 100);

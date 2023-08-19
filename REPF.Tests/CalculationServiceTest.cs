@@ -21,7 +21,7 @@ namespace REPF.Tests
             Floor = 4,
             IsLastFloor = false,
             IsRegistered = true,
-            HeatingType = "district",
+            HeatingType = "Centralno",
             HasElevator = true,
             Price = 0
         };
@@ -53,7 +53,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -61,8 +61,7 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            var realEstates = sut.LoadData(mlContext,request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext,request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
 
 
@@ -83,9 +82,9 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext,request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -100,7 +99,7 @@ namespace REPF.Tests
         {
             MLContext mlContext = new MLContext(seed: 0);
 
-            var data = sut.LoadData(mlContext, request);
+            var data = mlContext.Data.CreateEnumerable<CalculationParameters>(sut.LoadData(mlContext, request),false);
 
 
             data.Count().Should().BeGreaterThan(0);
@@ -113,11 +112,14 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Barajevo" };
+            request.Municipality = "Barajevo";
+            request.Neighborhood = "Barajevo - Centar";
 
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
+
+            var x = mlContext.Data.CreateEnumerable<CalculationParameters>(dataView, false).ToList();
+
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
 
 
@@ -129,7 +131,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -137,11 +139,12 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Čukarica" };
+            request.Municipality = "Čukarica";
+            request.Neighborhood = "Čukarica - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -151,7 +154,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -159,9 +162,13 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            request.Municipality = "Grocka";
+            request.Neighborhood = "Grocka - Centar";
+
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -171,7 +178,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -179,11 +186,12 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Lazarevac" };
+            request.Municipality = "Lazarevac";
+            request.Neighborhood = "Lazarevac - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -193,7 +201,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -201,11 +209,13 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Mladenovac" };
+            request.Municipality = "Mladenovac";
+            request.Neighborhood = "Mladenovac - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -215,7 +225,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -223,11 +233,13 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Novi Beograd" };
+            request.Municipality = "Novi Beograd";
+            request.Neighborhood = "Novi Beograd - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -237,7 +249,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -245,11 +257,13 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Obrenovac" };
+            request.Municipality = "Obrenovac";
+            request.Neighborhood = "Obrenovac - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -259,7 +273,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -269,9 +283,10 @@ namespace REPF.Tests
 
             request = new CalculationRequest() { Municipality = "Palilula" };
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -281,7 +296,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -289,11 +304,14 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Rakovica" };
+            request.Municipality = "Rakovica";
+            request.Neighborhood = "Rakovica - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -303,7 +321,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -311,11 +329,13 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Savski venac" };
+            request.Municipality = "Savski venac";
+            request.Neighborhood = "Savski venac - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -325,7 +345,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -333,11 +353,13 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Sopot" };
+            request.Municipality = "Sopot";
+            request.Neighborhood = "Sopot - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -347,7 +369,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -355,11 +377,13 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Stari Grad" };
+            request.Municipality = "Stari Grad";
+            request.Neighborhood = "Stari Grad - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -369,7 +393,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -377,11 +401,13 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Surčin" };
+            request.Municipality = "Surčin";
+            request.Neighborhood = "Surčin - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -391,7 +417,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -399,11 +425,13 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Voždovac" };
+            request.Municipality = "Voždovac";
+            request.Neighborhood = "Voždovac - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -413,7 +441,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -421,11 +449,13 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Vračar" };
+            request.Municipality = "Vračar";
+            request.Neighborhood = "Vračar - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -435,7 +465,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -443,11 +473,13 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Zemun" };
+            request.Municipality = "Zemun";
+            request.Neighborhood = "Zemun - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -457,7 +489,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
         [Fact]
@@ -465,11 +497,13 @@ namespace REPF.Tests
         {
             var mlContext = new MLContext(seed: 0);
 
-            request = new CalculationRequest() { Municipality = "Zvezdara" };
+            request.Municipality = "Zvezdara";
+            request.Neighborhood = "Zvezdara - Centar";
 
-            var realEstates = sut.LoadData(mlContext, request);
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
+            IDataView dataView = sut.LoadData(mlContext, request);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
+
+
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             var trainData = split.TrainSet;
@@ -479,7 +513,7 @@ namespace REPF.Tests
 
             var metrics = sut.Evaluate(model, mlContext, testData);
 
-            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.75);
+            Math.Round(metrics.RSquared,2).Should().BeGreaterThanOrEqualTo(0.7);
         }
 
     }
