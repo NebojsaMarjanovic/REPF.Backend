@@ -67,7 +67,7 @@ namespace REPF.Backend.Enumerations
                     new Tuple<string,string[]>("Sopot",
                     new string[]{""})},
                 {Location.StariGrad,
-                    new Tuple<string,string[]>("Stari Grad",
+                    new Tuple<string,string[]>("Stari grad",
                     new string[]{"0.5","1","1.5","2","2.5","3","3.5","4","4.5","5"})},
                 {Location.Surcin,
                     new Tuple<string,string[]>("Surčin",
