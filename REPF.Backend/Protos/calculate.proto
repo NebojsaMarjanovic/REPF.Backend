@@ -11,17 +11,16 @@ service CalculateService {
 
 
 message CalculationRequest {
-    int32 id = 1;
-    string municipality = 2;
-    string neighborhood = 3;
-    float price = 4;
-    float squareFootage = 5;
-    float rooms = 6;
-    float floor = 7;
-    bool isLastFloor = 8;
-    string heatingType = 9;
-    bool hasElevator = 10;
-    bool isRegistered = 11;
+    string municipality = 1;
+    string neighborhood = 2;
+    float price = 3;
+    float squareFootage = 4;
+    float rooms = 5;
+    float floor = 6;
+    bool isLastFloor = 7;
+    string heatingType = 8;
+    bool hasElevator = 9;
+    bool isRegistered = 10;
 }
 
 message CalculationResponse {

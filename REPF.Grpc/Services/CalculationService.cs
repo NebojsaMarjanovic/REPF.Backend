@@ -2,6 +2,7 @@
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Trainers.FastTree;
+using Microsoft.ML.Trainers.LightGbm;
 using Microsoft.ML.Transforms;
 using REPF.Grpc.Models;
 using System.Data;
@@ -15,9 +16,8 @@ namespace REPF.Grpc.Services
         {
             var mlContext = new MLContext(seed: 0);
 
-            var realEstates = LoadData(mlContext, request);
+            var dataView = LoadData(mlContext, request);
 
-            IDataView dataView = mlContext.Data.LoadFromEnumerable<CalculationParameters>(realEstates);
             dataView = mlContext.Data.FilterRowsByColumn(dataView, "Price", lowerBound: 10000);
 
             var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
@@ -38,22 +38,45 @@ namespace REPF.Grpc.Services
 
         public ITransformer? Train(MLContext mlContext, IDataView trainData)
         {
-            var pipeline = mlContext.Transforms.CopyColumns(outputColumnName:"Label", inputColumnName:"Price") 
-                                    .Append(mlContext.Transforms.Categorical.OneHotEncoding(new[] 
-                                    { new InputOutputColumnPair(@"Municipality", @"Municipality"), 
-                                        new InputOutputColumnPair(@"IsLastFloor", @"IsLastFloor"), 
-                                        new InputOutputColumnPair(@"HeatingType", @"HeatingType"), 
-                                        new InputOutputColumnPair(@"HasElevator", @"HasElevator"), 
-                                        new InputOutputColumnPair(@"IsRegistered", @"IsRegistered") }, 
-                                        outputKind: OneHotEncodingEstimator.OutputKind.Indicator))
-                                    .Append(mlContext.Transforms.ReplaceMissingValues(new[] { new InputOutputColumnPair(@"SquareFootage", @"SquareFootage"), new InputOutputColumnPair(@"Rooms", @"Rooms"), new InputOutputColumnPair(@"Floor", @"Floor") }))
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName: @"Neighborhood", outputColumnName: @"Neighborhood"))
-                                    .Append(mlContext.Transforms.Concatenate(@"Features", new[] { @"Municipality", @"IsLastFloor", @"HeatingType", @"HasElevator", @"IsRegistered", @"SquareFootage", @"Rooms", @"Floor", @"Neighborhood" }))
-                                    .Append(mlContext.Transforms.NormalizeMinMax(@"Features", @"Features"))
-                                        //.Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 10, MinimumExampleCountPerLeaf = 2, NumberOfTrees = 705, MaximumBinCountPerFeature = 1022, FeatureFraction = 0.99999999, LearningRate = 0.30498982295545 }));
-                                     .Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 11, MinimumExampleCountPerLeaf = 4, NumberOfTrees = 79, MaximumBinCountPerFeature = 300, FeatureFraction = 0.313806953660382, LearningRate = 0.423485295561442, LabelColumnName = @"Price", FeatureColumnName = @"Features" }));
+            //var pipeline = mlContext.Transforms.CopyColumns(outputColumnName: "Label", inputColumnName: "Price")
+            //                         .Append(mlContext.Transforms.Categorical.OneHotEncoding(new[]
+            //                         { new InputOutputColumnPair(@"Municipality", @"Municipality"),
+            //                                new InputOutputColumnPair(@"IsLastFloor", @"IsLastFloor"),
+            //                                new InputOutputColumnPair(@"HeatingType", @"HeatingType"),
+            //                                new InputOutputColumnPair(@"HasElevator", @"HasElevator"),
+            //                                new InputOutputColumnPair(@"IsRegistered", @"IsRegistered") },
+            //                             outputKind: OneHotEncodingEstimator.OutputKind.Indicator))
+            //                         .Append(mlContext.Transforms.ReplaceMissingValues(new[] { new InputOutputColumnPair(@"SquareFootage", @"SquareFootage"), new InputOutputColumnPair(@"Rooms", @"Rooms"), new InputOutputColumnPair(@"Floor", @"Floor") }))
+            //                         .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName: @"Neighborhood", outputColumnName: @"Neighborhood"))
+            //                         .Append(mlContext.Transforms.Concatenate(@"Features", new[] { @"Municipality", @"IsLastFloor", @"HeatingType", @"HasElevator", @"IsRegistered", @"SquareFootage", @"Rooms", @"Floor", @"Neighborhood" }))
+            //                         .Append(mlContext.Transforms.NormalizeMinMax(@"Features", @"Features"))
+            //                          .Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 25, MinimumExampleCountPerLeaf = 10, NumberOfTrees = 105, MaximumBinCountPerFeature = 1022, FeatureFraction = 0.99999999, LearningRate = 0.30498982295545 }));
+            //.Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 25, MinimumExampleCountPerLeaf = 5, NumberOfTrees = 100, MaximumBinCountPerFeature = 255, LearningRate = 0.2, LabelColumnName = @"Price", FeatureColumnName = @"Features" }));
 
-           
+
+            //var pipeline = mlContext.Transforms.CopyColumns(outputColumnName: "Label", inputColumnName: "Price")
+            //                     .Append(mlContext.Transforms.Categorical.OneHotEncoding(new[] { new InputOutputColumnPair(@"IsLastFloor", @"IsLastFloor"), new InputOutputColumnPair(@"HeatingType", @"HeatingType"), new InputOutputColumnPair(@"HasElevator", @"HasElevator"), new InputOutputColumnPair(@"IsRegistered", @"IsRegistered") }, outputKind: OneHotEncodingEstimator.OutputKind.Indicator))
+            //                     .Append(mlContext.Transforms.ReplaceMissingValues(new[] { new InputOutputColumnPair(@"SquareFootage", @"SquareFootage"), new InputOutputColumnPair(@"Rooms", @"Rooms"), new InputOutputColumnPair(@"Floor", @"Floor") }))
+            //                     .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName: @"Neighborhood", outputColumnName: @"Neighborhood"))
+            //                     .Append(mlContext.Transforms.Concatenate(@"Features", new[] { @"IsLastFloor", @"HeatingType", @"HasElevator", @"IsRegistered", @"SquareFootage", @"Rooms", @"Floor", @"Neighborhood" }))
+            //                     .Append(mlContext.Transforms.NormalizeMinMax(@"Features", @"Features"))
+            //                     .Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 11, MinimumExampleCountPerLeaf = 2, NumberOfTrees = 400, MaximumBinCountPerFeature = 500, FeatureFraction = 0.99999999, LearningRate = 0.318169735031126, LabelColumnName = @"Price", FeatureColumnName = @"Features" }));
+
+            var pipeline = mlContext.Transforms.CopyColumns(outputColumnName: "Label", inputColumnName: "Price")
+                                 .Append(mlContext.Transforms.Categorical.OneHotEncoding(new[] { new InputOutputColumnPair(@"Municipality", @"Municipality"), new InputOutputColumnPair(@"IsLastFloor", @"IsLastFloor"), new InputOutputColumnPair(@"HeatingType", @"HeatingType"), new InputOutputColumnPair(@"HasElevator", @"HasElevator"), new InputOutputColumnPair(@"IsRegistered", @"IsRegistered") }, outputKind: OneHotEncodingEstimator.OutputKind.Indicator))
+                                 .Append(mlContext.Transforms.ReplaceMissingValues(new[] { new InputOutputColumnPair(@"SquareFootage", @"SquareFootage"), new InputOutputColumnPair(@"Rooms", @"Rooms"), new InputOutputColumnPair(@"Floor", @"Floor") }))
+                                 .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName: @"Neighborhood", outputColumnName: @"Neighborhood"))
+                                 .Append(mlContext.Transforms.Concatenate(@"Features", new[] { @"Municipality", @"IsLastFloor", @"HeatingType", @"HasElevator", @"IsRegistered", @"SquareFootage", @"Rooms", @"Floor", @"Neighborhood" }))
+
+                                                                      //stari
+                                 .Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 17, MinimumExampleCountPerLeaf = 5, NumberOfTrees = 70, MaximumBinCountPerFeature = 300, FeatureFraction = 0.313806953660382, LearningRate = 0.423485295561442, LabelColumnName = @"Price", FeatureColumnName = @"Features" }));
+
+            //0,8785      22388,55 3269442944,14 57179,04      27,4         41  
+            //.Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 1995, MinimumExampleCountPerLeaf = 34, NumberOfTrees = 371, MaximumBinCountPerFeature = 648, FeatureFraction = 0.841097137255805, LearningRate = 0.287769359103512, LabelColumnName = @"Price", FeatureColumnName = @"Features" }));
+
+            // 0,8822      26791,54 3368627264,15 58039,88       3,7         47 
+            //.Append(mlContext.Regression.Trainers.FastTreeTweedie(new FastTreeTweedieTrainer.Options() { NumberOfLeaves = 4, MinimumExampleCountPerLeaf = 14, NumberOfTrees = 1371, MaximumBinCountPerFeature = 168, FeatureFraction = 0.99999999, LearningRate = 0.999999776672986, LabelColumnName = @"Price", FeatureColumnName = @"Features" }));
+
 
             Console.WriteLine("=============== Create and Train the Model ===============");
 
@@ -116,24 +139,39 @@ namespace REPF.Grpc.Services
             };
         }
 
-        public IEnumerable<CalculationParameters>? LoadData(MLContext mlContext, CalculationRequest request)
+        public IDataView LoadData(MLContext mlContext, CalculationRequest request)
         {
             DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<CalculationParameters>();
 
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=REPF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            string sqlCommand = "SELECT Id, Municipality, Neighborhood, Price, SquareFootage, Rooms, Floor, IsLastFloor, HeatingType, HasElevator, IsRegistered FROM RealEstates";
+            string sqlCommand = $"SELECT Id, Municipality, Neighborhood, Price, SquareFootage, Rooms, Floor, IsLastFloor, HeatingType, HasElevator, IsRegistered FROM RealEstates"; 
 
             DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 
-
-            //var dataView = mlContext.Data.LoadFromTextFile<CalculationParameters>(dataPath, separatorChar: '|', hasHeader: true);
-
             var dataView = loader.Load(dbSource);
+            var realEstates = new List<CalculationParameters>();
+            if (request.Municipality.Contains("Lazarevac") ||
+                request.Municipality.Contains("Mladenovac") ||
+                request.Municipality.Contains("Barajevo") ||
+                request.Municipality.Contains("Obrenovac") ||
+                request.Municipality.Contains("Sopot")||
+                request.Municipality.Contains("Grocka"))
+            {
+                realEstates = mlContext.Data.CreateEnumerable<CalculationParameters>(dataView, false)
+                    .Where(x => x.Municipality == "Lazarevac"
+                    || x.Municipality == "Mladenovac"
+                    || x.Municipality == "Barajevo"
+                    || x.Municipality == "Obrenovac"
+                    || x.Municipality == "Sopot"
+                    || x.Municipality=="Grocka").ToList();
+            }
+            else
+            {
+                realEstates = mlContext.Data.CreateEnumerable<CalculationParameters>(dataView, false).Where(x => x.Municipality == request.Municipality).ToList();
+            }
+            dataView = mlContext.Data.LoadFromEnumerable(realEstates);
 
-            var realEstates = mlContext.Data.CreateEnumerable<CalculationParameters>(dataView, false).Where(x => x.Municipality == request.Municipality).ToList();
-
-           
-            return realEstates;
+            return dataView;
         }
 
 

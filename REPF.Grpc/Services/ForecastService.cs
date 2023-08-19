@@ -1,8 +1,10 @@
 ﻿using Grpc.Core;
 using Microsoft.ML;
+using Microsoft.ML.Data;
 using Microsoft.ML.Transforms.TimeSeries;
 using REPF.Grpc.Models;
 using REPF.Grpc.Protos;
+using System.Data.SqlClient;
 using System.Globalization;
 
 namespace REPF.Grpc.Services
@@ -19,7 +21,7 @@ namespace REPF.Grpc.Services
             mlContext = new MLContext();
 
 
-            var realEstates = LoadData(request.Location, request.RoomCount);
+            var realEstates = LoadData(mlContext, request.Location, request.RoomCount);
 
             data = mlContext.Data.LoadFromEnumerable(realEstates);
 
@@ -28,18 +30,17 @@ namespace REPF.Grpc.Services
 
 
             var forecaster = Train(mlContext,trainData);
-            var forecastEngine = forecaster.CreateTimeSeriesEngine<ForecastParameters, ForecastResult>(mlContext);
 
             var evaluationResult = Evaluate(forecaster, mlContext, testData);
 
-            var forecastResult = MakeForecast(forecastEngine, mlContext, testData);
+            var forecastResult = MakeForecast(forecaster, mlContext, testData);
 
             var response = new ForecastResponse();
 
             foreach (var realEstate in realEstates)
             {
                 var date = DateOnly.ParseExact(realEstate.Date, "MM/dd/yyyy");
-                response.HistoricalData.Add(date.ToString("MM/yyyy"), realEstate.AveragePrice);
+                response.HistoricalData.Add(date.ToString("MM/yyyy"), realEstate.AveragePricePerSquareMeter);
             }
 
             var lastDate = DateOnly.ParseExact(realEstates.Last().Date, "MM/dd/yyyy");
@@ -56,24 +57,22 @@ namespace REPF.Grpc.Services
             return await Task.FromResult(response);
         }
 
-        public IEnumerable<ForecastParameters>? LoadData(string location, double roomCount)
+        public IEnumerable<ForecastParameters> LoadData(MLContext mlContext, string location, double roomCount)
         {
-            string dataPath = "C:\\Users\\nebojsa.marjanovic\\source\\repos\\REPF.Backend\\REPF.Grpc\\Files\\historical_data - Copy.csv";
+            DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<ForecastParameters>();
 
-            var realEstates = File.ReadAllLines(dataPath)
-                                .Skip(1)
-                                .Select(x => x.Split('|'))
-                                .Select(x => new ForecastParameters()
-                                {
-                                    Location = x[0],
-                                    RoomCount = float.Parse(x[1], CultureInfo.InvariantCulture),
-                                    Month = float.Parse(x[2], CultureInfo.InvariantCulture),
-                                    Date = x[3],
-                                    AveragePrice = float.Parse(x[4], CultureInfo.InvariantCulture),
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=REPF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string sqlCommand = $"select ID, Location, RoomCount, Month, Date, AveragePricePerSquareMeter from HistoricalData";
 
-                                });
+            DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 
-            return realEstates.Where(x => x.Location == location && x.RoomCount == roomCount);
+            var dataView = loader.Load(dbSource);
+
+            var realEstates = mlContext.Data.CreateEnumerable<ForecastParameters>(dataView, false)
+                .Where(x=>x.Location==location && x.RoomCount==roomCount).ToList();
+
+            return realEstates.ToList();
+
         }
 
 
@@ -81,7 +80,7 @@ namespace REPF.Grpc.Services
         {
             IDataView predictions = model.Transform(testData);
 
-            IEnumerable<float> actual = mlContext.Data.CreateEnumerable<ForecastParameters>(testData, true).Select(observed => observed.AveragePrice);
+            IEnumerable<float> actual = mlContext.Data.CreateEnumerable<ForecastParameters>(testData, true).Select(observed => observed.AveragePricePerSquareMeter);
             IEnumerable<float> forecast = mlContext.Data.CreateEnumerable<ForecastResult>(predictions, true).Select(observed => observed.Forecast[0]);
 
             var mean = actual.Average();
@@ -98,10 +97,11 @@ namespace REPF.Grpc.Services
             return Tuple.Create(MAE, RMSE);
         }
 
-        public ForecastResult MakeForecast(TimeSeriesPredictionEngine<ForecastParameters, ForecastResult> forecaster,
-            MLContext mlContext, IDataView testData)
+        public ForecastResult MakeForecast(ITransformer model, MLContext mlContext, IDataView testData)
         { 
-                var forecast = forecaster.Predict();
+            var forecastEngine = model.CreateTimeSeriesEngine<ForecastParameters, ForecastResult>(mlContext);
+
+            var forecast = forecastEngine.Predict();
 
                 IEnumerable<string> forecastOutput =
                     mlContext.Data.CreateEnumerable<ForecastParameters>(testData, reuseRowObject: false)
@@ -109,7 +109,7 @@ namespace REPF.Grpc.Services
                         .Select((ForecastParameters forecastedValue, int index) =>
                         {
                             string rentalDate = forecastedValue.Date;
-                            float actualRentals = forecastedValue.AveragePrice;
+                            float actualRentals = forecastedValue.AveragePricePerSquareMeter;
                             float lowerEstimate = Math.Max(0, forecast.LowerBoundForecast[index]);
                             float estimate = forecast.Forecast[index];
                             float upperEstimate = forecast.UpperBoundForecast[index];
@@ -143,7 +143,7 @@ namespace REPF.Grpc.Services
    
         public ITransformer? Train(MLContext mlContext, IDataView trainData)
         {
-            var pipelinePrediction = mlContext.Forecasting.ForecastBySsa(nameof(ForecastResult.Forecast), nameof(ForecastParameters.AveragePrice),
+            var pipelinePrediction = mlContext.Forecasting.ForecastBySsa(nameof(ForecastResult.Forecast), nameof(ForecastParameters.AveragePricePerSquareMeter),
                windowSize: 3, seriesLength: 6, trainSize: 48, horizon: 18,
                confidenceLowerBoundColumn: "LowerBoundForecast",
                confidenceUpperBoundColumn: "UpperBoundForecast");
