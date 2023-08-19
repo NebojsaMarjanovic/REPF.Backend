@@ -1,0 +1,2344 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/16/2023 5:14:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TTBG-084"
+  DTS:CreatorName="TELETRADER\nebojsa.marjanovic"
+  DTS:DTSID="{4F929A8D-9091-4FC8-9568-8241B1D0042B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5228.0"
+  DTS:LocaleID="9242"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{880D3955-92FE-4A2B-BEB6-C3615002AC8B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLOCALDB.REPF]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C7334D51-A2FE-44F2-9208-86E28DBC6304}"
+      DTS:ObjectName="(localdb)\MSSQLLOCALDB.REPF">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLOCALDB;Initial Catalog=REPF;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{C7334D51-A2FE-44F2-9208-86E28DBC6304}(localdb)\MSSQLLOCALDB.REPF;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[4zida File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B86A094C-4E99-4883-85A2-4B904DACDC5A}"
+      DTS:ObjectName="4zida File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\nebojsa.marjanovic\source\repos\4zida\DataCleaner\Files\4zida_12.08.2023.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Opstina"
+              DTS:DTSID="{6191919E-45FD-429A-A3D6-AE629D4640E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Naselje"
+              DTS:DTSID="{6D384B14-33A8-42AD-9A59-E137922627DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Kvadratura"
+              DTS:DTSID="{BB0689DA-519F-48FD-85C8-9731607A55B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BrojSoba"
+              DTS:DTSID="{BD317EA7-E422-4F38-A5BD-B0F2D9B9244D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sprat"
+              DTS:DTSID="{AC17E702-09E9-4863-8ABF-EB236BB5D6C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PoslednjiSprat"
+              DTS:DTSID="{C47BD11E-80C7-4DC4-AE65-7A6CE2A9929E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Grejanje"
+              DTS:DTSID="{FEFCAFDA-7F6C-427A-87AC-A3BA56A9BC95}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lift"
+              DTS:DTSID="{25E2F8BF-E048-4DE3-BB84-E5D00E13CB79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cena"
+              DTS:DTSID="{86A9A244-B7CF-4B6F-AC76-15B498205B63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DatumObjavljivanja"
+              DTS:DTSID="{9B31316F-47B9-4AF5-80FF-2A99A129E0E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Opremljen"
+              DTS:DTSID="{1A06FB01-E006-4685-9D95-26FF4C3D7317}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Registrovan"
+              DTS:DTSID="{BC0B48EF-6F84-49E9-9D9F-91A2751BA04E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GodinaIzgradnje"
+              DTS:DTSID="{7942ABE1-4C1D-4AA7-8269-11F0559A3248}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HaloNekretnine File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{385A186B-9042-42D3-AADE-E3E83945804E}"
+      DTS:ObjectName="HaloNekretnine File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\nebojsa.marjanovic\source\repos\New-HaloNekretnine\New-HaloNekretnine\Files\nekretnine_new_clean_fetch_from_12.08.2023.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Opstina"
+              DTS:DTSID="{5BBC6968-3BDD-4430-95FA-7C75A0E99A20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Naselje"
+              DTS:DTSID="{DD5723B9-4308-482D-A813-76A7953497F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cena"
+              DTS:DTSID="{1EAEB89C-3EA2-4929-AC95-6D144354072E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Kvadratura"
+              DTS:DTSID="{193E46EF-9B63-448C-9EF2-FB8270C485C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BrojSoba"
+              DTS:DTSID="{FDBD779A-6293-47FA-AF6B-34A4E475EB1D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Grejanje"
+              DTS:DTSID="{91CEE629-C83A-4A60-9DA9-C8A013338C3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sprat"
+              DTS:DTSID="{FB8DE1B7-15AC-482C-9279-7460D86EE4B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PoslednjiSprat"
+              DTS:DTSID="{19933CED-0948-4D94-A2D7-FE1BEE3F1540}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Uknjizen"
+              DTS:DTSID="{C94DA475-C38A-49AA-83A1-263499D04D8C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lift"
+              DTS:DTSID="{5BAEEFE1-D780-4533-AC79-E23393F084C6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HaloNekretnineHistoricalData File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{004BAB06-B543-4918-BF14-958F933FBB99}"
+      DTS:ObjectName="HaloNekretnineHistoricalData File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="9242"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\nebojsa.marjanovic\source\repos\HaloNekretnine\PriceForecastor\Files\historicalDataTxt.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lokacija"
+              DTS:DTSID="{94CC652C-68C7-4C59-B334-09DD43B91D98}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BrojSoba"
+              DTS:DTSID="{FCD57F93-AA18-4109-9659-49A3FDE356A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Mesec"
+              DTS:DTSID="{4A8EE47E-2FF6-4D52-A37F-71C81E282A9E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Datum"
+              DTS:DTSID="{682860F7-FA70-4397-9824-D30FCD4BDD66}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProsecnaCena"
+              DTS:DTSID="{F0F8762A-99B8-4435-A9B7-47F17A72A924}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Nekretnine File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{661E8DE7-50A4-4079-BBEF-CB28128113D7}"
+      DTS:ObjectName="Nekretnine File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\nebojsa.marjanovic\source\repos\Nekretnine\Nekretnine\Files\nekretnine_new_clean_fetch_from_12.08.2023.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Opstina"
+              DTS:DTSID="{831DAAB5-F0DD-4802-8A6F-F859B24FBFFE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Naselje"
+              DTS:DTSID="{65754AB2-763F-46B3-82CA-78A4F31C9F63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cena"
+              DTS:DTSID="{371ECD72-958C-470C-ACB4-D7469A4A7477}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Kvadratura"
+              DTS:DTSID="{056C71BF-5EDB-49D2-A2DC-805E3E36BE3F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BrojSoba"
+              DTS:DTSID="{505F77D5-32F1-4A83-8168-E3663082A301}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Grejanje"
+              DTS:DTSID="{5C9544A8-192A-4A8B-9B6A-8ACF1DCD929C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sprat"
+              DTS:DTSID="{DD2E1228-86BB-4C50-BD49-46E0FBEFC05D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PoslednjiSprat"
+              DTS:DTSID="{5A09FF90-6D5D-439F-AC49-AC132C84CCFB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Uknjizen"
+              DTS:DTSID="{6BB05DB8-5D8C-4675-8AAF-B9FC5A405D59}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lift"
+              DTS:DTSID="{84D4993D-2FB4-4DC4-BFEC-68C974456B46}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GodinaIzgradnje"
+              DTS:DTSID="{B664A8B5-4FD5-4673-8757-EA23597607E6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ImportCalculationData"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{DA74D34B-7B14-4FF5-8D64-D8211E84F19E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ImportCalculationData"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ImportCalculationData\4zidaDataDrop"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="4zidaDataDrop"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportCalculationData\4zidaDataDrop.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[4zida File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[4zida File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Opstina]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Opstina]"
+                      length="50"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Opstina]"
+                      name="Opstina"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Naselje]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Naselje]"
+                      length="50"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Naselje]"
+                      name="Naselje"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Kvadratura]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Kvadratura]"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Kvadratura]"
+                      name="Kvadratura"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[BrojSoba]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[BrojSoba]"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[BrojSoba]"
+                      name="BrojSoba"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Sprat]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Sprat]"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Sprat]"
+                      name="Sprat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[PoslednjiSprat]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[PoslednjiSprat]"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[PoslednjiSprat]"
+                      name="PoslednjiSprat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Grejanje]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Grejanje]"
+                      length="50"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Grejanje]"
+                      name="Grejanje"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Lift]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Lift]"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Lift]"
+                      name="Lift"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Cena]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Cena]"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Cena]"
+                      name="Cena"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Registrovan]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Registrovan]"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Registrovan]"
+                      name="Registrovan"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Opstina]"
+                      dataType="wstr"
+                      length="50"
+                      name="Opstina" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Naselje]"
+                      dataType="wstr"
+                      length="50"
+                      name="Naselje" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Kvadratura]"
+                      dataType="i4"
+                      name="Kvadratura" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[BrojSoba]"
+                      dataType="r4"
+                      name="BrojSoba" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Sprat]"
+                      dataType="i4"
+                      name="Sprat" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[PoslednjiSprat]"
+                      dataType="bool"
+                      name="PoslednjiSprat" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Grejanje]"
+                      dataType="wstr"
+                      length="50"
+                      name="Grejanje" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Lift]"
+                      dataType="bool"
+                      name="Lift" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Cena]"
+                      dataType="r4"
+                      name="Cena" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[DatumObjavljivanja]"
+                      dataType="wstr"
+                      length="50"
+                      name="DatumObjavljivanja" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Opremljen]"
+                      dataType="bool"
+                      name="Opremljen" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[Registrovan]"
+                      dataType="bool"
+                      name="Registrovan" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].ExternalColumns[GodinaIzgradnje]"
+                      dataType="wstr"
+                      length="50"
+                      name="GodinaIzgradnje" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportCalculationData\HaloNekretnineDataDrop"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="HaloNekretnineDataDrop"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[HaloNekretnine File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[HaloNekretnine File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Opstina]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Opstina]"
+                      length="50"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Opstina]"
+                      name="Opstina"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Naselje]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Naselje]"
+                      length="50"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Naselje]"
+                      name="Naselje"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Cena]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Cena]"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Cena]"
+                      name="Cena"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Kvadratura]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Kvadratura]"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Kvadratura]"
+                      name="Kvadratura"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[BrojSoba]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[BrojSoba]"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[BrojSoba]"
+                      name="BrojSoba"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Grejanje]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Grejanje]"
+                      length="50"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Grejanje]"
+                      name="Grejanje"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Sprat]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Sprat]"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Sprat]"
+                      name="Sprat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[PoslednjiSprat]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[PoslednjiSprat]"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[PoslednjiSprat]"
+                      name="PoslednjiSprat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Uknjizen]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Uknjizen]"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Uknjizen]"
+                      name="Uknjizen"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Lift]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Lift]"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Lift]"
+                      name="Lift"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Opstina]"
+                      dataType="wstr"
+                      length="50"
+                      name="Opstina" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Naselje]"
+                      dataType="wstr"
+                      length="50"
+                      name="Naselje" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Cena]"
+                      dataType="r4"
+                      name="Cena" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Kvadratura]"
+                      dataType="i4"
+                      name="Kvadratura" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[BrojSoba]"
+                      dataType="r4"
+                      name="BrojSoba" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Grejanje]"
+                      dataType="wstr"
+                      length="50"
+                      name="Grejanje" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Sprat]"
+                      dataType="i4"
+                      name="Sprat" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[PoslednjiSprat]"
+                      dataType="bool"
+                      name="PoslednjiSprat" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Uknjizen]"
+                      dataType="bool"
+                      name="Uknjizen" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Lift]"
+                      dataType="bool"
+                      name="Lift" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportCalculationData\NekretnineDataDrop"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="NekretnineDataDrop"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportCalculationData\NekretnineDataDrop.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Nekretnine File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Nekretnine File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Opstina]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Opstina]"
+                      length="50"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Opstina]"
+                      name="Opstina"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Naselje]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Naselje]"
+                      length="50"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Naselje]"
+                      name="Naselje"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Cena]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Cena]"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Cena]"
+                      name="Cena"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Kvadratura]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Kvadratura]"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Kvadratura]"
+                      name="Kvadratura"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[BrojSoba]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[BrojSoba]"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[BrojSoba]"
+                      name="BrojSoba"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Grejanje]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Grejanje]"
+                      length="50"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Grejanje]"
+                      name="Grejanje"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Sprat]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Sprat]"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Sprat]"
+                      name="Sprat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[PoslednjiSprat]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[PoslednjiSprat]"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[PoslednjiSprat]"
+                      name="PoslednjiSprat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Uknjizen]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Uknjizen]"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Uknjizen]"
+                      name="Uknjizen"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Lift]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Lift]"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Lift]"
+                      name="Lift"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Opstina]"
+                      dataType="wstr"
+                      length="50"
+                      name="Opstina" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Naselje]"
+                      dataType="wstr"
+                      length="50"
+                      name="Naselje" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Cena]"
+                      dataType="r4"
+                      name="Cena" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Kvadratura]"
+                      dataType="i4"
+                      name="Kvadratura" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[BrojSoba]"
+                      dataType="r4"
+                      name="BrojSoba" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Grejanje]"
+                      dataType="wstr"
+                      length="50"
+                      name="Grejanje" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Sprat]"
+                      dataType="i4"
+                      name="Sprat" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[PoslednjiSprat]"
+                      dataType="bool"
+                      name="PoslednjiSprat" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Uknjizen]"
+                      dataType="bool"
+                      name="Uknjizen" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[Lift]"
+                      dataType="bool"
+                      name="Lift" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].ExternalColumns[GodinaIzgradnje]"
+                      dataType="wstr"
+                      length="50"
+                      name="GodinaIzgradnje" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportCalculationData\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[RealEstates]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportCalculationData\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLOCALDB.REPF]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLOCALDB.REPF]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Opstina]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Opstina"
+                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Municipality]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Opstina]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Naselje]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Naselje"
+                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Neighborhood]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Naselje]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cena]"
+                      cachedDataType="r4"
+                      cachedName="Cena"
+                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Cena]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Kvadratura]"
+                      cachedDataType="i4"
+                      cachedName="Kvadratura"
+                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SquareFootage]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Kvadratura]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BrojSoba]"
+                      cachedDataType="r4"
+                      cachedName="BrojSoba"
+                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rooms]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[BrojSoba]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sprat]"
+                      cachedDataType="i4"
+                      cachedName="Sprat"
+                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Floor]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Sprat]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PoslednjiSprat]"
+                      cachedDataType="bool"
+                      cachedName="PoslednjiSprat"
+                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsLastFloor]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[PoslednjiSprat]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Grejanje]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Grejanje"
+                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HeatingType]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Grejanje]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Lift]"
+                      cachedDataType="bool"
+                      cachedName="Lift"
+                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HasElevator]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Lift]" />
+                    <inputColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Registrovan]"
+                      cachedDataType="bool"
+                      cachedName="Registrovan"
+                      externalMetadataColumnId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsRegistered]"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Registrovan]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Municipality]"
+                      dataType="wstr"
+                      length="50"
+                      name="Municipality" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Neighborhood]"
+                      dataType="wstr"
+                      length="50"
+                      name="Neighborhood" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
+                      dataType="r4"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SquareFootage]"
+                      dataType="r4"
+                      name="SquareFootage" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rooms]"
+                      dataType="r4"
+                      name="Rooms" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Floor]"
+                      dataType="r4"
+                      name="Floor" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsLastFloor]"
+                      dataType="bool"
+                      name="IsLastFloor" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HeatingType]"
+                      dataType="wstr"
+                      length="50"
+                      name="HeatingType" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HasElevator]"
+                      dataType="bool"
+                      name="HasElevator" />
+                    <externalMetadataColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsRegistered]"
+                      dataType="bool"
+                      name="IsRegistered" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ImportCalculationData\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportCalculationData\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportCalculationData\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportCalculationData\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 1].Columns[Opstina]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Opstina"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Opstina]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Opstina]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 1].Columns[Naselje]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Naselje"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Naselje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Naselje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 1].Columns[Kvadratura]"
+                      cachedDataType="i4"
+                      cachedName="Kvadratura"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Kvadratura]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Kvadratura]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 1].Columns[BrojSoba]"
+                      cachedDataType="r4"
+                      cachedName="BrojSoba"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[BrojSoba]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[BrojSoba]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 1].Columns[Sprat]"
+                      cachedDataType="i4"
+                      cachedName="Sprat"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Sprat]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Sprat]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 1].Columns[PoslednjiSprat]"
+                      cachedDataType="bool"
+                      cachedName="PoslednjiSprat"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[PoslednjiSprat]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[PoslednjiSprat]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 1].Columns[Grejanje]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Grejanje"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Grejanje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Grejanje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 1].Columns[Lift]"
+                      cachedDataType="bool"
+                      cachedName="Lift"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Lift]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Lift]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 1].Columns[Cena]"
+                      cachedDataType="r4"
+                      cachedName="Cena"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Cena]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Cena]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 1].Columns[Registrovan]"
+                      cachedDataType="bool"
+                      cachedName="Registrovan"
+                      lineageId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output].Columns[Registrovan]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Registrovan]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 2].Columns[Opstina]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Opstina"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Opstina]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Opstina]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 2].Columns[Naselje]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Naselje"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Naselje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Naselje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 2].Columns[Cena]"
+                      cachedDataType="r4"
+                      cachedName="Cena"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Cena]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Cena]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 2].Columns[Kvadratura]"
+                      cachedDataType="i4"
+                      cachedName="Kvadratura"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Kvadratura]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Kvadratura]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 2].Columns[BrojSoba]"
+                      cachedDataType="r4"
+                      cachedName="BrojSoba"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[BrojSoba]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[BrojSoba]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 2].Columns[Grejanje]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Grejanje"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Grejanje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Grejanje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 2].Columns[Sprat]"
+                      cachedDataType="i4"
+                      cachedName="Sprat"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Sprat]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Sprat]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 2].Columns[PoslednjiSprat]"
+                      cachedDataType="bool"
+                      cachedName="PoslednjiSprat"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[PoslednjiSprat]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[PoslednjiSprat]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 2].Columns[Lift]"
+                      cachedDataType="bool"
+                      cachedName="Lift"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Lift]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Lift]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 2].Columns[Uknjizen]"
+                      cachedDataType="bool"
+                      cachedName="Uknjizen"
+                      lineageId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output].Columns[Uknjizen]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Registrovan]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 3].Columns[Opstina]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Opstina"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Opstina]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Opstina]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 3].Columns[Naselje]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Naselje"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Naselje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Naselje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 3].Columns[Cena]"
+                      cachedDataType="r4"
+                      cachedName="Cena"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Cena]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Cena]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 3].Columns[Kvadratura]"
+                      cachedDataType="i4"
+                      cachedName="Kvadratura"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Kvadratura]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Kvadratura]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 3].Columns[BrojSoba]"
+                      cachedDataType="r4"
+                      cachedName="BrojSoba"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[BrojSoba]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[BrojSoba]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 3].Columns[Grejanje]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Grejanje"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Grejanje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Grejanje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 3].Columns[Sprat]"
+                      cachedDataType="i4"
+                      cachedName="Sprat"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Sprat]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Sprat]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 3].Columns[PoslednjiSprat]"
+                      cachedDataType="bool"
+                      cachedName="PoslednjiSprat"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[PoslednjiSprat]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[PoslednjiSprat]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 3].Columns[Lift]"
+                      cachedDataType="bool"
+                      cachedName="Lift"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Lift]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Lift]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 3].Columns[Uknjizen]"
+                      cachedDataType="bool"
+                      cachedName="Uknjizen"
+                      lineageId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output].Columns[Uknjizen]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Registrovan]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\ImportCalculationData\Union All.Inputs[Union All Input 4]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Opstina]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Opstina]"
+                      name="Opstina" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Naselje]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Naselje]"
+                      name="Naselje" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Kvadratura]"
+                      dataType="i4"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Kvadratura]"
+                      name="Kvadratura" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[BrojSoba]"
+                      dataType="r4"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[BrojSoba]"
+                      name="BrojSoba" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Sprat]"
+                      dataType="i4"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Sprat]"
+                      name="Sprat" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[PoslednjiSprat]"
+                      dataType="bool"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[PoslednjiSprat]"
+                      name="PoslednjiSprat" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Grejanje]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Grejanje]"
+                      name="Grejanje" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Lift]"
+                      dataType="bool"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Lift]"
+                      name="Lift" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Cena]"
+                      dataType="r4"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Cena]"
+                      name="Cena" />
+                    <outputColumn
+                      refId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Registrovan]"
+                      dataType="bool"
+                      lineageId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1].Columns[Registrovan]"
+                      name="Registrovan" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ImportCalculationData.Paths[Flat File Source Output]"
+              endId="Package\ImportCalculationData\Union All.Inputs[Union All Input 1]"
+              name="Flat File Source Output"
+              startId="Package\ImportCalculationData\4zidaDataDrop.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\ImportCalculationData.Paths[Flat File Source Output1]"
+              endId="Package\ImportCalculationData\Union All.Inputs[Union All Input 2]"
+              name="Flat File Source Output"
+              startId="Package\ImportCalculationData\NekretnineDataDrop.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\ImportCalculationData.Paths[Flat File Source Output2]"
+              endId="Package\ImportCalculationData\Union All.Inputs[Union All Input 3]"
+              name="Flat File Source Output"
+              startId="Package\ImportCalculationData\HaloNekretnineDataDrop.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\ImportCalculationData.Paths[Union All Output 1]"
+              endId="Package\ImportCalculationData\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\ImportCalculationData\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="185.333333333334,42.6666666666667"
+          Id="Package\ImportCalculationData"
+          TopLeft="303.749986421317,112.894735602543" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ImportCalculationData">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="122.666666666667,42.6666666666667"
+          Id="Package\ImportCalculationData\Union All"
+          TopLeft="400.624984772876,285.175436023461" />
+        <NodeLayout
+          Size="198.666666666667,42.6666666666667"
+          Id="Package\ImportCalculationData\HaloNekretnineDataDrop"
+          TopLeft="512.291643765446,126.236840719208" />
+        <NodeLayout
+          Size="150.666666666667,42.6666666666667"
+          Id="Package\ImportCalculationData\4zidaDataDrop"
+          TopLeft="78.2291631695504,122.245612692855" />
+        <NodeLayout
+          Size="177.333333333334,42.6666666666667"
+          Id="Package\ImportCalculationData\NekretnineDataDrop"
+          TopLeft="271.874987846241,122.017542519921" />
+        <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\ImportCalculationData\OLE DB Destination"
+          TopLeft="276.552185439351,396.135333996377" />
+        <EdgeLayout
+          Id="Package\ImportCalculationData.Paths[Union All Output 1]"
+          TopLeft="461.95831810621,327.842102690128">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-98.072799333525,68.293231306249"
+              Start="0,0"
+              End="-98.072799333525,60.793231306249">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.1466156531245" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.1466156531245"
+                    Point2="0,34.1466156531245"
+                    Point3="-4,34.1466156531245" />
+                  <mssgle:LineSegment
+                    End="-94.072799333525,34.1466156531245" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-94.072799333525,34.1466156531245"
+                    Point2="-98.072799333525,34.1466156531245"
+                    Point3="-98.072799333525,38.1466156531245" />
+                  <mssgle:LineSegment
+                    End="-98.072799333525,60.793231306249" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ImportCalculationData.Paths[Flat File Source Output2]"
+          TopLeft="611.624977098779,168.903507385874">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-120.999992325903,116.271928637587"
+              Start="0,0"
+              End="-120.999992325903,108.771928637587">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.8653718770072" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,71.8653718770072"
+                    Point2="0,75.8653718770072"
+                    Point3="-4,75.8653718770072" />
+                  <mssgle:LineSegment
+                    End="-116.999992325903,75.8653718770072" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-116.999992325903,75.8653718770072"
+                    Point2="-120.999992325903,75.8653718770072"
+                    Point3="-120.999992325903,79.8653718770072" />
+                  <mssgle:LineSegment
+                    End="-120.999992325903,108.771928637587" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ImportCalculationData.Paths[Flat File Source Output1]"
+          TopLeft="360.541654512907,164.684209186587">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120.527774704413,120.491226836874"
+              Start="0,0"
+              End="120.527774704413,112.991226836874">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.3639025900799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,67.3639025900799"
+                    Point2="0,71.3639025900799"
+                    Point3="4,71.3639025900799" />
+                  <mssgle:LineSegment
+                    End="116.527774704413,71.3639025900799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="116.527774704413,71.3639025900799"
+                    Point2="120.527774704413,71.3639025900799"
+                    Point3="120.527774704413,75.3639025900799" />
+                  <mssgle:LineSegment
+                    End="120.527774704413,112.991226836874" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ImportCalculationData.Paths[Flat File Source Output]"
+          TopLeft="153.562496502884,164.912279359522">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="308.395821603326,120.26315666394"
+              Start="0,0"
+              End="308.395821603326,112.76315666394">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.1315783319698" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56.1315783319698"
+                    Point2="0,60.1315783319698"
+                    Point3="4,60.1315783319698" />
+                  <mssgle:LineSegment
+                    End="304.395821603326,60.1315783319698" />
+                  <mssgle:CubicBezierSegment
+                    Point1="304.395821603326,60.1315783319698"
+                    Point2="308.395821603326,60.1315783319698"
+                    Point3="308.395821603326,64.1315783319698" />
+                  <mssgle:LineSegment
+                    End="308.395821603326,112.76315666394" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ImportCalculationData\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
