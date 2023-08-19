@@ -105,7 +105,7 @@ namespace REPF.Grpc.Services
 
                 IEnumerable<string> forecastOutput =
                     mlContext.Data.CreateEnumerable<ForecastParameters>(testData, reuseRowObject: false)
-                        .Take(12-DateTime.Now.Month+12)
+                        .Take(DateTime.Now.Month)
                         .Select((ForecastParameters forecastedValue, int index) =>
                         {
                             string rentalDate = forecastedValue.Date;
@@ -114,7 +114,7 @@ namespace REPF.Grpc.Services
                             float estimate = forecast.Forecast[index];
                             float upperEstimate = forecast.UpperBoundForecast[index];
                             return $"Date: {rentalDate}\n" +
-                            $"Actual Rentals: {actualRentals}\n" +
+                            $"Actual Price: {actualRentals}\n" +
                             $"Lower Estimate: {lowerEstimate}\n" +
                             $"Forecast: {estimate}\n" +
                             $"Upper Estimate: {upperEstimate}\n";
@@ -127,16 +127,6 @@ namespace REPF.Grpc.Services
             {
                 Console.WriteLine(prediction);
             }
-
-            //Console.WriteLine();
-            //Console.WriteLine();
-
-            //var date = new DateOnly(2023, 1, 1);
-            //foreach (var forecasted in forecast.Forecast)
-            //{
-            //    Console.WriteLine($"{date}: {forecasted}");
-            //    date = date.AddMonths(1);
-            //}
             return forecast;
 
         }
