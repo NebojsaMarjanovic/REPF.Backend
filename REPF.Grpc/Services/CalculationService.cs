@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace REPF.Grpc.Services
 {
-    public class CalculationService:CalculateService.CalculateServiceBase
+    public class CalculationService : CalculateService.CalculateServiceBase
     {
         public override Task<CalculationResponse> Calculate(CalculationRequest request, ServerCallContext context)
         {
@@ -28,8 +28,8 @@ namespace REPF.Grpc.Services
 
             var model = Train(mlContext, trainData);
             var metrics = Evaluate(model, mlContext, testData);
-            var prediction = MakeCalculation(model,mlContext, request);
-            prediction.Price = Math.Round(prediction.Price/100d,0)*100;
+            var prediction = MakeCalculation(model, mlContext, request);
+            prediction.Price = Math.Round(prediction.Price / 100d, 0) * 100;
 
 
             return Task.FromResult(prediction);
@@ -38,14 +38,14 @@ namespace REPF.Grpc.Services
 
         public ITransformer? Train(MLContext mlContext, IDataView trainData)
         {
-          
+
             var pipeline = mlContext.Transforms.CopyColumns(outputColumnName: "Label", inputColumnName: "Price")
-                                 .Append(mlContext.Transforms.Categorical.OneHotEncoding(new[] 
-                                 { new InputOutputColumnPair(@"Municipality", @"Municipality"), 
-                                     new InputOutputColumnPair(@"IsLastFloor", @"IsLastFloor"), 
-                                     new InputOutputColumnPair(@"HeatingType", @"HeatingType"), 
-                                     new InputOutputColumnPair(@"HasElevator", @"HasElevator"), 
-                                     new InputOutputColumnPair(@"IsRegistered", @"IsRegistered") }, 
+                                 .Append(mlContext.Transforms.Categorical.OneHotEncoding(new[]
+                                 { new InputOutputColumnPair(@"Municipality", @"Municipality"),
+                                     new InputOutputColumnPair(@"IsLastFloor", @"IsLastFloor"),
+                                     new InputOutputColumnPair(@"HeatingType", @"HeatingType"),
+                                     new InputOutputColumnPair(@"HasElevator", @"HasElevator"),
+                                     new InputOutputColumnPair(@"IsRegistered", @"IsRegistered") },
                                      outputKind: OneHotEncodingEstimator.OutputKind.Indicator))
                                  .Append(mlContext.Transforms.ReplaceMissingValues(new[] { new InputOutputColumnPair(@"SquareFootage", @"SquareFootage"), new InputOutputColumnPair(@"Rooms", @"Rooms"), new InputOutputColumnPair(@"Floor", @"Floor") }))
                                  .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName: @"Neighborhood", outputColumnName: @"Neighborhood"))
@@ -65,11 +65,11 @@ namespace REPF.Grpc.Services
 
         public RegressionMetrics Evaluate(ITransformer model, MLContext mlContext, IDataView testData)
         {
-           
+
 
             var predictions = model.Transform(testData);
             var metrics = mlContext.Regression.Evaluate(predictions, "Label", "Score");
-            
+
             Console.WriteLine();
             Console.WriteLine($"*************************************************");
             Console.WriteLine($"*       Model quality metrics evaluation         ");
@@ -119,7 +119,7 @@ namespace REPF.Grpc.Services
             DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<CalculationParameters>();
 
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=REPF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            string sqlCommand = $"SELECT Id, Municipality, Neighborhood, Price, SquareFootage, Rooms, Floor, IsLastFloor, HeatingType, HasElevator, IsRegistered FROM RealEstates"; 
+            string sqlCommand = $"SELECT Id, Municipality, Neighborhood, Price, SquareFootage, Rooms, Floor, IsLastFloor, HeatingType, HasElevator, IsRegistered FROM RealEstates";
 
             DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 
@@ -129,7 +129,7 @@ namespace REPF.Grpc.Services
                 request.Municipality.Contains("Mladenovac") ||
                 request.Municipality.Contains("Barajevo") ||
                 request.Municipality.Contains("Obrenovac") ||
-                request.Municipality.Contains("Sopot")||
+                request.Municipality.Contains("Sopot") ||
                 request.Municipality.Contains("Grocka"))
             {
                 realEstates = mlContext.Data.CreateEnumerable<CalculationParameters>(dataView, false)

@@ -105,7 +105,7 @@ namespace REPF.Grpc.Services
 
                 IEnumerable<string> forecastOutput =
                     mlContext.Data.CreateEnumerable<ForecastParameters>(testData, reuseRowObject: false)
-                        .Take(DateTime.Now.Month)
+                        .Take(12-DateTime.Now.Month+12)
                         .Select((ForecastParameters forecastedValue, int index) =>
                         {
                             string rentalDate = forecastedValue.Date;
