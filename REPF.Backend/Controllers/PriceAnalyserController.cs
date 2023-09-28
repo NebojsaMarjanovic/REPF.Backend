@@ -1,6 +1,7 @@
 ﻿using Grpc.Core;
 using Grpc.Net.Client;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using REPF.Backend.Enumerations;
 using REPF.Backend.Models;
 using REPF.Grpc;
@@ -15,13 +16,16 @@ namespace REPF.Backend.Controllers
     {
         private readonly CalculateService.CalculateServiceClient _calculatorClient;
         private readonly ForecastService.ForecastServiceClient _forecasterClient;
+        private readonly IMemoryCache _cache;
 
 
         public PriceAnalyserController(CalculateService.CalculateServiceClient calculatorClient, 
-                                     ForecastService.ForecastServiceClient forecasterClient)
+                                     ForecastService.ForecastServiceClient forecasterClient,
+                                     IMemoryCache cache)
         {
             _calculatorClient = calculatorClient;
             _forecasterClient = forecasterClient;
+            _cache = cache;
         }
 
 
@@ -33,18 +37,22 @@ namespace REPF.Backend.Controllers
                 Municipality = calculationRequestParameters.Municipality,
                 Neighborhood = calculationRequestParameters.Neighborhood,
                 Rooms = (float)calculationRequestParameters.RoomCount,
-                HasElevator=calculationRequestParameters.HasElevator,
+                HasElevator = calculationRequestParameters.HasElevator,
                 HeatingType = calculationRequestParameters.HeatingType,
-                SquareFootage=calculationRequestParameters.Quadrature,
+                SquareFootage = calculationRequestParameters.Quadrature,
                 IsLastFloor = calculationRequestParameters.IsLastFloor,
-                Floor =calculationRequestParameters.Floor,
+                Floor = calculationRequestParameters.Floor,
                 IsRegistered = calculationRequestParameters.RegisteredStatus,
             };
 
+            if (!_cache.TryGetValue(request, out CalculationResponse? result))
+            {
+                result = await _calculatorClient.CalculateAsync(request, cancellationToken: cancellationToken);
+              
+                _cache.Set(request, result,TimeSpan.FromDays(1));
+            }
 
-            var result = await _calculatorClient.CalculateAsync(request, cancellationToken: cancellationToken);
-
-            return Ok(result.Price);
+            return Ok(result!.Price);
 
         }
 
@@ -64,8 +72,12 @@ namespace REPF.Backend.Controllers
                 RoomCount = forecastRequestParameters.RoomCount
             };
 
+            if (!_cache.TryGetValue(request, out ForecastResponse result))
+            {
+                result = await _forecasterClient.ForecastAsync(request, cancellationToken: cancellationToken);
 
-            var result = await _forecasterClient.ForecastAsync(request, cancellationToken: cancellationToken);
+                _cache.Set(request, result, TimeSpan.FromDays(1));
+            }
 
             return Ok(result);
 
