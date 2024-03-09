@@ -1,7 +1,6 @@
 ﻿using FluentAssertions;
 using Microsoft.ML;
-using REPF.Grpc.Protos;
-using System.Collections.Immutable;
+using REPF.PriceForecaster;
 using System.Globalization;
 
 namespace REPF.Tests
@@ -35,7 +34,7 @@ namespace REPF.Tests
             {"Zvezdara",new string[]{"0.5","1","1.5","2","2.5","3","3.5","4","4.5","5" } }, //0.5,    1(120.5)
         };
 
-        REPF.Grpc.Services.ForecastService sut = new REPF.Grpc.Services.ForecastService();
+        PriceForecasterService.Services.ForecastService sut = new PriceForecasterService.Services.ForecastService();
 
         [Fact]
         public void EvaluateModelForEveryRequestBarajevo_ShouldHaveAcceptableMetrics()

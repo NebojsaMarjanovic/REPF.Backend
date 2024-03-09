@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "REPF.PriceCalculator";
+
+package forecast;
+
+service CalculateService {
+	rpc Calculate (CalculationRequest) returns (CalculationResponse);
+}
+
+
+message CalculationRequest {
+    string municipality = 1;
+    string neighborhood = 2;
+    float price = 3;
+    float squareFootage = 4;
+    float rooms = 5;
+    float floor = 6;
+    bool isLastFloor = 7;
+    string heatingType = 8;
+    bool hasElevator = 9;
+    bool isRegistered = 10;
+}
+
+message CalculationResponse {
+  double price = 1;
+}
+
+

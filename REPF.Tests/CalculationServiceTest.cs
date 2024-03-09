@@ -1,9 +1,9 @@
 using FluentAssertions;
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using REPF.Grpc;
-using REPF.Grpc.Models;
 using REPF.Grpc.Services;
+using REPF.PriceCalculator;
+using REPF.PriceCalculatorService.Models;
 using System.Data.SqlClient;
 
 namespace REPF.Tests
