@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option csharp_namespace = "AuthenticationService";
+
+package authentication;
+
+import "google/protobuf/wrappers.proto";
+
+
+service AuthenticateService{
+	rpc Login (LoginRequest) returns (LoginResponse);
+	rpc Register(RegisterRequest) returns (RegisterResponse);
+}
+
+message LoginRequest{
+	string username = 1;
+	string password = 2;
+}
+
+message LoginResponse{
+	google.protobuf.StringValue token = 1;
+}
+
+message RegisterRequest{
+	string name = 1;
+	string surname = 2;
+	string username = 3;
+	string email = 4;
+	string password = 5;
+}
+
+message RegisterResponse{
+	ResponseStatus response_status = 1;
+}
+
+enum ResponseStatus{
+	OK = 0;
+	USER_EXISTS = 1;
+	ERROR = 2;
+}
