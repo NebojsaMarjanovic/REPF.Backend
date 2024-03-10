@@ -4,6 +4,9 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>6dc4a2f0-fd8b-4e5b-9ff5-11256a243792</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	  <DockerfileRunArguments>-p 7070:7070 -p 7071:7071</DockerfileRunArguments>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +17,7 @@
     <PackageReference Include="Grpc.AspNetCore" Version="2.61.0" />
     <PackageReference Include="Microsoft.ML" Version="3.0.1" />
     <PackageReference Include="Microsoft.ML.TimeSeries" Version="3.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 

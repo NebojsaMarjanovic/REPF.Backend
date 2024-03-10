@@ -1,8 +1,10 @@
 ﻿using Grpc.Core;
+using Microsoft.Extensions.Options;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Transforms.TimeSeries;
 using REPF.PriceForecaster;
+using REPF.PriceForecasterService.Configurations;
 using REPF.PriceForecasterService.Models;
 using System.Data.SqlClient;
 
@@ -10,6 +12,14 @@ namespace REPF.PriceForecasterService.Services
 {
     public class ForecastService : PriceForecaster.ForecastService.ForecastServiceBase
     {
+
+        private readonly Database _database;
+
+        public ForecastService(IOptions<Database> database)
+        {
+            _database = database.Value;
+        }
+
         private MLContext mlContext;
         private IDataView data;
         private IDataView trainData;
@@ -60,7 +70,7 @@ namespace REPF.PriceForecasterService.Services
         {
             DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<ForecastParameters>();
 
-            string connectionString = @"Data Source=DESKTOP-DDCJN53;Initial Catalog=REPF;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+            string connectionString = _database.ConnectionString;
             string sqlCommand = $"select ID, Location, RoomCount, Month, Date, AveragePricePerSquareMeter from HistoricalData";
 
             DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);

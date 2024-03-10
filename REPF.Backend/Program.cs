@@ -1,8 +1,6 @@
 
-using REPF.Grpc;
-using REPF.Grpc.Protos;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using REPF.PriceCalculator;
+using REPF.PriceForecaster;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,12 +21,12 @@ builder.Services.AddMemoryCache();
 
 builder.Services.AddGrpcClient<ForecastService.ForecastServiceClient>(o =>
 {
-    o.Address = new Uri("http://localhost:5001");
+    o.Address = new Uri("http://localhost:7071");
 });
 
 builder.Services.AddGrpcClient<CalculateService.CalculateServiceClient>(o =>
 {
-    o.Address = new Uri("http://localhost:5001");
+    o.Address = new Uri("http://localhost:8081");
 });
 
 

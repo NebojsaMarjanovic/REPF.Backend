@@ -1,11 +1,9 @@
-﻿using Grpc.Core;
-using Grpc.Net.Client;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using REPF.Backend.Enumerations;
 using REPF.Backend.Models;
-using REPF.Grpc;
-using REPF.Grpc.Protos;
+using REPF.PriceCalculator;
+using REPF.PriceForecaster;
 using System.Globalization;
 
 namespace REPF.Backend.Controllers

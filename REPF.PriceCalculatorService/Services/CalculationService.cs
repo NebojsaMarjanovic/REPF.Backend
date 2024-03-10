@@ -1,10 +1,12 @@
 ﻿
 using Grpc.Core;
+using Microsoft.Extensions.Options;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Trainers.FastTree;
 using Microsoft.ML.Transforms;
 using REPF.PriceCalculator;
+using REPF.PriceCalculatorService.Configuration;
 using REPF.PriceCalculatorService.Models;
 using System.Data.SqlClient;
 
@@ -12,6 +14,14 @@ namespace REPF.Grpc.Services
 {
     public class CalculationService : CalculateService.CalculateServiceBase
     {
+
+        private readonly Database _database;
+
+        public CalculationService(IOptions<Database> database)
+        {
+            _database = database.Value;
+        }
+
         public override Task<CalculationResponse> Calculate(CalculationRequest request, ServerCallContext context)
         {
             var mlContext = new MLContext(seed: 0);
@@ -117,7 +127,7 @@ namespace REPF.Grpc.Services
         {
             DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<CalculationParameters>();
 
-            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=REPF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string connectionString = _database.ConnectionString;
             string sqlCommand = $"SELECT Id, Municipality, Neighborhood, Price, SquareFootage, Rooms, Floor, IsLastFloor, HeatingType, HasElevator, IsRegistered FROM RealEstates";
 
             DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
